@@ -1,3 +1,4 @@
+import Architect
 import PrimeNumberTheoremAnd.MellinCalculus
 import PrimeNumberTheoremAnd.ZetaBounds
 import PrimeNumberTheoremAnd.ZetaConj
@@ -82,6 +83,16 @@ noncomputable abbrev SmoothedChebyshevIntegrand (SmoothingF : ℝ → ℝ) (ε :
   fun s ↦ (- deriv riemannZeta s) / riemannZeta s *
     𝓜 (fun x ↦ (Smooth1 SmoothingF ε x : ℂ)) s * (X : ℂ) ^ s
 
+@[blueprint
+  "SmoothedChebyshev"
+  (title := "SmoothedChebyshev")
+  (statement := /-- Fix $\epsilon>0$, and a bumpfunction supported in $[1/2,2]$. Then we define the
+    smoothed
+    Chebyshev function $\psi_{\epsilon}$ from $\mathbb{R}_{>0}$ to $\mathbb{C}$ by
+    $$\psi_{\epsilon}(X) = \frac{1}{2\pi i}\int_{(\sigma)}\frac{-\zeta'(s)}{\zeta(s)}
+    \mathcal{M}(\widetilde{1_{\epsilon}})(s)
+    X^{s}ds,$$
+    where we'll take $\sigma = 1 + 1 / \log X$. -/)]
 noncomputable def SmoothedChebyshev (SmoothingF : ℝ → ℝ) (ε : ℝ) (X : ℝ) : ℂ :=
   VerticalIntegral' (SmoothedChebyshevIntegrand SmoothingF ε X) ((1 : ℝ) + (Real.log X)⁻¹)
 
@@ -135,6 +146,19 @@ $$
 is integrable on $\mathbb{R}$.
 \end{lemma}
 %%-/
+@[blueprint
+  "SmoothedChebyshevDirichlet_aux_integrable"
+  (title := "SmoothedChebyshevDirichlet_aux_integrable")
+  (statement := /-- Fix a nonnegative, continuously differentiable function $F$ on $\mathbb{R}$ with
+    support in $[1/2,2]$, and total mass one, $\int_{(0,\infty)} F(x)/x dx = 1$. Then for any
+    $\epsilon>0$, and $\sigma\in (1, 2]$, the function
+    $$
+    x \mapsto\mathcal{M}(\widetilde{1_{\epsilon}})(\sigma + ix)
+    $$
+    is integrable on $\mathbb{R}$. -/)
+  (proof := /-- By Lemma \ref{MellinOfSmooth1b} the integrand is $O(1/t^2)$ as $t\rightarrow \infty$
+    and hence the function is integrable. -/)
+  (latexEnv := "lemma")]
 lemma SmoothedChebyshevDirichlet_aux_integrable {SmoothingF : ℝ → ℝ}
     (diffSmoothingF : ContDiff ℝ 1 SmoothingF)
     (SmoothingFpos : ∀ x > 0, 0 ≤ SmoothingF x)
@@ -189,6 +213,20 @@ $\sum_{n=1}^\infty \int_{(0,\infty)} \frac{\Lambda(n)}{n^{\sigma+it}}
 -- TODO: add to mathlib
 attribute [fun_prop] Continuous.const_cpow
 
+@[blueprint
+  "SmoothedChebyshevDirichlet_aux_tsum_integral"
+  (title := "SmoothedChebyshevDirichlet_aux_tsum_integral")
+  (statement := /-- Fix a nonnegative, continuously differentiable function $F$ on $\mathbb{R}$ with
+    support in
+    $[1/2,2]$, and total mass one, $\int_{(0,\infty)} F(x)/x dx = 1$. Then for any $\epsilon>0$ and
+    $\sigma\in(1,2]$, the
+    function
+    $x \mapsto \sum_{n=1}^\infty \frac{\Lambda(n)}{n^{\sigma+it}}
+    \mathcal{M}(\widetilde{1_{\epsilon}})(\sigma+it) x^{\sigma+it}$ is equal to
+    $\sum_{n=1}^\infty \int_{(0,\infty)} \frac{\Lambda(n)}{n^{\sigma+it}}
+    \mathcal{M}(\widetilde{1_{\epsilon}})(\sigma+it) x^{\sigma+it}$. -/)
+  (proof := /-- Interchange of summation and integration. -/)
+  (latexEnv := "lemma")]
 lemma SmoothedChebyshevDirichlet_aux_tsum_integral {SmoothingF : ℝ → ℝ}
     (diffSmoothingF : ContDiff ℝ 1 SmoothingF)
     (SmoothingFpos : ∀ x > 0, 0 ≤ SmoothingF x)
@@ -271,6 +309,24 @@ We have that
 $$\psi_{\epsilon}(X) = \sum_{n=1}^\infty \Lambda(n)\widetilde{1_{\epsilon}}(n/X).$$
 \end{theorem}
 %%-/
+@[blueprint
+  "SmoothedChebyshevDirichlet"
+  (title := "SmoothedChebyshevDirichlet")
+  (statement := /-- We have that
+    $$\psi_{\epsilon}(X) = \sum_{n=1}^\infty \Lambda(n)\widetilde{1_{\epsilon}}(n/X).$$ -/)
+  (proof := /-- We have that
+    $$\psi_{\epsilon}(X) = \frac{1}{2\pi i}\int_{(2)}\sum_{n=1}^\infty \frac{\Lambda(n)}{n^s}
+    \mathcal{M}(\widetilde{1_{\epsilon}})(s)
+    X^{s}ds.$$
+    We have enough decay (thanks to quadratic decay of $\mathcal{M}(\widetilde{1_{\epsilon}})$) to
+    justify the interchange of summation and integration. We then get
+    $$\psi_{\epsilon}(X) =
+    \sum_{n=1}^\infty \Lambda(n)\frac{1}{2\pi i}\int_{(2)}
+    \mathcal{M}(\widetilde{1_{\epsilon}})(s)
+    (n/X)^{-s}
+    ds
+    $$
+    and apply the Mellin inversion formula. -/)]
 theorem SmoothedChebyshevDirichlet {SmoothingF : ℝ → ℝ}
     (diffSmoothingF : ContDiff ℝ 1 SmoothingF)
     (SmoothingFpos : ∀ x > 0, 0 ≤ SmoothingF x)
@@ -684,6 +740,24 @@ theorem SmoothedChebyshevClose_aux {Smooth1 : (ℝ → ℝ) → ℝ → ℝ → 
       rw [C_eq]
       ring
 
+@[blueprint
+  "SmoothedChebyshevClose"
+  (title := "SmoothedChebyshevClose")
+  (statement := /-- We have that
+    $$\psi_{\epsilon}(X) = \psi(X) + O(\epsilon X \log X).$$ -/)
+  (proof := /-- Take the difference. By Lemma \ref{Smooth1Properties_above} and
+    \ref{Smooth1Properties_below},
+    the sums agree except when $1-c \epsilon \leq n/X \leq 1+c \epsilon$. This is an interval of
+    length $\ll \epsilon X$, and the summands are bounded by $\Lambda(n) \ll \log X$.
+    
+    %[No longer relevant, as we will do better than any power of log savings...: This is not enough,
+    %as it loses a log! (Which is fine if our target is the strong PNT, with
+    %exp-root-log savings, but not here with the ``softer'' approach.) So we will need something
+    % like
+    %the Selberg sieve (already in Mathlib? Or close?) to conclude that the number of primes in this
+    %interval is $\ll \epsilon X / \log X + 1$.
+    %(The number of prime powers is $\ll X^{1/2}$.)
+    %And multiplying that by $\Lambda (n) \ll \log X$ gives the desired bound.] -/)]
 theorem SmoothedChebyshevClose {SmoothingF : ℝ → ℝ}
     (diffSmoothingF : ContDiff ℝ 1 SmoothingF)
     (suppSmoothingF : Function.support SmoothingF ⊆ Icc (1 / 2) 2)
@@ -859,6 +933,18 @@ X^{\sigma_0 + t i}
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I1"
+  (title := "I₁")
+  (statement := /-- $$
+    I_1(\nu, \epsilon, X, T) := \frac{1}{2\pi i} \int_{-\infty}^{-T}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma_0 + t i)
+    \right)
+     \mathcal M(\widetilde 1_\epsilon)(\sigma_0 + t i)
+    X^{\sigma_0 + t i}
+    \ i \ dt
+    $$ -/)]
 noncomputable def I₁ (SmoothingF : ℝ → ℝ) (ε X T : ℝ) : ℂ :=
   (1 / (2 * π * I)) * (I * (∫ t : ℝ in Iic (-T),
       SmoothedChebyshevIntegrand SmoothingF ε X ((1 + (Real.log X)⁻¹) + t * I)))
@@ -875,6 +961,17 @@ X^{\sigma - i T} \ d\sigma
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I2"
+  (title := "I₂")
+  (statement := /-- $$
+    I_2(\nu, \epsilon, X, T, \sigma_1) := \frac{1}{2\pi i} \int_{\sigma_1}^{\sigma_0}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma - i T)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma - i T)
+    X^{\sigma - i T} \ d\sigma
+    $$ -/)]
 noncomputable def I₂ (SmoothingF : ℝ → ℝ) (ε T X σ₁ : ℝ) : ℂ :=
   (1 / (2 * π * I)) * ((∫ σ in σ₁..(1 + (Real.log X)⁻¹),
     SmoothedChebyshevIntegrand SmoothingF ε X (σ - T * I)))
@@ -891,6 +988,17 @@ X^{\sigma_1 + t i} \ i \ dt
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I37"
+  (title := "I₃₇")
+  (statement := /-- $$
+    I_{37}(\nu, \epsilon, X, T, \sigma_1) := \frac{1}{2\pi i} \int_{-T}^{T}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma_1 + t i)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma_1 + t i)
+    X^{\sigma_1 + t i} \ i \ dt
+    $$ -/)]
 noncomputable def I₃₇ (SmoothingF : ℝ → ℝ) (ε T X σ₁ : ℝ) : ℂ :=
   (1 / (2 * π * I)) * (I * (∫ t in (-T)..T,
     SmoothedChebyshevIntegrand SmoothingF ε X (σ₁ + t * I)))
@@ -907,6 +1015,17 @@ X^{\sigma + T i} \ d\sigma
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I8"
+  (title := "I₈")
+  (statement := /-- $$
+    I_8(\nu, \epsilon, X, T, \sigma_1) := \frac{1}{2\pi i} \int_{\sigma_1}^{\sigma_0}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma + T i)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma + T i)
+    X^{\sigma + T i} \ d\sigma
+    $$ -/)]
 noncomputable def I₈ (SmoothingF : ℝ → ℝ) (ε T X σ₁ : ℝ) : ℂ :=
   (1 / (2 * π * I)) * ((∫ σ in σ₁..(1 + (Real.log X)⁻¹),
     SmoothedChebyshevIntegrand SmoothingF ε X (σ + T * I)))
@@ -923,6 +1042,17 @@ X^{\sigma_0 + t i} \ i \ dt
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I9"
+  (title := "I₉")
+  (statement := /-- $$
+    I_9(\nu, \epsilon, X, T) := \frac{1}{2\pi i} \int_{T}^{\infty}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma_0 + t i)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma_0 + t i)
+    X^{\sigma_0 + t i} \ i \ dt
+    $$ -/)]
 noncomputable def I₉ (SmoothingF : ℝ → ℝ) (ε X T : ℝ) : ℂ :=
   (1 / (2 * π * I)) * (I * (∫ t : ℝ in Ici T,
       SmoothedChebyshevIntegrand SmoothingF ε X ((1 + (Real.log X)⁻¹) + t * I)))
@@ -939,6 +1069,17 @@ X^{\sigma_1 + t i} \ i \ dt
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I3"
+  (title := "I₃")
+  (statement := /-- $$
+    I_3(\nu, \epsilon, X, T, \sigma_1) := \frac{1}{2\pi i} \int_{-T}^{-3}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma_1 + t i)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma_1 + t i)
+    X^{\sigma_1 + t i} \ i \ dt
+    $$ -/)]
 noncomputable def I₃ (SmoothingF : ℝ → ℝ) (ε T X σ₁ : ℝ) : ℂ :=
   (1 / (2 * π * I)) * (I * (∫ t in (-T)..(-3),
     SmoothedChebyshevIntegrand SmoothingF ε X (σ₁ + t * I)))
@@ -955,6 +1096,17 @@ X^{\sigma_1 + t i} \ i \ dt
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I7"
+  (title := "I₇")
+  (statement := /-- $$
+    I_7(\nu, \epsilon, X, T, \sigma_1) := \frac{1}{2\pi i} \int_{3}^{T}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma_1 + t i)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma_1 + t i)
+    X^{\sigma_1 + t i} \ i \ dt
+    $$ -/)]
 noncomputable def I₇ (SmoothingF : ℝ → ℝ) (ε T X σ₁ : ℝ) : ℂ :=
   (1 / (2 * π * I)) * (I * (∫ t in (3 : ℝ)..T,
     SmoothedChebyshevIntegrand SmoothingF ε X (σ₁ + t * I)))
@@ -972,6 +1124,17 @@ X^{\sigma - 3 i} \ d\sigma
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I4"
+  (title := "I₄")
+  (statement := /-- $$
+    I_4(\nu, \epsilon, X, \sigma_1, \sigma_2) := \frac{1}{2\pi i} \int_{\sigma_2}^{\sigma_1}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma - 3 i)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma - 3 i)
+    X^{\sigma - 3 i} \ d\sigma
+    $$ -/)]
 noncomputable def I₄ (SmoothingF : ℝ → ℝ) (ε X σ₁ σ₂ : ℝ) : ℂ :=
   (1 / (2 * π * I)) * ((∫ σ in σ₂..σ₁,
     SmoothedChebyshevIntegrand SmoothingF ε X (σ - 3 * I)))
@@ -988,6 +1151,17 @@ X^{\sigma + 3 i} \ d\sigma
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I6"
+  (title := "I₆")
+  (statement := /-- $$
+    I_6(\nu, \epsilon, X, \sigma_1, \sigma_2) := \frac{1}{2\pi i} \int_{\sigma_2}^{\sigma_1}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma + 3 i)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma + 3 i)
+    X^{\sigma + 3 i} \ d\sigma
+    $$ -/)]
 noncomputable def I₆ (SmoothingF : ℝ → ℝ) (ε X σ₁ σ₂ : ℝ) : ℂ :=
   (1 / (2 * π * I)) * ((∫ σ in σ₂..σ₁,
     SmoothedChebyshevIntegrand SmoothingF ε X (σ + 3 * I)))
@@ -1004,6 +1178,17 @@ X^{\sigma_2 + t i} \ i \ dt
 $$
 \end{definition}
 %%-/
+@[blueprint
+  "I5"
+  (title := "I₅")
+  (statement := /-- $$
+    I_5(\nu, \epsilon, X, \sigma_2) := \frac{1}{2\pi i} \int_{-3}^{3}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma_2 + t i)
+    \right)
+      \mathcal M(\widetilde 1_\epsilon)(\sigma_2 + t i)
+    X^{\sigma_2 + t i} \ i \ dt
+    $$ -/)]
 noncomputable def I₅ (SmoothingF : ℝ → ℝ) (ε X σ₂ : ℝ) : ℂ :=
   (1 / (2 * π * I)) * (I * (∫ t in (-3)..3,
     SmoothedChebyshevIntegrand SmoothingF ε X (σ₂ + t * I)))
@@ -1029,6 +1214,17 @@ theorem dlog_riemannZeta_bdd_on_vertical_lines_explicit {σ₀ : ℝ} (σ₀_gt 
   fun _ ↦ dlog_riemannZeta_bdd_on_vertical_lines_generalized _ _ _ σ₀_gt <| le_refl _
 
 -- TODO : Move elsewhere (should be in Mathlib!) NOT NEEDED
+@[blueprint
+  "dlog_riemannZeta_bdd_on_vertical_lines"
+  (title := "dlog_riemannZeta_bdd_on_vertical_lines")
+  (statement := /-- For $\sigma_0 > 1$, there exists a constant $C > 0$ such that
+    $$
+    \forall t \in \R, \quad
+    \left\| \frac{\zeta'(\sigma_0 + t i)}{\zeta(\sigma_0 + t i)} \right\| \leq C.
+    $$ -/)
+  (proof := /-- Write as Dirichlet series and estimate trivially using Theorem
+    \ref{LogDerivativeDirichlet}. -/)
+  (latexEnv := "lemma")]
 theorem dlog_riemannZeta_bdd_on_vertical_lines {σ₀ : ℝ} (σ₀_gt : 1 < σ₀) :
     ∃ c > 0, ∀(t : ℝ), ‖ζ' (σ₀ + t * I) / ζ (σ₀ + t * I)‖ ≤ c := by
   refine ⟨1 + ‖(ζ' σ₀ / ζ σ₀)‖, (by positivity), fun t ↦ ?_⟩
@@ -1057,6 +1253,20 @@ The integrand $$\zeta'(s)/\zeta(s)\mathcal{M}(\widetilde{1_{\epsilon}})(s)X^{s}$
 is integrable on the contour $\sigma_0 + t i$ for $t \in \R$ and $\sigma_0 > 1$.
 \end{lemma}
 %%-/
+@[blueprint
+  "SmoothedChebyshevPull1_aux_integrable"
+  (title := "SmoothedChebyshevPull1_aux_integrable")
+  (statement := /-- The integrand
+    $$\zeta'(s)/\zeta(s)\mathcal{M}(\widetilde{1_{\epsilon}})(s)X^{s}$$
+    is integrable on the contour $\sigma_0 + t i$ for $t \in \R$ and $\sigma_0 > 1$. -/)
+  (proof := /-- The $\zeta'(s)/\zeta(s)$ term is bounded, as is $X^s$, and the smoothing function
+    $\mathcal{M}(\widetilde{1_{\epsilon}})(s)$
+    decays like $1/|s|^2$ by Theorem \ref{MellinOfSmooth1b}.
+    Actually, we already know that
+    $\mathcal{M}(\widetilde{1_{\epsilon}})(s)$
+    is integrable from Theorem \ref{SmoothedChebyshevDirichlet_aux_integrable},
+    so we should just need to bound the rest. -/)
+  (latexEnv := "lemma")]
 theorem SmoothedChebyshevPull1_aux_integrable {SmoothingF : ℝ → ℝ} {ε : ℝ} (ε_pos : 0 < ε)
     (ε_lt_one : ε < 1)
     {X : ℝ} (X_gt : 3 < X)
@@ -1135,6 +1345,14 @@ so we should just need to bound the rest.
 Let $g : \C \to \C$ be a holomorphic function on a rectangle, then $g$ is bounded above on the rectangle.
 \end{lemma}
 %%-/
+@[blueprint
+  "BddAboveOnRect"
+  (title := "BddAboveOnRect")
+  (statement := /-- Let $g : \C \to \C$ be a holomorphic function on a rectangle, then $g$ is
+    bounded above on the rectangle. -/)
+  (proof := /-- Use the compactness of the rectangle and the fact that holomorphic functions are
+    continuous. -/)
+  (latexEnv := "lemma")]
 lemma BddAboveOnRect {g : ℂ → ℂ} {z w : ℂ} (holoOn : HolomorphicOn g (z.Rectangle w)) :
     BddAbove (norm ∘ g '' (z.Rectangle w)) := by
   have compact_rect : IsCompact (z.Rectangle w) := by
@@ -1161,6 +1379,17 @@ $$
 \end{theorem}
 %%-/
 
+@[blueprint
+  "SmoothedChebyshevPull1"
+  (title := "SmoothedChebyshevPull1")
+  (statement := /-- We have that
+    $$\psi_{\epsilon}(X) =
+    \mathcal{M}(\widetilde{1_{\epsilon}})(1)
+    X^{1} +
+    I_1 - I_2 +I_{37} + I_8 + I_9
+    .
+    $$ -/)
+  (proof := /-- Pull rectangle contours and evaluate the pole at $s=1$. -/)]
 theorem SmoothedChebyshevPull1 {SmoothingF : ℝ → ℝ} {ε : ℝ} (ε_pos : 0 < ε)
     (ε_lt_one : ε < 1)
     (X : ℝ) (X_gt : 3 < X)
@@ -1405,6 +1634,17 @@ $$
 \end{lemma}
 %%-/
 
+@[blueprint
+  "SmoothedChebyshevPull2"
+  (title := "SmoothedChebyshevPull2")
+  (statement := /-- We have that
+    $$
+    I_{37} =
+    I_3 - I_4 + I_5 + I_6 + I_7
+    .
+    $$ -/)
+  (proof := /-- Mimic the proof of Lemma \ref{SmoothedChebyshevPull1}. -/)
+  (latexEnv := "lemma")]
 theorem SmoothedChebyshevPull2 {SmoothingF : ℝ → ℝ} {ε : ℝ} (ε_pos : 0 < ε) (ε_lt_one : ε < 1)
     (X : ℝ) (_ : 3 < X)
     {T : ℝ} (T_pos : 3 < T) {σ₁ σ₂ : ℝ}
@@ -1604,6 +1844,18 @@ $$
 where the implicit constant is independent of $X$.
 \end{theorem}
 %%-/
+@[blueprint
+  "ZetaBoxEval"
+  (title := "ZetaBoxEval")
+  (statement := /-- For all $\epsilon > 0$ sufficiently close to $0$, the rectangle integral over
+    $[1-\delta,2] \times_{ℂ} [-T,T]$ of the integrand in
+    $\psi_{\epsilon}$ is
+    $$
+    \frac{X^{1}}{1}\mathcal{M}(\widetilde{1_{\epsilon}})(1)
+    = X(1+O(\epsilon))
+    ,$$
+    where the implicit constant is independent of $X$. -/)
+  (proof := /-- Unfold the definitions and apply Lemma \ref{MellinOfSmooth1c}. -/)]
 theorem ZetaBoxEval {SmoothingF : ℝ → ℝ}
     (suppSmoothingF : Function.support SmoothingF ⊆ Icc (1 / 2) 2)
     (mass_one : ∫ x in Ioi 0, SmoothingF x / x = 1)
@@ -1762,6 +2014,17 @@ $$
 $$
 \end{lemma}
 %%-/
+@[blueprint
+  "IBound_aux1"
+  (title := "IBound_aux1")
+  (statement := /-- Given a natural number $k$ and a real number $X_0 > 0$, there exists $C \geq 1$
+    so that for all $X \geq X_0$,
+    $$
+    \log^k X \le C \cdot X.
+    $$ -/)
+  (proof := /-- We use the fact that $\log^k X / X$ goes to $0$ as $X \to \infty$.
+    Then we use the extreme value theorem to find a constant $C$ that works for all $X \geq X_0$. -/)
+  (latexEnv := "lemma")]
 lemma IBound_aux1 (X₀ : ℝ) (X₀pos : X₀ > 0) (k : ℕ) : ∃ C ≥ 1, ∀ X ≥ X₀, Real.log X ^ k ≤ C * X := by
   -- When X is large, the ratio goes to 0.
   have ⟨M, hM⟩ := Filter.eventually_atTop.mp (isLittleO_log_rpow_rpow_atTop k zero_lt_one).eventuallyLE
@@ -1812,6 +2075,59 @@ Same with $I_9$.
 \end{lemma}
 %%-/
 
+@[blueprint
+  "I1Bound"
+  (title := "I1Bound")
+  (statement := /-- We have that
+    $$
+    \left|I_{1}(\nu, \epsilon, X, T)\
+    \right| \ll \frac{X}{\epsilon T}
+    .
+    $$
+    Same with $I_9$. -/)
+  (proof := /-- Unfold the definitions and apply the triangle inequality.
+    $$
+    \left|I_{1}(\nu, \epsilon, X, T)\right| =
+    \left|
+    \frac{1}{2\pi i} \int_{-\infty}^{-T}
+    \left(
+    \frac{-\zeta'}\zeta(\sigma_0 + t i)
+    \right)
+     \mathcal M(\widetilde 1_\epsilon)(\sigma_0 + t i)
+    X^{\sigma_0 + t i}
+    \ i \ dt
+    \right|
+    $$
+    By Theorem \ref{dlog_riemannZeta_bdd_on_vertical_lines} (once fixed!!),
+    $\zeta'/\zeta (\sigma_0 + t i)$ is bounded by $\zeta'/\zeta(\sigma_0)$, and
+    Theorem \ref{riemannZetaLogDerivResidue} gives $\ll 1/(\sigma_0-1)$ for the latter. This gives:
+    $$
+    \leq
+    \frac{1}{2\pi}
+    \left|
+     \int_{-\infty}^{-T}
+    C \log X\cdot
+     \frac{C'}{\epsilon|\sigma_0 + t i|^2}
+    X^{\sigma_0}
+    \ dt
+    \right|
+    ,
+    $$
+    where we used Theorem \ref{MellinOfSmooth1b}.
+    Continuing the calculation, we have
+    $$
+    \leq
+    \log X \cdot
+    C'' \frac{X^{\sigma_0}}{\epsilon}
+    \int_{-\infty}^{-T}
+    \frac{1}{t^2}
+    \ dt
+    \ \leq \
+    C''' \frac{X\log X}{\epsilon T}
+    ,
+    $$
+    where we used that $\sigma_0=1+1/\log X$, and $X^{\sigma_0} = X\cdot X^{1/\log X}=e \cdot X$. -/)
+  (latexEnv := "lemma")]
 theorem I1Bound
     {SmoothingF : ℝ → ℝ}
     (suppSmoothingF : Function.support SmoothingF ⊆ Icc (1 / 2) 2) (ContDiffSmoothingF : ContDiff ℝ 1 SmoothingF)
@@ -2210,6 +2526,39 @@ $$
 $$
 \end{lemma}
 %%-/
+@[blueprint
+  "I2Bound"
+  (title := "I2Bound")
+  (statement := /-- Assuming a bound of the form of Lemma \ref{LogDerivZetaBndUnif} we have that
+    $$
+    \left|I_{2}(\nu, \epsilon, X, T)\right| \ll \frac{X}{\epsilon T}
+    .
+    $$ -/)
+  (proof := /-- Unfold the definitions and apply the triangle inequality.
+    $$
+    \left|I_{2}(\nu, \epsilon, X, T, \sigma_1)\right| =
+    \left|\frac{1}{2\pi i} \int_{\sigma_1}^{\sigma_0}
+    \left(\frac{-\zeta'}\zeta(\sigma - T i) \right) \cdot
+    \mathcal M(\widetilde 1_\epsilon)(\sigma - T i) \cdot
+    X^{\sigma - T i}
+     \ d\sigma
+    \right|
+    $$
+    $$\leq
+    \frac{1}{2\pi}
+    \int_{\sigma_1}^{\sigma_0}
+    C \cdot \log T ^ 9
+    \frac{C'}{\epsilon|\sigma - T i|^2}
+    X^{\sigma_0}
+     \ d\sigma
+     \leq
+    C'' \cdot \frac{X\log T^9}{\epsilon T^2}
+    ,
+    $$
+    where we used Theorems \ref{MellinOfSmooth1b}, the hypothesised bound on zeta and the fact that
+    $X^\sigma \le X^{\sigma_0} = X\cdot X^{1/\log X}=e \cdot X$.
+    Since $T>3$, we have $\log T^9 \leq C''' T$. -/)
+  (latexEnv := "lemma")]
 lemma I2Bound {SmoothingF : ℝ → ℝ}
     (suppSmoothingF : Function.support SmoothingF ⊆ Icc (1 / 2) 2)
     (ContDiffSmoothingF : ContDiff ℝ 1 SmoothingF)
@@ -2390,6 +2739,16 @@ I_8(\nu, \epsilon, X, T) = -\overline{I_2(\nu, \epsilon, X, T)}
 $$
 \end{lemma}
 %%-/
+@[blueprint
+  "I8I2"
+  (title := "I8I2")
+  (statement := /-- Symmetry between $I_2$ and $I_8$:
+    $$
+    I_8(\nu, \epsilon, X, T) = -\overline{I_2(\nu, \epsilon, X, T)}
+    .
+    $$ -/)
+  (proof := /-- This is a direct consequence of the definitions of $I_2$ and $I_8$. -/)
+  (latexEnv := "lemma")]
 lemma I8I2 {SmoothingF : ℝ → ℝ}
     {X ε T σ₁ : ℝ} (T_gt : 3 < T) :
     I₈ SmoothingF ε X T σ₁ = -conj (I₂ SmoothingF ε X T σ₁) := by
@@ -2420,6 +2779,17 @@ $$
 $$
 \end{lemma}
 %%-/
+@[blueprint
+  "I8Bound"
+  (title := "I8Bound")
+  (statement := /-- We have that
+    $$
+    \left|I_{8}(\nu, \epsilon, X, T)\right| \ll \frac{X}{\epsilon T}
+    .
+    $$ -/)
+  (proof := /-- We deduce this from the corresponding bound for $I_2$, using the symmetry between
+    $I_2$ and $I_8$. -/)
+  (latexEnv := "lemma")]
 lemma I8Bound {SmoothingF : ℝ → ℝ}
     (suppSmoothingF : Function.support SmoothingF ⊆ Icc (1 / 2) 2)
     (ContDiffSmoothingF : ContDiff ℝ 1 SmoothingF)
@@ -2454,6 +2824,15 @@ $$
 \end{lemma}
 %%-/
 
+@[blueprint
+  "IntegralofLogx^n/x^2Bounded"
+  (title := "IntegralofLogx^n/x^2Bounded")
+  (statement := /-- For every $n$ there is some absolute constant $C>0$ such that
+    $$
+    \int_3^T \frac{(\log x)^9}{x^2}dx < C
+    $$ -/)
+  (proof := /-- Induct on n and just integrate by parts. -/)
+  (latexEnv := "lemma")]
 lemma log_pow_over_xsq_integral_bounded :
   ∀ n : ℕ, ∃ C : ℝ, 0 < C ∧ ∀ T >3, ∫ x in Ioo 3 T, (Real.log x)^n / x^2 < C := by
   have log3gt1: 1 < Real.log 3 := logt_gt_one le_rfl
@@ -2723,6 +3102,38 @@ Same with $I_7$.
 
 set_option maxHeartbeats 400000 in
 -- Slow
+@[blueprint
+  "I3Bound"
+  (title := "I3Bound")
+  (statement := /-- Assuming a bound of the form of Lemma \ref{LogDerivZetaBndUnif} we have that
+    $$
+    \left|I_{3}(\nu, \epsilon, X, T)\right| \ll \frac{X}{\epsilon}\, X^{-\frac{A}{(\log T)^9}}
+    .
+    $$
+    Same with $I_7$. -/)
+  (proof := /-- Unfold the definitions and apply the triangle inequality.
+    $$
+    \left|I_{3}(\nu, \epsilon, X, T, \sigma_1)\right| =
+    \left|\frac{1}{2\pi i} \int_{-T}^3
+    \left(\frac{-\zeta'}\zeta(\sigma_1 + t i) \right)
+    \mathcal M(\widetilde 1_\epsilon)(\sigma_1 + t i)
+    X^{\sigma_1 + t i}
+    \ i \ dt
+    \right|
+    $$
+    $$\leq
+    \frac{1}{2\pi}
+    \int_{-T}^3
+    C \cdot \log t ^ 9
+    \frac{C'}{\epsilon|\sigma_1 + t i|^2}
+    X^{\sigma_1}
+     \ dt
+    ,
+    $$
+    where we used Theorems \ref{MellinOfSmooth1b} and the hypothesised bound on zeta.
+    Now we estimate $X^{\sigma_1} = X \cdot X^{-A/ \log T^9}$, and the integral is absolutely
+    bounded. -/)
+  (latexEnv := "lemma")]
 theorem I3Bound {SmoothingF : ℝ → ℝ}
     (suppSmoothingF : Function.support SmoothingF ⊆ Icc (1 / 2) 2)
     (ContDiffSmoothingF : ContDiff ℝ 1 SmoothingF)
@@ -3057,6 +3468,25 @@ Same with $I_6$.
 \end{lemma}
 %%-/
 
+@[blueprint
+  "I4Bound"
+  (title := "I4Bound")
+  (statement := /-- We have that
+    $$
+    \left|I_{4}(\nu, \epsilon, X, \sigma_1, \sigma_2)\right| \ll \frac{X}{\epsilon}\,
+     X^{-\frac{A}{(\log T)^9}}
+    .
+    $$
+    Same with $I_6$. -/)
+  (proof := /-- The analysis of $I_4$ is similar to that of $I_2$, (in Lemma \ref{I2Bound}) but even
+    easier.
+    Let $C$ be the sup of $-\zeta'/\zeta$ on the curve $\sigma_2 + 3 i$ to $1+ 3i$ (this curve is
+    compact, and away from the pole at $s=1$).
+    Apply Theorem \ref{MellinOfSmooth1b} to get the bound $1/(\epsilon |s|^2)$, which is bounded by
+    $C'/\epsilon$.
+    And $X^s$ is bounded by $X^{\sigma_1} = X \cdot X^{-A/ \log T^9}$.
+    Putting these together gives the result. -/)
+  (latexEnv := "lemma")]
 lemma I4Bound {SmoothingF : ℝ → ℝ}
     (suppSmoothingF : Function.support SmoothingF ⊆ Icc (1 / 2) 2)
     (ContDiffSmoothingF : ContDiff ℝ 1 SmoothingF)
@@ -3480,6 +3910,19 @@ $$
 \end{lemma}
 %%-/
 
+@[blueprint
+  "I5Bound"
+  (title := "I5Bound")
+  (statement := /-- We have that
+    $$
+    \left|I_{5}(\nu, \epsilon, X, \sigma_2)\right| \ll \frac{X^{\sigma_2}}{\epsilon}.
+    $$ -/)
+  (proof := /-- Here $\zeta'/\zeta$ is absolutely bounded on the compact interval $\sigma_2 + i
+    [-3,3]$, and
+    $X^s$ is bounded by $X^{\sigma_2}$. Using Theorem \ref{MellinOfSmooth1b} gives the bound
+    $1/(\epsilon |s|^2)$, which is bounded by $C'/\epsilon$.
+    Putting these together gives the result. -/)
+  (latexEnv := "lemma")]
 lemma I5Bound {SmoothingF : ℝ → ℝ}
     (suppSmoothingF : Function.support SmoothingF ⊆ Icc (1 / 2) 2)
     (ContDiffSmoothingF : ContDiff ℝ 1 SmoothingF)
@@ -3756,6 +4199,12 @@ $$ \sum_{n \leq x} \Lambda(n) = x + O(x \exp(-c(\log x)^{1/10})).$$
 set_option maxHeartbeats 400000 in
 -- Slow
 /-- *** Prime Number Theorem (Medium Strength) *** The `ChebyshevPsi` function is asymptotic to `x`. -/
+@[blueprint
+  "MediumPNT"
+  (title := "MediumPNT")
+  (statement := /-- We have
+    $$ \sum_{n \leq x} \Lambda(n) = x + O(x \exp(-c(\log x)^{1/10})).$$ -/)
+  (proof := /-- Evaluate the integrals. -/)]
 theorem MediumPNT : ∃ c > 0,
     (ψ - id) =O[atTop]
       fun (x : ℝ) ↦ x * Real.exp (-c * (Real.log x) ^ ((1 : ℝ) / 10)) := by

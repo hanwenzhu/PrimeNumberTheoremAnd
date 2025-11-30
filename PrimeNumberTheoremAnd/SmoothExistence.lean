@@ -1,3 +1,4 @@
+import Architect
 import Batteries.Tactic.Lemma
 import Mathlib.Geometry.Manifold.PartitionOfUnity
 import Mathlib.Tactic.Bound
@@ -60,6 +61,17 @@ $$
 
 attribute [-simp] one_div in
 
+attribute [-simp] one_div in
+@[blueprint
+  "SmoothExistence"
+  (title := "SmoothExistence")
+  (statement := /-- There exists a smooth (once differentiable would be enough), nonnegative
+    ``bumpfunction'' $\nu$,
+     supported in $[1/2,2]$ with total mass one:
+    $$
+    \int_0^\infty \nu(x)\frac{dx}{x} = 1.
+    $$ -/)
+  (proof := /-- Same idea as Urysohn-type argument. -/)]
 lemma SmoothExistence : ∃ (ν : ℝ → ℝ), (ContDiff ℝ ∞ ν) ∧ (∀ x, 0 ≤ ν x) ∧
     ν.support ⊆ Icc (1 / 2) 2 ∧ ∫ x in Ici 0, ν x / x = 1 := by
   suffices h : ∃ (ν : ℝ → ℝ), (ContDiff ℝ ∞ ν) ∧ (∀ x, 0 ≤ ν x) ∧

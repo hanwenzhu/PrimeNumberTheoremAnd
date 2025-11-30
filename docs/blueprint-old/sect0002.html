@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>First approach: Wiener-Ikehara Tauberian theorem.</title>
+<link rel="next" href="sect0003.html" title="Second approach" />
+<link rel="prev" href="sect0001.html" title="The project" />
+<link rel="up" href="index.html" title="Prime Number Theorem And ..." />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">Prime Number Theorem And ...</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">The project</span></a>
+ </li>
+<li class=" active current">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">First approach: Wiener-Ikehara Tauberian theorem.</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sect0002.html#a0000000012"><span class="toc_ref">2.1</span> <span class="toc_entry">A Fourier-analytic proof of the Wiener-Ikehara theorem</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000013"><span class="toc_ref">2.2</span> <span class="toc_entry">Weak PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000014"><span class="toc_ref">2.3</span> <span class="toc_entry">Removing the Chebyshev hypothesis</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000015"><span class="toc_ref">2.4</span> <span class="toc_entry">The prime number theorem in arithmetic progressions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000016"><span class="toc_ref">2.5</span> <span class="toc_entry">The Chebotarev density theorem: the case of cyclotomic extensions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000017"><span class="toc_ref">2.6</span> <span class="toc_entry">The Chebotarev density theorem: the case of abelian extensions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000018"><span class="toc_ref">2.7</span> <span class="toc_entry">The Chebotarev density theorem: the general case</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0003.html"><span class="toc_ref">3</span> <span class="toc_entry">Second approach</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0003.html#a0000000019"><span class="toc_ref">3.1</span> <span class="toc_entry">Residue calculus on rectangles</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000020"><span class="toc_ref">3.2</span> <span class="toc_entry">Perron Formula</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000021"><span class="toc_ref">3.3</span> <span class="toc_entry">Mellin transforms</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000022"><span class="toc_ref">3.4</span> <span class="toc_entry">Zeta Bounds</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000023"><span class="toc_ref">3.5</span> <span class="toc_entry">Proof of Medium PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000024"><span class="toc_ref">3.6</span> <span class="toc_entry">MediumPNT</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">4</span> <span class="toc_entry">Third Approach</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0004.html#a0000000025"><span class="toc_ref">4.1</span> <span class="toc_entry">Strong PNT</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0005.html"><span class="toc_ref">5</span> <span class="toc_entry">Elementary Corollaries</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0005.html#a0000000026"><span class="toc_ref">5.1</span> <span class="toc_entry">Consequences of the PNT in arithmetic progressions</span></a>
+ </li>
+<li class="">
+  <a href="sect0005.html#a0000000027"><span class="toc_ref">5.2</span> <span class="toc_entry">Consequences of the Chebotarev density theorem</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">6</span> <span class="toc_entry">Explicit estimates</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html"><span class="toc_ref">7</span> <span class="toc_entry">Primary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0007.html#a0000000028"><span class="toc_ref">7.1</span> <span class="toc_entry">Definitions</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html#a0000000029"><span class="toc_ref">7.2</span> <span class="toc_entry">The estimates of Fiori, Kadiri, and Swidinsky</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html#a0000000030"><span class="toc_ref">7.3</span> <span class="toc_entry">Summary of results</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0008.html"><span class="toc_ref">8</span> <span class="toc_entry">Secondary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0008.html#a0000000031"><span class="toc_ref">8.1</span> <span class="toc_entry">Definitions</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html#a0000000032"><span class="toc_ref">8.2</span> <span class="toc_entry">The arguments of Rosser and Schoenfeld</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html#a0000000033"><span class="toc_ref">8.3</span> <span class="toc_entry">Summary of results</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0009.html"><span class="toc_ref">9</span> <span class="toc_entry">Tertiary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0009.html#a0000000034"><span class="toc_ref">9.1</span> <span class="toc_entry">The least common multiple sequence is not highly abundant for large \(n\)</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li ><a href="dep_graph_document.html">Dependency graph</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h1 id="a0000000003">2 First approach: Wiener-Ikehara Tauberian theorem.</h1>
+<h1 id="a0000000012">2.1 A Fourier-analytic proof of the Wiener-Ikehara theorem</h1>
+<p>The Fourier transform of an absolutely integrable function \(\psi : \mathbb {R}\to \mathbb {C}\) is defined by the formula </p>
+<div class="displaymath" id="a0000000035">
+  \[  \hat\psi (u) := \int _\mathbb {R}e(-tu) \psi (t)\  dt \]
+</div>
+<p> where \(e(\theta ) := e^{2\pi i \theta }\). </p>
+<p>Let \(f: \mathbb {N}\to \mathbb {C}\) be an arithmetic function such that \(\sum _{n=1}^\infty \frac{|f(n)|}{n^\sigma } {\lt} \infty \) for all \(\sigma {\gt}1\). Then the Dirichlet series </p>
+<div class="displaymath" id="a0000000036">
+  \[  F(s) := \sum _{n=1}^\infty \frac{f(n)}{n^s} \]
+</div>
+<p> is absolutely convergent for \(\sigma {\gt}1\). </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="first_fourier">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">1</span>
+    <span class="lemma_thmtitle">first_fourier</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#first_fourier">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000037"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/first_fourier" class="lean_decl">first_fourier</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>If \(\psi : \mathbb {R}\to \mathbb {C}\) is integrable and \(x {\gt} 0\), then for any \(\sigma {\gt}1\) </p>
+<div class="displaymath" id="a0000000038">
+  \[  \sum _{n=1}^\infty \frac{f(n)}{n^\sigma } \hat\psi ( \frac{1}{2\pi } \log \frac{n}{x} ) = \int _\mathbb {R}F(\sigma + it) \psi (t) x^{it}\  dt. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000037">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>By the definition of the Fourier transform, the left-hand side expands as </p>
+<div class="displaymath" id="a0000000039">
+  \[  \sum _{n=1}^\infty \int _\mathbb {R}\frac{f(n)}{n^\sigma } \psi (t) e( - \frac{1}{2\pi } t \log \frac{n}{x})\  dt \]
+</div>
+<p> while the right-hand side expands as </p>
+<div class="displaymath" id="a0000000040">
+  \[  \int _\mathbb {R}\sum _{n=1}^\infty \frac{f(n)}{n^{\sigma +it}} \psi (t) x^{it}\  dt. \]
+</div>
+<p> Since </p>
+<div class="displaymath" id="a0000000041">
+  \[ \frac{f(n)}{n^\sigma } \psi (t) e( - \frac{1}{2\pi } t \log \frac{n}{x}) = \frac{f(n)}{n^{\sigma +it}} \psi (t) x^{it} \]
+</div>
+<p> the claim then follows from Fubini’s theorem. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="second_fourier">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">2</span>
+    <span class="lemma_thmtitle">second_fourier</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#second_fourier">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000042"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/second_fourier" class="lean_decl">second_fourier</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>If \(\psi : \mathbb {R}\to \mathbb {C}\) is continuous and compactly supported and \(x {\gt} 0\), then for any \(\sigma {\gt}1\) </p>
+<div class="displaymath" id="a0000000043">
+  \[  \int _{-\log x}^\infty e^{-u(\sigma -1)} \hat\psi (\frac{u}{2\pi })\  du = x^{\sigma - 1} \int _\mathbb {R}\frac{1}{\sigma +it-1} \psi (t) x^{it}\  dt. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000042">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>The left-hand side expands as </p>
+<div class="displaymath" id="a0000000044">
+  \[  \int _{-\log x}^\infty \int _\mathbb {R}e^{-u(\sigma -1)} \psi (t) e(-\frac{tu}{2\pi })\  dt\  du \atop {?}= x^{\sigma - 1} \int _\mathbb {R}\frac{1}{\sigma +it-1} \psi (t) x^{it}\  dt \]
+</div>
+<p> so by Fubini’s theorem it suffices to verify the identity </p>
+<div class="displaymath" id="a0000000045">
+  \begin{align*}  \int _{-\log x}^\infty e^{-u(\sigma -1)} e(-\frac{tu}{2\pi })\  du & = \int _{-\log x}^\infty e^{(it - \sigma + 1)u}\  du \\ & = \frac{1}{it - \sigma + 1} e^{(it - \sigma + 1)u}\  \Big|_{-\log x}^\infty \\ & = x^{\sigma - 1} \frac{1}{\sigma +it-1} x^{it} \end{align*}
+</div>
+
+  </div>
+</div>
+<p>Now let \(A \in \mathbb {C}\), and suppose that there is a continuous function \(G(s)\) defined on \(\mathrm{Re} s \geq 1\) such that \(G(s) = F(s) - \frac{A}{s-1}\) whenever \(\mathrm{Re} s {\gt} 1\). We also make the Chebyshev-type hypothesis </p>
+<div class="equation" id="cheby">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{cheby} \sum _{n \leq x} |f(n)| \ll x \end{equation}
+  </div>
+  <span class="equation_label">1</span>
+</p>
+</div>
+<p> for all \(x \geq 1\) (this hypothesis is not strictly necessary, but simplifies the arguments and can be obtained fairly easily in applications). </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="prelim-decay">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">3</span>
+    <span class="lemma_thmtitle">Preliminary decay bound I</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#prelim-decay">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000046"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> If \(\psi :\mathbb {R}\to \mathbb {C}\) is absolutely integrable then </p>
+<div class="displaymath" id="a0000000047">
+  \[  |\hat\psi (u)| \leq \|  \psi \| _1  \]
+</div>
+<p> for all \(u \in \mathbb {R}\). where \(C\) is an absolute constant. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000046">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Immediate from the triangle inequality. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="prelim-decay-2">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">4</span>
+    <span class="lemma_thmtitle">Preliminary decay bound II</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#prelim-decay-2">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000048"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> If \(\psi :\mathbb {R}\to \mathbb {C}\) is absolutely integrable and of bounded variation, and \(\psi '\) is bounded variation, then </p>
+<div class="displaymath" id="a0000000049">
+  \[  |\hat\psi (u)| \leq \|  \psi \| _{TV} / 2\pi |u|  \]
+</div>
+<p> for all non-zero \(u \in \mathbb {R}\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000048">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>By integration by parts we will have </p>
+<div class="displaymath" id="a0000000050">
+  \[  2\pi i u \hat\psi (u) = \int _\mathbb {R}e(-tu) \psi '(t)\  dt \]
+</div>
+<p> and the claim then follows from the triangle inequality. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="prelim-decay-3">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">5</span>
+    <span class="lemma_thmtitle">Preliminary decay bound III</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#prelim-decay-3">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000051"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> If \(\psi :\mathbb {R}\to \mathbb {C}\) is absolutely integrable, absolutely continuous, and \(\psi '\) is of bounded variation, then </p>
+<div class="displaymath" id="a0000000052">
+  \[  |\hat\psi (u)| \leq \|  \psi ' \| _{TV} / (2\pi |u|)^2 \]
+</div>
+<p> for all non-zero \(u \in \mathbb {R}\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000051">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Should follow from previous lemma. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="decay-alt">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">6</span>
+    <span class="lemma_thmtitle">Decay bound, alternate form</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#decay-alt">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000053"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> If \(\psi :\mathbb {R}\to \mathbb {C}\) is absolutely integrable, absolutely continuous, and \(\psi '\) is of bounded variation, then </p>
+<div class="displaymath" id="a0000000054">
+  \[  |\hat\psi (u)| \leq ( \| \psi \| _1 + \|  \psi ' \| _{TV} / (2\pi )^2) / (1+|u|^2) \]
+</div>
+<p> for all \(u \in \mathbb {R}\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000053">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Should follow from previous lemmas. </p>
+
+  </div>
+</div>
+<p>It should be possible to refactor the lemma below to follow from Lemma <a href="sect0002.html#decay-alt">6</a> instead. </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="decay">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">7</span>
+    <span class="lemma_thmtitle">Decay bounds</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#decay">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000055"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/decay_bounds" class="lean_decl">decay_bounds</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>If \(\psi :\mathbb {R}\to \mathbb {C}\) is \(C^2\) and obeys the bounds </p>
+<div class="displaymath" id="a0000000056">
+  \[  |\psi (t)|, |\psi ''(t)| \leq A / (1 + |t|^2) \]
+</div>
+<p> for all \(t \in \mathbb {R}\), then </p>
+<div class="displaymath" id="a0000000057">
+  \[  |\hat\psi (u)| \leq C A / (1+|u|^2) \]
+</div>
+<p> for all \(u \in \mathbb {R}\), where \(C\) is an absolute constant. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000055">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>From two integration by parts we obtain the identity </p>
+<div class="displaymath" id="a0000000058">
+  \[  (1+u^2) \hat\psi (u) = \int _{\bf R} (\psi (t) - \frac{u}{4\pi ^2} \psi ''(t)) e(-tu)\  dt. \]
+</div>
+<p> Now apply the triangle inequality and the identity \(\int _{\bf R} \frac{dt}{1+t^2}\  dt = \pi \) to obtain the claim with \(C = \pi + 1 / 4 \pi \). </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="limiting">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">8</span>
+    <span class="lemma_thmtitle">Limiting Fourier identity</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#limiting">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000059"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/limiting_fourier" class="lean_decl">limiting_fourier</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>If \(\psi : \mathbb {R}\to \mathbb {C}\) is \(C^2\) and compactly supported and \(x \geq 1\), then </p>
+<div class="displaymath" id="a0000000060">
+  \[  \sum _{n=1}^\infty \frac{f(n)}{n} \hat\psi ( \frac{1}{2\pi } \log \frac{n}{x} ) - A \int _{-\log x}^\infty \hat\psi (\frac{u}{2\pi })\  du = \int _\mathbb {R}G(1+it) \psi (t) x^{it}\  dt. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000059">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> By Lemma <a href="sect0002.html#first_fourier">1</a> and Lemma <a href="sect0002.html#second_fourier">2</a>, we know that for any \(\sigma {\gt}1\), we have </p>
+<div class="displaymath" id="a0000000061">
+  \[  \sum _{n=1}^\infty \frac{f(n)}{n^\sigma } \hat\psi ( \frac{1}{2\pi } \log \frac{n}{x} ) - A x^{1-\sigma } \int _{-\log x}^\infty e^{-u(\sigma -1)} \hat\psi (\frac{u}{2\pi })\  du = \int _\mathbb {R}G(\sigma +it) \psi (t) x^{it}\  dt. \]
+</div>
+<p> Now take limits as \(\sigma \to 1\) using dominated convergence together with <a href="sect0002.html#cheby" class="eqref">1</a> and Lemma <a href="sect0002.html#decay">7</a> to obtain the result. </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="limiting-cor">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">1</span>
+    <span class="corollary_thmtitle">Corollary of limiting identity</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#limiting-cor">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000062"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/limiting_cor" class="lean_decl">limiting_cor</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p>With the hypotheses as above, we have </p>
+<div class="displaymath" id="a0000000063">
+  \[  \sum _{n=1}^\infty \frac{f(n)}{n} \hat\psi ( \frac{1}{2\pi } \log \frac{n}{x} ) = A \int _{-\infty }^\infty \hat\psi (\frac{u}{2\pi })\  du + o(1) \]
+</div>
+<p> as \(x \to \infty \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000062">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Immediate from the Riemann-Lebesgue lemma, and also noting that \(\int _{-\infty }^{-\log x} \hat\psi (\frac{u}{2\pi })\  du = o(1)\). </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="smooth-ury">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">9</span>
+    <span class="lemma_thmtitle">Smooth Urysohn lemma</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#smooth-ury">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000064"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/smooth_urysohn" class="lean_decl">smooth_urysohn</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>If \(I\) is a closed interval contained in an open interval \(J\), then there exists a smooth function \(\Psi : \mathbb {R}\to \mathbb {R}\) with \(1_I \leq \Psi \leq 1_J\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000064">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>A standard analysis lemma, which can be proven by convolving \(1_K\) with a smooth approximation to the identity for some interval \(K\) between \(I\) and \(J\). Note that we have “SmoothBumpFunction”s on smooth manifolds in Mathlib, so this shouldn’t be too hard... </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="schwarz-id">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">10</span>
+    <span class="lemma_thmtitle">Limiting identity for Schwartz functions</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#schwarz-id">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000065"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/limiting_cor_schwartz" class="lean_decl">limiting_cor_schwartz</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>The previous corollary also holds for functions \(\psi \) that are assumed to be in the Schwartz class, as opposed to being \(C^2\) and compactly supported. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000065">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>For any \(R{\gt}1\), one can use a smooth cutoff function (provided by Lemma <a href="sect0002.html#smooth-ury">9</a> to write \(\psi = \psi _{\leq R} + \psi _{{\gt}R}\), where \(\psi _{\leq R}\) is \(C^2\) (in fact smooth) and compactly supported (on \([-R,R]\)), and \(\psi _{{\gt}R}\) obeys bounds of the form </p>
+<div class="displaymath" id="a0000000066">
+  \[  |\psi _{{\gt}R}(t)|, |\psi ''_{{\gt}R}(t)| \ll R^{-1} / (1 + |t|^2)  \]
+</div>
+<p> where the implied constants depend on \(\psi \). By Lemma <a href="sect0002.html#decay">7</a> we then have </p>
+<div class="displaymath" id="a0000000067">
+  \[  \hat\psi _{{\gt}R}(u) \ll R^{-1} / (1+|u|^2). \]
+</div>
+<p> Using this and <a href="sect0002.html#cheby" class="eqref">1</a> one can show that </p>
+<div class="displaymath" id="a0000000068">
+  \[  \sum _{n=1}^\infty \frac{f(n)}{n} \hat\psi _{{\gt}R}( \frac{1}{2\pi } \log \frac{n}{x} ), A \int _{-\infty }^\infty \hat\psi _{{\gt}R} (\frac{u}{2\pi })\  du \ll R^{-1}  \]
+</div>
+<p> (with implied constants also depending on \(A\)), while from Lemma <a href="sect0002.html#limiting-cor">1</a> one has </p>
+<div class="displaymath" id="a0000000069">
+  \[  \sum _{n=1}^\infty \frac{f(n)}{n} \hat\psi _{\leq R}( \frac{1}{2\pi } \log \frac{n}{x} ) = A \int _{-\infty }^\infty \hat\psi _{\leq R} (\frac{u}{2\pi })\  du + o(1). \]
+</div>
+<p> Combining the two estimates and letting \(R\) be large, we obtain the claim. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="bij">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">11</span>
+    <span class="lemma_thmtitle">Bijectivity of Fourier transform</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#bij">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000070"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/fourier_surjection_on_schwartz" class="lean_decl">fourier_surjection_on_schwartz</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>The Fourier transform is a bijection on the Schwartz class. [Note: only surjectivity is actually used.] </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000070">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>This is a standard result in Fourier analysis. It can be proved here by appealing to Mellin inversion, Theorem ??. In particular, given \(f\) in the Schwartz class, let \(F : \mathbb {R}_+ \to \mathbb {C}: x \mapsto f(\log x)\) be a function in the “Mellin space”; then the Mellin transform of \(F\) on the imaginary axis \(s=it\) is the Fourier transform of \(f\). The Mellin inversion theorem gives Fourier inversion. </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="WienerIkeharaSmooth">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">2</span>
+    <span class="corollary_thmtitle">Smoothed Wiener-Ikehara</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#WienerIkeharaSmooth">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000071"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/wiener_ikehara_smooth" class="lean_decl">wiener_ikehara_smooth</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p>If \(\Psi : (0,\infty ) \to \mathbb {C}\) is smooth and compactly supported away from the origin, then, </p>
+<div class="displaymath" id="a0000000072">
+  \[  \sum _{n=1}^\infty f(n) \Psi ( \frac{n}{x} ) = A x \int _0^\infty \Psi (y)\  dy + o(x) \]
+</div>
+<p> as \(x \to \infty \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000071">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>By Lemma <a href="sect0002.html#bij">11</a>, we can write </p>
+<div class="displaymath" id="a0000000073">
+  \[  y \Psi (y) = \hat\psi ( \frac{1}{2\pi } \log y ) \]
+</div>
+<p> for all \(y{\gt}0\) and some Schwartz function \(\psi \). Making this substitution, the claim is then equivalent after standard manipulations to </p>
+<div class="displaymath" id="a0000000074">
+  \[  \sum _{n=1}^\infty \frac{f(n)}{n} \hat\psi ( \frac{1}{2\pi } \log \frac{n}{x} ) = A \int _{-\infty }^\infty \hat\psi (\frac{u}{2\pi })\  du + o(1) \]
+</div>
+<p> and the claim follows from Lemma <a href="sect0002.html#schwarz-id">10</a>. </p>
+
+  </div>
+</div>
+<p>Now we add the hypothesis that \(f(n) \geq 0\) for all \(n\). </p>
+<div class="proposition_thmwrapper theorem-style-definition" id="WienerIkeharaInterval">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">1</span>
+    <span class="proposition_thmtitle">Wiener-Ikehara in an interval</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#WienerIkeharaInterval">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000075"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/WienerIkeharaInterval" class="lean_decl">WienerIkeharaInterval</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p> For any closed interval \(I \subset (0,+\infty )\), we have </p>
+<div class="displaymath" id="a0000000076">
+  \[  \sum _{n=1}^\infty f(n) 1_I( \frac{n}{x} ) = A x |I| + o(x). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000075">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Use Lemma <a href="sect0002.html#smooth-ury">9</a> to bound \(1_I\) above and below by smooth compactly supported functions whose integral is close to the measure of \(|I|\), and use the non-negativity of \(f\). </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="WienerIkehara">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">3</span>
+    <span class="corollary_thmtitle">Wiener-Ikehara theorem</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#WienerIkehara">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000077"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/WienerIkeharaTheorem'" class="lean_decl">WienerIkeharaTheorem'</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p>We have </p>
+<div class="displaymath" id="a0000000078">
+  \[  \sum _{n\leq x} f(n) = A x + o(x). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000077">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Apply the preceding proposition with \(I = [\varepsilon ,1]\) and then send \(\varepsilon \) to zero (using <a href="sect0002.html#cheby" class="eqref">1</a> to control the error). </p>
+
+  </div>
+</div>
+<h1 id="a0000000013">2.2 Weak PNT</h1>
+<div class="theorem_thmwrapper theorem-style-definition" id="WeakPNT">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1</span>
+    <span class="theorem_thmtitle">WeakPNT</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#WeakPNT">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000079"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/WeakPNT" class="lean_decl">WeakPNT</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>We have </p>
+<div class="displaymath" id="a0000000080">
+  \[  \sum _{n \leq x} \Lambda (n) = x + o(x). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000079">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Already done by Stoll, assuming Wiener-Ikehara. </p>
+
+  </div>
+</div>
+<h1 id="a0000000014">2.3 Removing the Chebyshev hypothesis</h1>
+<p>In this section we do *not* assume the bound <a href="sect0002.html#cheby" class="eqref">1</a>, but instead derive it from the other hypotheses. </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="limiting_fourier_variant">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">12</span>
+    <span class="lemma_thmtitle">limiting_fourier_variant</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#limiting_fourier_variant">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000081"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/limiting_fourier_variant" class="lean_decl">limiting_fourier_variant</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>If \(\psi : \mathbb {R}\to \mathbb {C}\) is \(C^2\) and compactly supported with \(f\) and \(\hat\psi \) non-negative, and \(x \geq 1\), then </p>
+<div class="displaymath" id="a0000000082">
+  \[  \sum _{n=1}^\infty \frac{f(n)}{n} \hat\psi ( \frac{1}{2\pi } \log \frac{n}{x} ) - A \int _{-\log x}^\infty \hat\psi (\frac{u}{2\pi })\  du = \int _\mathbb {R}G(1+it) \psi (t) x^{it}\  dt. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000081">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Repeat the proof of Lemma <a href="sect0002.html#limiting_fourier_variant">12</a>, but use monotone convergence instead of dominated convergence. (The proof should be simpler, as one no longer needs to establish domination for the sum.) </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="crude_upper_bound">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">4</span>
+    <span class="corollary_thmtitle">crude_upper_bound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#crude_upper_bound">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000083"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/crude_upper_bound" class="lean_decl">crude_upper_bound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p>If \(\psi : \mathbb {R}\to \mathbb {C}\) is \(C^2\) and compactly supported with \(f\) and \(\hat\psi \) non-negative, then there exists a constant \(B\) such that </p>
+<div class="displaymath" id="a0000000084">
+  \[  |\sum _{n=1}^\infty \frac{f(n)}{n} \hat\psi ( \frac{1}{2\pi } \log \frac{n}{x} )| \leq B \]
+</div>
+<p> for all \(x {\gt} 0\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000083">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> For \(x \geq 1\), this readily follows from the previous lemma and the triangle inequality. For \(x {\lt} 1\), only a bounded number of summands can contribute and the claim is trivial. </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="auto_cheby">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">5</span>
+    <span class="corollary_thmtitle">auto_cheby</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#auto_cheby">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000085"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/auto_cheby" class="lean_decl">auto_cheby</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p>One has </p>
+<div class="displaymath" id="a0000000086">
+  \[  \sum _{n \leq x} f(n) = O(x) \]
+</div>
+<p> for all \(x \geq 1\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000085">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> By applying Corollary <a href="sect0002.html#crude_upper_bound">4</a> for a specific compactly supported function \(\psi \), one can obtain a bound of the form \(\sum _{(1-\varepsilon )x {\lt} n \leq x} f(n) = O(x)\) for all \(x\) and some absolute constant \(\varepsilon \) (which can be made explicit). If \(C\) is a sufficiently large constant, the claim \(|\sum _{n \leq x} f(n)| \leq Cx\) can now be proven by strong induction on \(x\), as the claim for \((1-\varepsilon )x\) implies the claim for \(x\) by the triangle inequality (and the claim is trivial for \(x {\lt} 1\)). </p>
+<div class="corollary_thmwrapper theorem-style-definition" id="WienerIkeharaTheorem''">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">6</span>
+    <span class="corollary_thmtitle">WienerIkeharaTheorem”</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#WienerIkeharaTheorem''">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000087"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/WienerIkeharaTheorem''" class="lean_decl">WienerIkeharaTheorem''</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p>We have </p>
+<div class="displaymath" id="a0000000088">
+  \[  \sum _{n\leq x} f(n) = A x + o(x). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000087">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Use Corollary <a href="sect0002.html#auto_cheby">5</a> to remove the Chebyshev hypothesis in Theorem <a href="sect0002.html#WienerIkehara">3</a>. </p>
+
+  </div>
+</div>
+
+  </div>
+</div>
+<h1 id="a0000000015">2.4 The prime number theorem in arithmetic progressions</h1>
+<div class="lemma_thmwrapper theorem-style-definition" id="WeakPNT_character">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">13</span>
+    <span class="lemma_thmtitle">WeakPNT_character</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#WeakPNT_character">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000089"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/WeakPNT_character" class="lean_decl">WeakPNT_character</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>If \(q ≥ 1\) and \(a\) is coprime to \(q\), and \(\mathrm{Re} s {\gt} 1\), we have </p>
+<div class="displaymath" id="a0000000090">
+  \[  \sum _{n: n = a\  (q)} \frac{\Lambda (n)}{n^s} = - \frac{1}{\varphi (q)} \sum _{\chi \  (q)} \overline{\chi (a)} \frac{L'(s,\chi )}{L(s,\chi )}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000089">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>From the Fourier inversion formula on the multiplicative group \((\mathbb {Z}/q\mathbb {Z})^\times \), we have </p>
+<div class="displaymath" id="a0000000091">
+  \[  1_{n=a\  (q)} = \frac{\varphi (q)}{q} \sum _{\chi \  (q)} \overline{\chi (a)} \chi (n). \]
+</div>
+<p> On the other hand, from standard facts about L-series we have for each character \(\chi \) that </p>
+<div class="displaymath" id="a0000000092">
+  \[  \sum _{n} \frac{\Lambda (n) \chi (n)}{n^s} = - \frac{L'(s,\chi )}{L(s,\chi )}. \]
+</div>
+<p> Combining these two facts, we obtain the claim. </p>
+
+  </div>
+</div>
+<div class="proposition_thmwrapper theorem-style-definition" id="WeakPNT_AP_prelim">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">2</span>
+    <span class="proposition_thmtitle">WeakPNT_AP_prelim</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#WeakPNT_AP_prelim">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000093"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/WeakPNT_AP_prelim" class="lean_decl">WeakPNT_AP_prelim</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p>If \(q ≥ 1\) and \(a\) is coprime to \(q\), the Dirichlet series \(\sum _{n \leq x: n = a\  (q)} {\Lambda (n)}{n^s}\) converges for \(\mathrm{Re}(s) {\gt} 1\) to \(\frac{1}{\varphi (q)} \frac{1}{s-1} + G(s)\) where \(G\) has a continuous extension to \(\mathrm{Re}(s)=1\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000093">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> We expand out the left-hand side using Lemma <a href="sect0002.html#WeakPNT_character">13</a>. The contribution of the non-principal characters \(\chi \) extend continuously to \(\mathrm{Re}(s) = 1\) thanks to the non-vanishing of \(L(s,\chi )\) on this line (which should follow from another component of this project), so it suffices to show that for the principal character \(\chi _0\), that </p>
+<div class="displaymath" id="a0000000094">
+  \[  -\frac{L'(s,\chi _0)}{L(s,\chi _0)} - \frac{1}{s-1} \]
+</div>
+<p> also extends continuously here. But we already know that </p>
+<div class="displaymath" id="a0000000095">
+  \[  -\frac{\zeta '(s)}{\zeta (s)} - \frac{1}{s-1} \]
+</div>
+<p> extends, and from Euler product machinery one has the identity </p>
+<div class="displaymath" id="a0000000096">
+  \[  \frac{L'(s,\chi _0)}{L(s,\chi _0)} = \frac{\zeta '(s)}{\zeta (s)} + \sum _{p|q} \frac{\log p}{p^s-1}. \]
+</div>
+<p> Since there are only finitely many primes dividing \(q\), and each summand \(\frac{\log p}{p^s-1}\) extends continuously, the claim follows. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="WeakPNT_AP">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">2</span>
+    <span class="theorem_thmtitle">WeakPNT_AP</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#WeakPNT_AP">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000097"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/WeakPNT_AP" class="lean_decl">WeakPNT_AP</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>If \(q ≥ 1\) and \(a\) is coprime to \(q\), we have </p>
+<div class="displaymath" id="a0000000098">
+  \[  \sum _{n \leq x: n = a\  (q)} \Lambda (n) = \frac{x}{\varphi (q)} + o(x). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000097">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Apply Theorem <a href="sect0002.html#WienerIkehara">3</a> (or Theorem <a href="sect0002.html#WienerIkeharaTheorem''">6</a>) to Proposition <a href="sect0002.html#WeakPNT_AP_prelim">2</a>. (The Chebyshev bound follows from the corresponding bound for \(\Lambda \).) </p>
+
+  </div>
+</div>
+<h1 id="a0000000016">2.5 The Chebotarev density theorem: the case of cyclotomic extensions</h1>
+<p>In this section, \(K\) is a number field, \(L = K(\mu _m)\) for some natural number \(m\), and \(G = Gal(K/L)\). </p>
+<p>The goal here is to prove the Chebotarev density theorem for the case of cyclotomic extensions. </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="Dedekind_factor">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">14</span>
+    <span class="lemma_thmtitle">Dedekind_factor</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#Dedekind_factor">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000099"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> We have </p>
+<div class="displaymath" id="a0000000100">
+  \[  \zeta _L(s) = \prod _{\chi } L(\chi ,s) \]
+</div>
+<p> for \(\Re (s) {\gt} 1\), where \(\chi \) runs over homomorphisms from \(G\) to \(\mathbb {C}^\times \) and \(L\) is the Artin \(L\)-function. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000099">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>See Propositions 7.1.16, 7.1.19 of https://www.math.ucla.edu/&#160;sharifi/algnum.pdf . </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="Dedekind_pole">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">15</span>
+    <span class="lemma_thmtitle">Simple pole</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#Dedekind_pole">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000101"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> \(\zeta _L\) has a simple pole at \(s=1\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000101">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>See Theorem 7.1.12 of https://www.math.ucla.edu/&#160;sharifi/algnum.pdf . </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="Dedekind_nonvanishing">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">16</span>
+    <span class="lemma_thmtitle">Dedekind_nonvanishing</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#Dedekind_nonvanishing">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000102"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For any non-principal character \(\chi \) of \(Gal(K/L)\), \(L(\chi ,s)\) does not vanish for \(\Re (s)=1\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000102">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> For \(s=1\), this will follow from Lemmas <a href="sect0002.html#Dedekind_factor">14</a>, <a href="sect0002.html#Dedekind_pole">15</a>. For the rest of the line, one should be able to adapt the arguments for the Dirichet L-function. </p>
+
+  </div>
+</div>
+<h1 id="a0000000017">2.6 The Chebotarev density theorem: the case of abelian extensions</h1>
+<p>(Use the arguments in Theorem 7.2.2 of https://www.math.ucla.edu/&#160;sharifi/algnum.pdf to extend the previous results to abelian extensions (actually just cyclic extensions would suffice)) </p>
+<h1 id="a0000000018">2.7 The Chebotarev density theorem: the general case</h1>
+<p>(Use the arguments in Theorem 7.2.2 of https://www.math.ucla.edu/&#160;sharifi/algnum.pdf to extend the previous results to arbitrary extensions </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="Dedekind-PNT">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">17</span>
+    <span class="lemma_thmtitle">PNT for one character</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0002.html#Dedekind-PNT">#</a>
+    
+    <a class="icon proof" href="sect0002.html#a0000000103"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For any non-principal character \(\chi \) of \(Gal(K/L)\), </p>
+<div class="displaymath" id="a0000000104">
+  \[  \sum _{N \mathfrak {p} \leq x} \chi (\mathfrak {p}) \log N \mathfrak {p} = o(x). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000103">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> This should follow from Lemma <a href="sect0002.html#Dedekind_nonvanishing">16</a> and the arguments for the Dirichlet L-function. (It may be more convenient to work with a von Mangoldt type function instead of \(\log N\mathfrak {p}\)). </p>
+
+  </div>
+</div>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
+  <a href="sect0001.html" title="The project"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Prime Number Theorem And ..."><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0003.html" title="Second approach"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
+</body>
+</html>

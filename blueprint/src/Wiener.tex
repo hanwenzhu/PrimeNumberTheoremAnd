@@ -1,0 +1,255 @@
+
+The Fourier transform of an absolutely integrable function $\psi: \R \to \C$ is defined by the formula
+$$ \hat \psi(u) := \int_\R e(-tu) \psi(t)\ dt$$
+where $e(\theta) := e^{2\pi i \theta}$.
+
+Let $f: \N \to \C$ be an arithmetic function such that $\sum_{n=1}^\infty \frac{|f(n)|}{n^\sigma} < \infty$ for all $\sigma>1$.  Then the Dirichlet series
+$$ F(s) := \sum_{n=1}^\infty \frac{f(n)}{n^s}$$
+is absolutely convergent for $\sigma>1$.
+
+
+\inputleannode{first_fourier}
+
+
+
+
+
+\inputleannode{second_fourier}
+
+
+
+
+
+Now let $A \in \C$, and suppose that there is a continuous function $G(s)$ defined on $\mathrm{Re} s \geq 1$ such that $G(s) = F(s) - \frac{A}{s-1}$ whenever $\mathrm{Re} s > 1$.  We also make the Chebyshev-type hypothesis
+\begin{equation}\label{cheby}
+\sum_{n \leq x} |f(n)| \ll x
+\end{equation}
+for all $x \geq 1$ (this hypothesis is not strictly necessary, but simplifies the arguments and can be obtained fairly easily in applications).
+
+
+\begin{lemma}[Preliminary decay bound I]\label{prelim-decay}
+If $\psi:\R \to \C$ is absolutely integrable then
+$$ |\hat \psi(u)| \leq \| \psi \|_1 $$
+for all $u \in \R$. where $C$ is an absolute constant.
+\end{lemma}
+
+
+\begin{proof} Immediate from the triangle inequality.
+\end{proof}
+
+
+\begin{lemma}[Preliminary decay bound II]\label{prelim-decay-2}
+If $\psi:\R \to \C$ is absolutely integrable and of bounded variation, and $\psi'$ is bounded variation, then
+$$ |\hat \psi(u)| \leq \| \psi \|_{TV} / 2\pi |u| $$
+for all non-zero $u \in \R$.
+\end{lemma}
+
+
+\begin{proof} By integration by parts we will have
+$$ 2\pi i u \hat \psi(u) = \int _\R e(-tu) \psi'(t)\ dt$$
+and the claim then follows from the triangle inequality.
+\end{proof}
+
+
+\begin{lemma}[Preliminary decay bound III]\label{prelim-decay-3}
+If $\psi:\R \to \C$ is absolutely integrable, absolutely continuous, and $\psi'$ is of bounded variation, then
+$$ |\hat \psi(u)| \leq \| \psi' \|_{TV} / (2\pi |u|)^2$$
+for all non-zero $u \in \R$.
+\end{lemma}
+
+
+\begin{proof}\uses{prelim-decay-2} Should follow from previous lemma.
+\end{proof}
+
+
+\begin{lemma}[Decay bound, alternate form]\label{decay-alt}  If $\psi:\R \to \C$ is absolutely integrable, absolutely continuous, and $\psi'$ is of bounded variation, then
+$$ |\hat \psi(u)| \leq ( \|\psi\|_1 + \| \psi' \|_{TV} / (2\pi)^2) / (1+|u|^2)$$
+for all $u \in \R$.
+\end{lemma}
+
+
+\begin{proof}\uses{prelim-decay, prelim-decay-3, decay} Should follow from previous lemmas.
+\end{proof}
+
+
+
+It should be possible to refactor the lemma below to follow from Lemma \ref{decay-alt} instead.
+
+\inputleannode{decay}
+
+
+
+
+
+\inputleannode{limiting}
+
+
+
+
+
+\inputleannode{limiting-cor}
+
+
+
+
+
+\inputleannode{smooth-ury}
+
+
+
+
+
+\inputleannode{schwarz-id}
+
+
+
+
+
+\inputleannode{bij}
+
+
+
+
+
+\inputleannode{WienerIkeharaSmooth}
+
+
+
+
+
+Now we add the hypothesis that $f(n) \geq 0$ for all $n$.
+
+\inputleannode{WienerIkeharaInterval}
+
+
+
+
+
+\inputleannode{WienerIkehara}
+
+
+
+
+
+\section{Weak PNT}
+
+\inputleannode{WeakPNT}
+
+
+
+
+
+\section{Removing the Chebyshev hypothesis}
+
+In this section we do *not* assume the bound \eqref{cheby}, but instead derive it from the other hypotheses.
+
+\inputleannode{limiting_fourier_variant}
+
+
+
+
+
+\inputleannode{crude_upper_bound}
+
+
+
+
+
+\inputleannode{auto_cheby}
+
+
+
+
+
+\section{The prime number theorem in arithmetic progressions}
+
+\inputleannode{WeakPNT_character}
+
+
+
+
+
+\begin{proposition}[WeakPNT_AP_prelim]\label{WeakPNT_AP_prelim}\lean{WeakPNT_AP_prelim}\leanok  If $q ≥ 1$ and $a$ is coprime to $q$, the Dirichlet series $\sum_{n \leq x: n = a\ (q)} {\Lambda(n)}{n^s}$ converges for $\mathrm{Re}(s) > 1$ to $\frac{1}{\varphi(q)} \frac{1}{s-1} + G(s)$ where $G$ has a continuous extension to $\mathrm{Re}(s)=1$.
+\end{proposition}
+
+
+
+\begin{proof}
+\uses{ChebyshevPsi, WeakPNT_character}
+We expand out the left-hand side using Lemma \ref{WeakPNT_character}.  The contribution of the non-principal characters $\chi$ extend continuously to $\mathrm{Re}(s) = 1$ thanks to the non-vanishing of $L(s,\chi)$ on this line (which should follow from another component of this project), so it suffices to show that for the principal character $\chi_0$, that
+$$ -\frac{L'(s,\chi_0)}{L(s,\chi_0)} - \frac{1}{s-1}$$
+also extends continuously here.  But we already know that
+$$ -\frac{\zeta'(s)}{\zeta(s)} - \frac{1}{s-1}$$
+extends, and from Euler product machinery one has the identity
+$$ \frac{L'(s,\chi_0)}{L(s,\chi_0)}
+= \frac{\zeta'(s)}{\zeta(s)} + \sum_{p|q} \frac{\log p}{p^s-1}.$$
+Since there are only finitely many primes dividing $q$, and each summand $\frac{\log p}{p^s-1}$ extends continuously, the claim follows.
+\end{proof}
+
+
+\begin{theorem}[WeakPNT_AP]\label{WeakPNT_AP}\lean{WeakPNT_AP}\leanok  If $q ≥ 1$ and $a$ is coprime to $q$, we have
+$$ \sum_{n \leq x: n = a\ (q)} \Lambda(n) = \frac{x}{\varphi(q)} + o(x).$$
+\end{theorem}
+
+
+\begin{proof}\uses{WienerIkehara, WeakPNT_AP_prelim}
+Apply Theorem \ref{WienerIkehara} (or Theorem \ref{WienerIkeharaTheorem''}) to Proposition \ref{WeakPNT_AP_prelim}.  (The Chebyshev bound follows from the corresponding bound for $\Lambda$.)
+\end{proof}
+
+
+
+\section{The Chebotarev density theorem: the case of cyclotomic extensions}
+
+In this section, $K$ is a number field, $L = K(\mu_m)$ for some natural number $m$, and $G = Gal(K/L)$.
+
+The goal here is to prove the Chebotarev density theorem for the case of cyclotomic extensions.
+
+
+\begin{lemma}[Dedekind_factor]\label{Dedekind_factor}  We have
+$$ \zeta_L(s) = \prod_{\chi} L(\chi,s)$$
+for $\Re(s) > 1$, where $\chi$ runs over homomorphisms from $G$ to $\C^\times$ and $L$ is the Artin $L$-function.
+\end{lemma}
+
+
+
+\begin{proof} See Propositions 7.1.16, 7.1.19 of https://www.math.ucla.edu/~sharifi/algnum.pdf .
+\end{proof}
+
+
+\begin{lemma}[Simple pole]\label{Dedekind_pole}  $\zeta_L$ has a simple pole at $s=1$.
+\end{lemma}
+
+
+\begin{proof} See Theorem 7.1.12 of https://www.math.ucla.edu/~sharifi/algnum.pdf .
+\end{proof}
+
+
+\begin{lemma}[Dedekind_nonvanishing]\label{Dedekind_nonvanishing}  For any non-principal character $\chi$ of $Gal(K/L)$, $L(\chi,s)$ does not vanish for $\Re(s)=1$.
+\end{lemma}
+
+
+
+\begin{proof}\uses{Dedekind_factor, Dedekind_pole} For $s=1$, this will follow from Lemmas \ref{Dedekind_factor}, \ref{Dedekind_pole}. For the rest of the line, one should be able to adapt the arguments for the Dirichet L-function.
+\end{proof}
+
+
+\section{The Chebotarev density theorem: the case of abelian extensions}
+
+(Use the arguments in Theorem 7.2.2 of https://www.math.ucla.edu/~sharifi/algnum.pdf to extend the previous results to abelian extensions (actually just cyclic extensions would suffice))
+
+
+
+\section{The Chebotarev density theorem: the general case}
+
+(Use the arguments in Theorem 7.2.2 of https://www.math.ucla.edu/~sharifi/algnum.pdf to extend the previous results to arbitrary extensions
+
+
+
+\begin{lemma}[PNT for one character]\label{Dedekind-PNT}  For any non-principal character $\chi$ of $Gal(K/L)$,
+$$ \sum_{N \mathfrak{p} \leq x} \chi(\mathfrak{p}) \log N \mathfrak{p}  = o(x).$$
+\end{lemma}
+
+
+\begin{proof}\uses{Dedekind_nonvanishing} This should follow from Lemma \ref{Dedekind_nonvanishing} and the arguments for the Dirichlet L-function. (It may be more convenient to work with a von Mangoldt type function instead of $\log N\mathfrak{p}$).
+\end{proof}
+

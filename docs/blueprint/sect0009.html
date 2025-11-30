@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tertiary explicit estimates</title>
+<link rel="prev" href="sect0008.html" title="Secondary explicit estimates" />
+<link rel="up" href="index.html" title="Prime Number Theorem And ..." />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">Prime Number Theorem And ...</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">The project</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">First approach: Wiener-Ikehara Tauberian theorem.</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0002.html#a0000000012"><span class="toc_ref">2.1</span> <span class="toc_entry">A Fourier-analytic proof of the Wiener-Ikehara theorem</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000013"><span class="toc_ref">2.2</span> <span class="toc_entry">Weak PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000014"><span class="toc_ref">2.3</span> <span class="toc_entry">Removing the Chebyshev hypothesis</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000015"><span class="toc_ref">2.4</span> <span class="toc_entry">The prime number theorem in arithmetic progressions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000016"><span class="toc_ref">2.5</span> <span class="toc_entry">The Chebotarev density theorem: the case of cyclotomic extensions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000017"><span class="toc_ref">2.6</span> <span class="toc_entry">The Chebotarev density theorem: the case of abelian extensions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000018"><span class="toc_ref">2.7</span> <span class="toc_entry">The Chebotarev density theorem: the general case</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0003.html"><span class="toc_ref">3</span> <span class="toc_entry">Second approach</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0003.html#a0000000019"><span class="toc_ref">3.1</span> <span class="toc_entry">Residue calculus on rectangles</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000020"><span class="toc_ref">3.2</span> <span class="toc_entry">Perron Formula</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000021"><span class="toc_ref">3.3</span> <span class="toc_entry">Mellin transforms</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000022"><span class="toc_ref">3.4</span> <span class="toc_entry">Zeta Bounds</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000023"><span class="toc_ref">3.5</span> <span class="toc_entry">Proof of Medium PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000024"><span class="toc_ref">3.6</span> <span class="toc_entry">Proof of Medium PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000025"><span class="toc_ref">3.7</span> <span class="toc_entry">MediumPNT</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">4</span> <span class="toc_entry">Third Approach</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0004.html#a0000000026"><span class="toc_ref">4.1</span> <span class="toc_entry">Strong PNT</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0005.html"><span class="toc_ref">5</span> <span class="toc_entry">Elementary Corollaries</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0005.html#a0000000027"><span class="toc_ref">5.1</span> <span class="toc_entry">Consequences of the PNT in arithmetic progressions</span></a>
+ </li>
+<li class="">
+  <a href="sect0005.html#a0000000028"><span class="toc_ref">5.2</span> <span class="toc_entry">Consequences of the Chebotarev density theorem</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">6</span> <span class="toc_entry">Explicit estimates</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html"><span class="toc_ref">7</span> <span class="toc_entry">Primary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0007.html#a0000000029"><span class="toc_ref">7.1</span> <span class="toc_entry">Definitions</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html#a0000000030"><span class="toc_ref">7.2</span> <span class="toc_entry">The estimates of Fiori, Kadiri, and Swidinsky</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html#a0000000031"><span class="toc_ref">7.3</span> <span class="toc_entry">Summary of results</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0008.html"><span class="toc_ref">8</span> <span class="toc_entry">Secondary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0008.html#a0000000032"><span class="toc_ref">8.1</span> <span class="toc_entry">Definitions</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html#a0000000033"><span class="toc_ref">8.2</span> <span class="toc_entry">The arguments of Rosser and Schoenfeld</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html#a0000000034"><span class="toc_ref">8.3</span> <span class="toc_entry">Summary of results</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class=" active current">
+  <a href="sect0009.html"><span class="toc_ref">9</span> <span class="toc_entry">Tertiary explicit estimates</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sect0009.html#a0000000035"><span class="toc_ref">9.1</span> <span class="toc_entry">The least common multiple sequence is not highly abundant for large \(n\)</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li ><a href="dep_graph_document.html">Dependency graph</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h1 id="a0000000010">9 Tertiary explicit estimates</h1>
+<h1 id="a0000000035">9.1 The least common multiple sequence is not highly abundant for large \(n\)</h1>
+<h2 id="a0000000651">9.1.1 Problem statement and notation</h2>
+<div class="definition_thmwrapper theorem-style-definition" id="sigma-def">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">35</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#sigma-def">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/σ" class="lean_decl">σ</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>\(\sigma (n)\) is the sum of the divisors of \(n\). </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="highlyabundant-def">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">36</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#highlyabundant-def">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/HighlyAbundant" class="lean_decl">HighlyAbundant</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>A positive integer \(N\) is called <em>highly abundant</em> (HA) if </p>
+<div class="displaymath" id="a0000000652">
+  \[  \sigma (N) {\gt} \sigma (m)  \]
+</div>
+<p> for all positive integers \(m {\lt} N\), where \(\sigma (n)\) denotes the sum of the positive divisors of \(n\). </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="Ln-def">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">37</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#Ln-def">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/L" class="lean_decl">L</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>For each integer \(n \ge 1\), define </p>
+<div class="displaymath" id="a0000000653">
+  \[  L_n := \lcm (1,2,\dots ,n).  \]
+</div>
+<p> We call \((L_n)_{n \ge 1}\) the <em>least common multiple sequence</em>. </p>
+
+  </div>
+</div>
+<blockquote class="quote"> <b class="bfseries">Original MathOverflow question.</b> Is it true that every value in the sequence \(L_n = \lcm (1,2,\dots ,n)\) is highly abundant? Equivalently, <div class="displaymath" id="a0000000654">
+  \[  \{ L_n : n \ge 1\}  \subseteq HA?  \]
+</div> </blockquote>
+<p>In this note we record the structure of an argument showing that, for all sufficiently large \(n\), the integer \(L_n\) is <em>not</em> highly abundant. This argument was taken from <a href ="https://mathoverflow.net/questions/501066/is-the-least-common-multiple-sequence-textlcm1-2-dots-n-a-subset-of-t?noredirect=1#comment1313839_501066">this MathOverflow answer</a>. </p>
+<h2 id="a0000000655">9.1.2 A general criterion using three medium primes and three large primes</h2>
+<p>In this subsection we assume that \(n \geq 1\) and that \(p_1,p_2,p_3,q_1,q_2,q_3\) are primes satisfiying </p>
+<div class="displaymath" id="a0000000656">
+  \[  \sqrt{n} {\lt} p_1 {\lt} p_2 {\lt} p_3 {\lt} q_1 {\lt} q_2 {\lt} q_3 {\lt} n  \]
+</div>
+<p> and the key criterion </p>
+<div class="equation" id="eq:main-ineq">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{eq:main-ineq} \prod _{i=1}^3\Bigl(1+\frac{1}{q_i}\Bigr) \le \Biggl( \prod _{i=1}^3 \Bigl(1+\frac{1}{p_i(p_i+1)}\Bigr) \Biggr) \Bigl(1 + \frac{3}{8n}\Bigr) \Biggl(1 - \frac{4 p_1 p_2 p_3}{q_1 q_2 q_3}\Biggr). \end{equation}
+  </div>
+  <span class="equation_label">1</span>
+</p>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:4p3q3">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">128</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:4p3q3">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000657"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.prod_p_le_prod_q" class="lean_decl">Criterion.prod_p_le_prod_q</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>We have \(4 p_1 p_2 p_3 {\lt} q_1 q_2 q_3\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000657">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Obvious from the non-negativity of the left-hand side of <a href="sect0009.html#eq:main-ineq" class="eqref">1</a>. </p>
+
+  </div>
+</div>
+<h2 id="a0000000658">9.1.3 Factorisation of \(L_n\) and construction of a competitor</h2>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:Lprime-def">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">129</span>
+    <span class="lemma_thmtitle">Factorisation of \(L_n\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:Lprime-def">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000659"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.ln_eq" class="lean_decl">Criterion.ln_eq</a></li>
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.q_not_dvd_L'" class="lean_decl">Criterion.q_not_dvd_L'</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>There exists a positive integer \(L'\) such that </p>
+<div class="displaymath" id="a0000000660">
+  \[  L_n = q_1 q_2 q_3 \,  L'  \]
+</div>
+<p> and each prime \(q_i\) divides \(L_n\) exactly once and does not divide \(L'\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000659">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Since \(q_i {\lt} n\), the prime \(q_i\) divides \(L_n\) exactly once (as \(q_i^2 {\gt} n\)). Hence we may write \(L_n = q_1 q_2 q_3 L'\) where \(L'\) is the quotient obtained by removing these prime factors. By construction, \(q_i \nmid L'\) for each \(i\). </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:sigmaLn">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">130</span>
+    <span class="lemma_thmtitle">Normalised divisor sum for \(L_n\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:sigmaLn">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000661"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.σnorm_ln_eq" class="lean_decl">Criterion.σnorm_ln_eq</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>Let \(L'\) be as in Lemma&#160;<a href="sect0009.html#lem:Lprime-def">129</a>. Then </p>
+<div class="equation" id="eq:sigmaLn">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{eq:sigmaLn} \frac{\sigma (L_n)}{L_n} \; =\;  \frac{\sigma (L')}{L'} \prod _{i=1}^3 \Bigl(1 + \frac{1}{q_i}\Bigr). \end{equation}
+  </div>
+  <span class="equation_label">2</span>
+</p>
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000661">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Use the multiplicativity of \(\sigma (\cdot )\) and the fact that each \(q_i\) occurs to the first power in \(L_n\). Then </p>
+<div class="displaymath" id="a0000000662">
+  \[  \sigma (L_n) = \sigma (L') \prod _{i=1}^3 \sigma (q_i) = \sigma (L') \prod _{i=1}^3 (1+q_i).  \]
+</div>
+<p> Dividing by \(L_n = L' \prod _{i=1}^3 q_i\) gives </p>
+<div class="displaymath" id="a0000000663">
+  \[  \frac{\sigma (L_n)}{L_n} = \frac{\sigma (L')}{L'} \prod _{i=1}^3 \frac{1+q_i}{q_i} = \frac{\sigma (L')}{L'} \prod _{i=1}^3 \Bigl(1 + \frac{1}{q_i}\Bigr).  \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="div-remainder">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">131</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#div-remainder">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000664"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.r_ge" class="lean_decl">Criterion.r_ge</a></li>
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.r_le" class="lean_decl">Criterion.r_le</a></li>
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.prod_q_eq" class="lean_decl">Criterion.prod_q_eq</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>There exist integers \(m \ge 0\) and \(r\) satisfying \(0 {\lt} r {\lt} 4 p_1 p_2 p_3\) and </p>
+<div class="displaymath" id="a0000000665">
+  \[  q_1 q_2 q_3 = 4 p_1 p_2 p_3 m + r  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000664">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>This is division with remainder. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="M-def">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">38</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#M-def">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.M" class="lean_decl">Criterion.M</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>With \(m,r\) as above, define the competitor </p>
+<div class="displaymath" id="a0000000666">
+  \[  M := 4 p_1 p_2 p_3 m L'.  \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:M-basic">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">132</span>
+    <span class="lemma_thmtitle">Basic properties of \(M\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:M-basic">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000667"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.M_lt" class="lean_decl">Criterion.M_lt</a></li>
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.Ln_div_M_gt" class="lean_decl">Criterion.Ln_div_M_gt</a></li>
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.Ln_div_M_lt" class="lean_decl">Criterion.Ln_div_M_lt</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>With notation as above, we have: </p>
+<ol class="enumerate">
+  <li><p>\(M {\lt} L_n\). </p>
+</li>
+  <li><div class="displaymath" id="a0000000668">
+  \[  1 {\lt} \frac{L_n}{M} = \Bigl(1 - \frac{r}{q_1 q_2 q_3}\Bigr)^{-1} {\lt} \Bigl(1 - \frac{4 p_1 p_2 p_3}{q_1 q_2 q_3}\Bigr)^{-1}.  \]
+</div>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000667">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>The first item is by construction of the division algorithm. For the second, note that </p>
+<div class="displaymath" id="a0000000669">
+  \[  L_n = q_1 q_2 q_3 L' = (4 p_1 p_2 p_3 m + r) L' {\gt} 4 p_1 p_2 p_3 m L' = M,  \]
+</div>
+<p> since \(r{\gt}0\). For the third, </p>
+<div class="displaymath" id="a0000000670">
+  \[  \frac{L_n}{M} = \frac{4 p_1 p_2 p_3 m + r}{4 p_1 p_2 p_3 m} = 1 + \frac{r}{4 p_1 p_2 p_3 m} = \Bigl(1 - \frac{r}{4 p_1 p_2 p_3 m + r}\Bigr)^{-1} = \Bigl(1 - \frac{r}{q_1 q_2 q_3}\Bigr)^{-1}.  \]
+</div>
+<p> Since \(0 {\lt} r {\lt} 4p_1p_2p_3\) and \(4p_1p_2p_3 {\lt} q_1q_2q_3\), we have </p>
+<div class="displaymath" id="a0000000671">
+  \[  0{\lt}\frac{r}{q_1 q_2 q_3}{\lt}\frac{4p_1p_2p_3}{q_1 q_2 q_3},  \]
+</div>
+<p> so </p>
+<div class="displaymath" id="a0000000672">
+  \[  \Bigl(1-\frac{r}{q_1 q_2 q_3}\Bigr)^{-1} {\lt} \Bigl(1-\frac{4p_1p_2p_3}{q_1 q_2 q_3}\Bigr)^{-1}.  \]
+</div>
+
+  </div>
+</div>
+<h2 id="a0000000673">9.1.4 A sufficient condition</h2>
+<p>We give a sufficient condition for \(\sigma (M) \geq \sigma (L_n)\). </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:criterion-sufficient">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">133</span>
+    <span class="lemma_thmtitle">A sufficient inequality</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:criterion-sufficient">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000674"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.not_highlyAbundant_1" class="lean_decl">Criterion.not_highlyAbundant_1</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>Suppose </p>
+<div class="displaymath" id="a0000000675">
+  \[  \frac{\sigma (M)}{M} \Bigl(1 - \frac{4 p_1 p_2 p_3}{q_1 q_2 q_3}\Bigr) \; \ge \;  \frac{\sigma (L_n)}{L_n}.  \]
+</div>
+<p> Then \(\sigma (M) \ge \sigma (L_n)\), and so \(L_n\) is not highly abundant. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000674">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>By Lemma&#160;<a href="sect0009.html#lem:M-basic">132</a>, </p>
+<div class="displaymath" id="a0000000676">
+  \[  \frac{L_n}{M} {\lt} \Bigl(1 - \frac{4 p_1 p_2 p_3}{q_1 q_2 q_3}\Bigr)^{-1}.  \]
+</div>
+<p> Hence </p>
+<div class="displaymath" id="a0000000677">
+  \[  \frac{\sigma (M)}{M} \ge \frac{\sigma (L_n)}{L_n} \Bigl(1 - \frac{4 p_1 p_2 p_3}{q_1 q_2 q_3}\Bigr)^{-1} {\gt} \frac{\sigma (L_n)}{L_n} \cdot \frac{M}{L_n}.  \]
+</div>
+<p> Multiplying both sides by \(M\) gives </p>
+<div class="displaymath" id="a0000000678">
+  \[  \sigma (M) {\gt} \sigma (L_n) \cdot \frac{M}{L_n}  \]
+</div>
+<p> and hence </p>
+<div class="displaymath" id="a0000000679">
+  \[  \sigma (M) \ge \sigma (L_n),  \]
+</div>
+<p> since \(M/L_n{\lt}1\) and both sides are integers. </p>
+
+  </div>
+</div>
+<p>Combining Lemma <a href="sect0009.html#lem:criterion-sufficient">133</a> with Lemma <a href="sect0009.html#lem:sigmaLn">130</a>, we see that it suffices to bound \(\sigma (M)/M\) from below in terms of \(\sigma (L')/L'\): </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:criterion-reduced">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">134</span>
+    <span class="lemma_thmtitle">Reduction to a lower bound for \(\sigma (M)/M\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:criterion-reduced">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000680"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.not_highlyAbundant_2" class="lean_decl">Criterion.not_highlyAbundant_2</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>If </p>
+<div class="equation" id="eq:sigmaM-lower">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{eq:sigmaM-lower} \frac{\sigma (M)}{M} \; \ge \;  \frac{\sigma (L')}{L'} \Biggl( \prod _{i=1}^3 \Bigl(1+\frac{1}{p_i(p_i+1)}\Bigr) \Biggr) \Bigl(1 + \frac{3}{8n}\Bigr), \end{equation}
+  </div>
+  <span class="equation_label">3</span>
+</p>
+</div>
+<p> then \(L_n\) is not highly abundant. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000680">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Insert <a href="sect0009.html#eq:sigmaM-lower" class="eqref">3</a> and <a href="sect0009.html#eq:sigmaLn" class="eqref">2</a> into the desired inequality and compare with the assumed bound <a href="sect0009.html#eq:main-ineq" class="eqref">1</a>; this is a straightforward rearrangement. </p>
+
+  </div>
+</div>
+<h2 id="a0000000681">9.1.5 Effect of modifying prime powers</h2>
+<p>Now we estimate the effect on \(\sigma (\cdot )/(\cdot )\) of increasing certain prime exponents. </p>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:effect-pi">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">135</span>
+    <span class="lemma_thmtitle">Effect of increasing the exponent of \(p_i\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:effect-pi">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000682"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Fix \(i \in \{ 1,2,3\} \). Suppose that in passing from \(L'\) to \(M\) we increase the exponent of \(p_i\) by exactly \(1\). Then the normalised divisor sum is multiplied by a factor </p>
+<div class="displaymath" id="a0000000683">
+  \[  \frac{(1+p_i+p_i^2)/p_i^2}{(1+p_i)/p_i} = 1 + \frac{1}{p_i(p_i+1)}.  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000682">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>If the exponent of \(p_i\) in \(L'\) is \(e\), the contribution of \(p_i\) to \(\sigma (L')/L'\) is </p>
+<div class="displaymath" id="a0000000684">
+  \[  \frac{1 + p_i + \dots + p_i^e}{p_i^e}.  \]
+</div>
+<p> Increasing the exponent to \(e+1\) multiplies this factor by </p>
+<div class="displaymath" id="a0000000685">
+  \[  \frac{(1+p_i+\dots +p_i^{e+1})/p_i^{e+1}}{(1+p_i+\dots +p_i^e)/p_i^e} = \frac{1+p_i+\dots +p_i^{e+1}}{p_i(1+p_i+\dots +p_i^e)} = \frac{1+p_i+\dots +p_i^e + p_i^{e+1}}{p_i(1+p_i+\dots +p_i^e)}.  \]
+</div>
+<p> Since all terms \(1,p_i,\dots \) are positive, replacing \(e\) by \(1\) only decreases this ratio. Thus </p>
+<div class="displaymath" id="a0000000686">
+  \[  \frac{(1+p_i+p_i^2)/p_i^2}{(1+p_i)/p_i} \le \frac{(1+p_i+\dots +p_i^{e+1})/p_i^{e+1}}{(1+p_i+\dots +p_i^e)/p_i^e}.  \]
+</div>
+<p> In our application, the exponent is exactly increased by \(1\), and we may bound from below by the case \(e=1\), giving the claimed factor </p>
+<div class="displaymath" id="a0000000687">
+  \[  1 + \frac{1}{p_i(p_i+1)}.  \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:effect-2">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">136</span>
+    <span class="lemma_thmtitle">Effect of increasing the exponent of \(2\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:effect-2">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000688"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(k\) be the largest integer such that \(2^k \le n\). Then the exponent of \(2\) in \(L'\) is at least \(k\), and the exponent of \(2\) in \(M\) is at least \(k+2\). Consequently, </p>
+<div class="equation" id="eq:2-lower">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{eq:2-lower} \frac{(1+2+\dots +2^{k+2})/2^{k+2}}{(1+2+\dots +2^k)/2^k} \ge 1 + \frac{3}{2^{k+3}-4} \ge 1 + \frac{3}{8n}. \end{equation}
+  </div>
+  <span class="equation_label">4</span>
+</p>
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000688">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Since \(2^k \le n\), the number \(2^k\) divides \(\lcm (1,2,\dots ,n)\), hence \(2^k\) divides \(L_n\) and thus also divides \(L'\). The definition of \(M\) multiplies \(L'\) by \(4 = 2^2\), so the exponent of \(2\) in \(M\) is at least \(k+2\). </p>
+<p>The ratio of contributions of \(2\) to \(\sigma (M)/M\) and \(\sigma (L')/L'\) is </p>
+<div class="displaymath" id="a0000000689">
+  \[  \frac{(1+2+\dots +2^{k+2})/2^{k+2}}{(1+2+\dots +2^k)/2^k}.  \]
+</div>
+<p> A direct calculation yields </p>
+<div class="displaymath" id="a0000000690">
+  \[  \frac{1+2+\dots +2^{k+2}}{1+2+\dots +2^k} = \frac{2^{k+3}-1}{2^{k+1}-1} = 1 + \frac{3(2^k-1)}{2^{k+1}-1} \ge 1 + \frac{3}{2^{k+3}-4},  \]
+</div>
+<p> giving the first inequality in <a href="sect0009.html#eq:2-lower" class="eqref">4</a>. Finally, since \(2^k \le n {\lt} 2^{k+1}\), we have \(2^{k+3} {\lt} 8n\), so </p>
+<div class="displaymath" id="a0000000691">
+  \[  \frac{3}{2^{k+3}-4} \ge \frac{3}{8n},  \]
+</div>
+<p> giving the second inequality. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:m-nonnegative">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">137</span>
+    <span class="lemma_thmtitle">Effect of the remaining factor \(m\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:m-nonnegative">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000692"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> The extra factor \(m\) in the definition of \(M\) can only increase the normalised divisor sum: </p>
+<div class="displaymath" id="a0000000693">
+  \[  \frac{\sigma (M)}{M} \ge \frac{\sigma (L')}{L'} \times \Bigl(\text{multiplicative factors coming from }p_i\text{ and }2\Bigr).  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000692">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Since \(m\) is a positive integer, any extra primes (or higher exponents) it introduces appear as multiplicative factors of the form </p>
+<div class="displaymath" id="a0000000694">
+  \[  \frac{1+p+\dots +p^e}{p^e} \ge 1.  \]
+</div>
+<p> Hence they can only increase the value of \(\sigma (M)/M\). </p>
+
+  </div>
+</div>
+<h2 id="a0000000695">9.1.6 Conclusion of the criterion</h2>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:sigmaM-lower-final">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">138</span>
+    <span class="lemma_thmtitle">Lower bound for \(\sigma (M)/M\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:sigmaM-lower-final">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000696"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.σnorm_M_ge_σnorm_L'_mul" class="lean_decl">Criterion.σnorm_M_ge_σnorm_L'_mul</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>With notation as above, </p>
+<div class="displaymath" id="a0000000697">
+  \[  \frac{\sigma (M)}{M} \ge \frac{\sigma (L')}{L'} \Biggl( \prod _{i=1}^3 \Bigl(1 + \frac{1}{p_i(p_i+1)}\Bigr) \Biggr) \Bigl(1 + \frac{3}{8n}\Bigr).  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000696">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Multiply the contributions from Lemma&#160;<a href="sect0009.html#lem:effect-pi">135</a> for \(i=1,2,3\), from Lemma&#160;<a href="sect0009.html#lem:effect-2">136</a> for the prime \(2\), and note that Lemma&#160;<a href="sect0009.html#lem:m-nonnegative">137</a> allows us to ignore any additional (non-decreasing) contribution from \(m\). This gives exactly the stated lower bound. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="thm:criterion">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">52</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#thm:criterion">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000698"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Criterion.not_highlyAbundant" class="lean_decl">Criterion.not_highlyAbundant</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>Let \(n \geq 1\). Suppose that primes \(p_1,p_2,p_3,q_1,q_2,q_3\) satisfy </p>
+<div class="displaymath" id="a0000000699">
+  \[  \sqrt{n} {\lt} p_1 {\lt} p_2 {\lt} p_3 {\lt} q_1 {\lt} q_2 {\lt} q_3 {\lt} n  \]
+</div>
+<p> and the key criterion </p>
+<div class="equation" id="eq:main-ineq">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{eq:main-ineq} \prod _{i=1}^3\Bigl(1+\frac{1}{q_i}\Bigr) \le \Biggl( \prod _{i=1}^3 \Bigl(1+\frac{1}{p_i(p_i+1)}\Bigr) \Biggr) \Bigl(1 + \frac{3}{8n}\Bigr) \Biggl(1 - \frac{4 p_1 p_2 p_3}{q_1 q_2 q_3}\Biggr). \end{equation}
+  </div>
+  <span class="equation_label">5</span>
+</p>
+</div>
+<p> Then \(L_n\) is not highly abundant. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000698">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>By Lemma&#160;<a href="sect0009.html#lem:sigmaM-lower-final">138</a>, the condition <a href="sect0009.html#eq:sigmaM-lower" class="eqref">3</a> holds. By Lemma&#160;<a href="sect0009.html#lem:criterion-reduced">134</a> this implies </p>
+<div class="displaymath" id="a0000000700">
+  \[  \frac{\sigma (M)}{M} \Bigl(1 - \frac{4 p_1 p_2 p_3}{q_1 q_2 q_3}\Bigr) \ge \frac{\sigma (L_n)}{L_n}.  \]
+</div>
+<p> Applying Lemma&#160;<a href="sect0009.html#lem:criterion-sufficient">133</a>, we obtain \(\sigma (M) \ge \sigma (L_n)\) with \(M {\lt} L_n\), so \(L_n\) cannot be highly abundant. </p>
+
+  </div>
+</div>
+<p> Analogous arguments allow other pairs \((c,\alpha )\) in place of \((4,3/8)\), such as \((2,1/4)\), \((6,17/36)\), \((30,0.632\dots )\); or even \((1,0)\) provided more primes are used on the \(p\)-side than the \(q\)-side to restore an asymptotic advantage.  </p>
+<h2 id="a0000000701">9.1.7 Choice of six primes \(p_i,q_i\) for large \(n\)</h2>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:choose-pi">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">139</span>
+    <span class="lemma_thmtitle">Choice of medium primes \(p_i\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:choose-pi">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000702"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(n \ge X_0^2\). Set \(x := \sqrt{n}\). Then there exist primes \(p_1,p_2,p_3\) with </p>
+<div class="displaymath" id="a0000000703">
+  \[  p_i \le x \Bigl(1 + \frac{1}{\log ^3 x}\Bigr)^i  \]
+</div>
+<p> and \(p_1 {\lt} p_2 {\lt} p_3\). Moreover, \(\sqrt{n} {\lt} p_1\) </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000702">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Apply Theorem&#160;<a href="sect0008.html#thm:Dusart">51</a> successively with \(x, x(1+1/\log ^3 x), x(1+1/\log ^3 x)^2\), keeping track of the resulting primes and bounds. For \(n\) large and \(x = \sqrt{n}\), we have \(\sqrt{n} {\lt} p_1\) as soon as the first interval lies strictly above \(\sqrt{n}\); this can be enforced by taking \(n\) large enough. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:choose-qi">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">140</span>
+    <span class="lemma_thmtitle">Choice of large primes \(q_i\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:choose-qi">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000704"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(n \ge X_0^2\). Then there exist primes \(q_1 {\lt} q_2 {\lt} q_3\) with </p>
+<div class="displaymath" id="a0000000705">
+  \[  q_{4-i} \ge n \Bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\Bigr)^{-i}  \]
+</div>
+<p> for \(i = 1,2,3\), and \(q_1 {\lt} q_2 {\lt} q_3 {\lt} n\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000704">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Apply Theorem&#160;<a href="sect0008.html#thm:Dusart">51</a> with suitable values of \(x\) slightly below \(n\), e.g. \(x = n(1+1/\log ^3\sqrt{n})^{-i}\), again keeping track of the intervals. For \(n\) large enough, these intervals lie in \((\sqrt{n},n)\) and contain primes \(q_i\) with the desired ordering. </p>
+
+  </div>
+</div>
+<h2 id="a0000000706">9.1.8 Bounding the factors in <a href="sect0009.html#eq:main-ineq" class="eqref">5</a></h2>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:qi-product">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">141</span>
+    <span class="lemma_thmtitle">Bounds for the \(q_i\)-product</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:qi-product">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000707"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> With \(p_i,q_i\) as in Lemmas&#160;<a href="sect0009.html#lem:choose-pi">139</a> and <a href="sect0009.html#lem:choose-qi">140</a>, we have </p>
+<div class="equation" id="eq:qi-upper">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{eq:qi-upper} \prod _{i=1}^3 \Bigl(1 + \frac{1}{q_i}\Bigr) \le \prod _{i=1}^3 \Bigl(1 + \frac{\bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\bigr)^i}{n} \Bigr). \end{equation}
+  </div>
+  <span class="equation_label">6</span>
+</p>
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000707">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>By Lemma&#160;<a href="sect0009.html#lem:choose-qi">140</a>, each \(q_i\) is at least </p>
+<div class="displaymath" id="a0000000708">
+  \[  n\Bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\Bigr)^{-j}  \]
+</div>
+<p> for suitable indices \(j\), so \(1/q_i\) is bounded above by </p>
+<div class="displaymath" id="a0000000709">
+  \[  \frac{\bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\bigr)^i}{n}  \]
+</div>
+<p> after reindexing. Multiplying the three inequalities gives <a href="sect0009.html#eq:qi-upper" class="eqref">6</a>. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:pi-product">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">142</span>
+    <span class="lemma_thmtitle">Bounds for the \(p_i\)-product</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:pi-product">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000710"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> With \(p_i\) as in Lemma&#160;<a href="sect0009.html#lem:choose-pi">139</a>, we have for large \(n\) </p>
+<div class="equation" id="eq:pi-lower">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{eq:pi-lower} \prod _{i=1}^3 \Bigl(1 + \frac{1}{p_i(p_i+1)}\Bigr) \ge \prod _{i=1}^3 \Bigl( 1 + \frac{1}{\bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\bigr)^{2i} (n + \sqrt{n})} \Bigr). \end{equation}
+  </div>
+  <span class="equation_label">7</span>
+</p>
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000710">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>By Lemma&#160;<a href="sect0009.html#lem:choose-pi">139</a>, \(p_i \le \sqrt{n} (1+1/\log ^3\sqrt{n})^i\). Hence </p>
+<div class="displaymath" id="a0000000711">
+  \[  p_i^2 \le n\bigl(1 + \tfrac {1}{\log ^3 \sqrt{n}}\bigr)^{2i} \quad \text{and}\quad p_i+1 \le p_i(1 + 1/\sqrt{n}) \le (1+1/\sqrt{n}) p_i.  \]
+</div>
+<p> From these one gets </p>
+<div class="displaymath" id="a0000000712">
+  \[  p_i(p_i+1) \le \bigl(1 + \tfrac {1}{\log ^3 \sqrt{n}}\bigr)^{2i} (n + \sqrt{n}),  \]
+</div>
+<p> and hence </p>
+<div class="displaymath" id="a0000000713">
+  \[  \frac{1}{p_i(p_i+1)} \ge \frac{1}{\bigl(1 + \tfrac {1}{\log ^3 \sqrt{n}}\bigr)^{2i} (n + \sqrt{n})}.  \]
+</div>
+<p> Taking \(1+\cdot \) and multiplying over \(i=1,2,3\) gives <a href="sect0009.html#eq:pi-lower" class="eqref">7</a>. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:pq-ratio">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">143</span>
+    <span class="lemma_thmtitle">Lower bound for the product ratio \(p_i/q_i\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:pq-ratio">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000714"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> With \(p_i,q_i\) as in Lemmas&#160;<a href="sect0009.html#lem:choose-pi">139</a> and <a href="sect0009.html#lem:choose-qi">140</a>, we have </p>
+<div class="equation" id="eq:pq-ratio">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{eq:pq-ratio} 1 - \frac{4 p_1 p_2 p_3}{q_1 q_2 q_3} \ge 1 - \frac{4 \bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\bigr)^{12}}{n^{3/2}}. \end{equation}
+  </div>
+  <span class="equation_label">8</span>
+</p>
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000714">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We have \(p_i \le \sqrt{n} (1+1/\log ^3 \sqrt{n})^i\), so </p>
+<div class="displaymath" id="a0000000715">
+  \[  p_1 p_2 p_3 \le n^{3/2} \bigl(1 + \tfrac {1}{\log ^3 \sqrt{n}}\bigr)^{6}.  \]
+</div>
+<p> Similarly, \(q_i \ge n(1+1/\log ^3 \sqrt{n})^{-i}\), so </p>
+<div class="displaymath" id="a0000000716">
+  \[  q_1 q_2 q_3 \ge n^3 \bigl(1 + \tfrac {1}{\log ^3 \sqrt{n}}\bigr)^{-6}.  \]
+</div>
+<p> Combining, </p>
+<div class="displaymath" id="a0000000717">
+  \[  \frac{p_1 p_2 p_3}{q_1 q_2 q_3} \le \frac{n^{3/2} \bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\bigr)^{6}}{n^3 \bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\bigr)^{-6}} = \frac{\bigl(1 + \frac{1}{\log ^3 \sqrt{n}}\bigr)^{12}}{n^{3/2}}.  \]
+</div>
+<p> This implies <a href="sect0009.html#eq:pq-ratio" class="eqref">8</a>. </p>
+
+  </div>
+</div>
+<h2 id="a0000000718">9.1.9 Reduction to a small epsilon-inequality</h2>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:eps-bounds">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">144</span>
+    <span class="lemma_thmtitle">Uniform bounds for large \(n\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:eps-bounds">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000719"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For all \(n \ge X_0^2 = 89693^2\) we have </p>
+<div class="displaymath" id="a0000000720">
+  \[  \frac{1}{\log ^3 \sqrt{n}} \le 0.000675, \qquad \frac{1}{n^{3/2}} \le \frac{1}{89693}\cdot \frac{1}{n}.  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000719">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>This is a straightforward calculus and monotonicity check: the left-hand sides are decreasing in \(n\) for \(n \ge X_0^2\), and equality (or the claimed upper bound) holds at \(n=X_0^2\). One can verify numerically or symbolically. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="a0000000721">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">39</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#a0000000721">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>For \(n \ge X_0^2\), define \(\varepsilon := 1/n\). Then </p>
+<div class="displaymath" id="a0000000722">
+  \[  0 {\lt} \varepsilon \le \frac{1}{X_0^2} = \frac{1}{89693^2}.  \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:poly-ineq">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">145</span>
+    <span class="lemma_thmtitle">Polynomial approximation of the inequality</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:poly-ineq">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000723"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For \(0 \le \varepsilon \le 1/89693^2\), we have </p>
+<div class="displaymath" id="a0000000724">
+  \[  \prod _{i=1}^3 (1 + 1.000675^i \varepsilon ) \le \Bigl(1 + 3.01\varepsilon + 3.01\varepsilon ^2 + 1.01\varepsilon ^3\Bigr),  \]
+</div>
+<p> and </p>
+<div class="displaymath" id="a0000000725">
+  \[  \prod _{i=1}^3 \Bigl(1 + \frac{\varepsilon }{1.000675^{2i}}\Bigr) \Bigl(1 + \frac{3}{8}\varepsilon \Bigr) \Bigl(1 - \frac{4 \times 1.000675^{12}}{89693}\varepsilon \Bigr) \ge 1 + 3.37\varepsilon - 0.01\varepsilon ^2.  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000723">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Expand each finite product as a polynomial in \(\varepsilon \), estimate the coefficients using the bounds in Lemma&#160;<a href="sect0009.html#lem:eps-bounds">144</a>, and bound the tails by simple inequalities such as </p>
+<div class="displaymath" id="a0000000726">
+  \[  (1+C\varepsilon )^k \le 1 + k C\varepsilon + \dots  \]
+</div>
+<p> for small \(\varepsilon \). All coefficients can be bounded numerically in a rigorous way; this step is a finite computation that can be checked mechanically. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="lem:final-comparison">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">146</span>
+    <span class="lemma_thmtitle">Final polynomial comparison</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#lem:final-comparison">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000727"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For \(0 \le \varepsilon \le 1/89693^2\), we have </p>
+<div class="displaymath" id="a0000000728">
+  \[  1 + 3.01\varepsilon + 3.01\varepsilon ^2 + 1.01\varepsilon ^3 \le 1 + 3.37\varepsilon - 0.01\varepsilon ^2.  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000727">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>This is equivalent to </p>
+<div class="displaymath" id="a0000000729">
+  \[  3.01\varepsilon + 3.01\varepsilon ^2 + 1.01\varepsilon ^3 \le 3.37\varepsilon - 0.01\varepsilon ^2,  \]
+</div>
+<p> or </p>
+<div class="displaymath" id="a0000000730">
+  \[  0 \le (3.37 - 3.01)\varepsilon - (3.01+0.01)\varepsilon ^2 - 1.01\varepsilon ^3.  \]
+</div>
+<p> Factor out \(\varepsilon \) and use that \(0{\lt}\varepsilon \le 1/89693^2\) to check that the resulting quadratic in \(\varepsilon \) is nonnegative on this interval. Again, this is a finite computation that can be verified mechanically. </p>
+
+  </div>
+</div>
+<div class="proposition_thmwrapper theorem-style-definition" id="prop:ineq-holds-large-n">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">8</span>
+    <span class="proposition_thmtitle">Verification of <a href="sect0009.html#eq:main-ineq" class="eqref">5</a> for large \(n\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#prop:ineq-holds-large-n">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000731"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p> For every integer \(n \ge X_0^2 = 89693^2 \approx 8.04\times 10^9\), the primes \(p_i,q_i\) constructed in Lemmas&#160;<a href="sect0009.html#lem:choose-pi">139</a> and <a href="sect0009.html#lem:choose-qi">140</a> satisfy the inequality <a href="sect0009.html#eq:main-ineq" class="eqref">5</a>. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000731">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Combine Lemma&#160;<a href="sect0009.html#lem:qi-product">141</a>, Lemma&#160;<a href="sect0009.html#lem:pi-product">142</a>, and Lemma&#160;<a href="sect0009.html#lem:pq-ratio">143</a>. Then apply Lemma&#160;<a href="sect0009.html#lem:eps-bounds">144</a> and set \(\varepsilon = 1/n\). The products are bounded by the expressions in Lemma&#160;<a href="sect0009.html#lem:poly-ineq">145</a>, and the inequality in Lemma&#160;<a href="sect0009.html#lem:final-comparison">146</a> then ensures that <a href="sect0009.html#eq:main-ineq" class="eqref">5</a> holds. </p>
+
+  </div>
+</div>
+<h2 id="a0000000732">9.1.10 Conclusion for large \(n\)</h2>
+<div class="theorem_thmwrapper theorem-style-definition" id="thm:large-n-final">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">53</span>
+    <span class="theorem_thmtitle">Non-highly abundant for large \(n\)</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0009.html#thm:large-n-final">#</a>
+    
+    <a class="icon proof" href="sect0009.html#a0000000733"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/L_not_HA_of_ge" class="lean_decl">L_not_HA_of_ge</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>For every integer \(n \ge 89693^2\), the integer \(L_n\) is not highly abundant. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000733">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>By Proposition&#160;<a href="sect0009.html#prop:ineq-holds-large-n">8</a>, there exist primes \(p_1,p_2,p_3,q_1,q_2,q_3\) satisfying the hypotheses of Theorem&#160;<a href="sect0009.html#thm:criterion">52</a>. Hence \(L_n\) is not highly abundant. </p>
+
+  </div>
+</div>
+<p> In combination with earlier arguments and computations for smaller \(n\), one can conclude that \(L_n\) is highly abundant only for finitely many indices \(n\), and these indices can be determined explicitly by exhaustive computation.  </p>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
+  <a href="sect0008.html" title="Secondary explicit estimates"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Prime Number Theorem And ..."><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
+</body>
+</html>

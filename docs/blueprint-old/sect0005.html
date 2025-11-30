@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Elementary Corollaries</title>
+<link rel="next" href="sect0006.html" title="Explicit estimates" />
+<link rel="prev" href="sect0004.html" title="Third Approach" />
+<link rel="up" href="index.html" title="Prime Number Theorem And ..." />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">Prime Number Theorem And ...</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">The project</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">First approach: Wiener-Ikehara Tauberian theorem.</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0002.html#a0000000012"><span class="toc_ref">2.1</span> <span class="toc_entry">A Fourier-analytic proof of the Wiener-Ikehara theorem</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000013"><span class="toc_ref">2.2</span> <span class="toc_entry">Weak PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000014"><span class="toc_ref">2.3</span> <span class="toc_entry">Removing the Chebyshev hypothesis</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000015"><span class="toc_ref">2.4</span> <span class="toc_entry">The prime number theorem in arithmetic progressions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000016"><span class="toc_ref">2.5</span> <span class="toc_entry">The Chebotarev density theorem: the case of cyclotomic extensions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000017"><span class="toc_ref">2.6</span> <span class="toc_entry">The Chebotarev density theorem: the case of abelian extensions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000018"><span class="toc_ref">2.7</span> <span class="toc_entry">The Chebotarev density theorem: the general case</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0003.html"><span class="toc_ref">3</span> <span class="toc_entry">Second approach</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0003.html#a0000000019"><span class="toc_ref">3.1</span> <span class="toc_entry">Residue calculus on rectangles</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000020"><span class="toc_ref">3.2</span> <span class="toc_entry">Perron Formula</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000021"><span class="toc_ref">3.3</span> <span class="toc_entry">Mellin transforms</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000022"><span class="toc_ref">3.4</span> <span class="toc_entry">Zeta Bounds</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000023"><span class="toc_ref">3.5</span> <span class="toc_entry">Proof of Medium PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000024"><span class="toc_ref">3.6</span> <span class="toc_entry">MediumPNT</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">4</span> <span class="toc_entry">Third Approach</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0004.html#a0000000025"><span class="toc_ref">4.1</span> <span class="toc_entry">Strong PNT</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class=" active current">
+  <a href="sect0005.html"><span class="toc_ref">5</span> <span class="toc_entry">Elementary Corollaries</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sect0005.html#a0000000026"><span class="toc_ref">5.1</span> <span class="toc_entry">Consequences of the PNT in arithmetic progressions</span></a>
+ </li>
+<li class="">
+  <a href="sect0005.html#a0000000027"><span class="toc_ref">5.2</span> <span class="toc_entry">Consequences of the Chebotarev density theorem</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">6</span> <span class="toc_entry">Explicit estimates</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html"><span class="toc_ref">7</span> <span class="toc_entry">Primary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0007.html#a0000000028"><span class="toc_ref">7.1</span> <span class="toc_entry">Definitions</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html#a0000000029"><span class="toc_ref">7.2</span> <span class="toc_entry">The estimates of Fiori, Kadiri, and Swidinsky</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html#a0000000030"><span class="toc_ref">7.3</span> <span class="toc_entry">Summary of results</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0008.html"><span class="toc_ref">8</span> <span class="toc_entry">Secondary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0008.html#a0000000031"><span class="toc_ref">8.1</span> <span class="toc_entry">Definitions</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html#a0000000032"><span class="toc_ref">8.2</span> <span class="toc_entry">The arguments of Rosser and Schoenfeld</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html#a0000000033"><span class="toc_ref">8.3</span> <span class="toc_entry">Summary of results</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0009.html"><span class="toc_ref">9</span> <span class="toc_entry">Tertiary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0009.html#a0000000034"><span class="toc_ref">9.1</span> <span class="toc_entry">The least common multiple sequence is not highly abundant for large \(n\)</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li ><a href="dep_graph_document.html">Dependency graph</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h1 id="a0000000006">5 Elementary Corollaries</h1>
+<div class="lemma_thmwrapper theorem-style-definition" id="finsum_range_eq_sum_range">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">126</span>
+    <span class="lemma_thmtitle">finsum_range_eq_sum_range</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#finsum_range_eq_sum_range">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000586"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/finsum_range_eq_sum_range" class="lean_decl">finsum_range_eq_sum_range</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>For any arithmetic function \(f\) and real number \(x\), one has </p>
+<div class="displaymath" id="a0000000587">
+  \[  \sum _{n \leq x} f(n) = \sum _{n \leq ⌊x⌋_+} f(n) \]
+</div>
+<p> and </p>
+<div class="displaymath" id="a0000000588">
+  \[  \sum _{n {\lt} x} f(n) = \sum _{n {\lt} ⌈x⌉_+} f(n). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000586">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Straightforward. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="chebyshev_asymptotic">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">46</span>
+    <span class="theorem_thmtitle">chebyshev_asymptotic</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#chebyshev_asymptotic">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000589"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/chebyshev_asymptotic" class="lean_decl">chebyshev_asymptotic</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>One has </p>
+<div class="displaymath" id="a0000000590">
+  \[  \sum _{p \leq x} \log p = x + o(x). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000589">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>From the prime number theorem we already have </p>
+<div class="displaymath" id="a0000000591">
+  \[  \sum _{n \leq x} \Lambda (n) = x + o(x) \]
+</div>
+<p> so it suffices to show that </p>
+<div class="displaymath" id="a0000000592">
+  \[  \sum _{j \geq 2} \sum _{p^j \leq x} \log p = o(x). \]
+</div>
+<p> Only the terms with \(j \leq \log x / \log 2\) contribute, and each \(j\) contributes at most \(\sqrt{x} \log x\) to the sum, so the left-hand side is \(O( \sqrt{x} \log ^2 x ) = o(x)\) as required. </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="primorial_bounds">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">8</span>
+    <span class="corollary_thmtitle">primorial_bounds</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#primorial_bounds">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000593"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/primorial_bounds" class="lean_decl">primorial_bounds</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p> We have </p>
+<div class="displaymath" id="a0000000594">
+  \[  \prod _{p \leq x} p = \exp ( x + o(x) ) \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000593">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Exponentiate Theorem <a href="sect0005.html#chebyshev_asymptotic">46</a>. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="pi_asymp">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">47</span>
+    <span class="theorem_thmtitle">pi_asymp</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#pi_asymp">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000595"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/pi_asymp" class="lean_decl">pi_asymp</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>There exists a function \(c(x)\) such that \(c(x) = o(1)\) as \(x \to \infty \) and </p>
+<div class="displaymath" id="a0000000596">
+  \[  \pi (x) = (1 + c(x)) \int _2^x \frac{dt}{\log t} \]
+</div>
+<p> for all \(x\) large enough. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000595">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> We have the identity </p>
+<div class="displaymath" id="a0000000597">
+  \[  \pi (x) = \frac{1}{\log x} \sum _{p \leq x} \log p + \int _2^x (\sum _{p \leq t} \log p) \frac{dt}{t \log ^2 t} \]
+</div>
+<p> as can be proven by interchanging the sum and integral and using the fundamental theorem of calculus. For any \(\epsilon \), we know from Theorem <a href="sect0005.html#chebyshev_asymptotic">46</a> that there is \(x_\epsilon \) such that \(\sum _{p \leq t} \log p = t + O(\epsilon t)\) for \(t \geq x_\epsilon \), hence for \(x \geq x_\epsilon \) </p>
+<div class="displaymath" id="a0000000598">
+  \[  \pi (x) = \frac{1}{\log x} (x + O(\epsilon x)) + \int _{x_\epsilon }^x (t + O(\epsilon t)) \frac{dt}{t \log ^2 t} + O_\epsilon (1) \]
+</div>
+<p> where the \(O_\epsilon (1)\) term can depend on \(x_\epsilon \) but is independent of \(x\). One can evaluate this after an integration by parts as </p>
+<div class="displaymath" id="a0000000599">
+  \[  \pi (x) = (1+O(\epsilon )) \int _{x_\epsilon }^x \frac{dt}{\log t} + O_\epsilon (1) \]
+</div>
+<div class="displaymath" id="a0000000600">
+  \[  = (1+O(\epsilon )) \int _{2}^x \frac{dt}{\log t}  \]
+</div>
+<p> for \(x\) large enough, giving the claim. </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="pi_alt">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">9</span>
+    <span class="corollary_thmtitle">pi_alt</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#pi_alt">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000601"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/pi_alt" class="lean_decl">pi_alt</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p>One has </p>
+<div class="displaymath" id="a0000000602">
+  \[  \pi (x) = (1+o(1)) \frac{x}{\log x} \]
+</div>
+<p> as \(x \to \infty \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000601">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> An integration by parts gives </p>
+<div class="displaymath" id="a0000000603">
+  \[  \int _2^x \frac{dt}{\log t} = \frac{x}{\log x} - \frac{2}{\log 2} + \int _2^x \frac{dt}{\log ^2 t}. \]
+</div>
+<p> We have the crude bounds </p>
+<div class="displaymath" id="a0000000604">
+  \[  \int _2^{\sqrt{x}} \frac{dt}{\log ^2 t} = O( \sqrt{x} ) \]
+</div>
+<p> and </p>
+<div class="displaymath" id="a0000000605">
+  \[  \int _{\sqrt{x}}^x \frac{dt}{\log ^2 t} = O( \frac{x}{\log ^2 x} ) \]
+</div>
+<p> and combining all this we obtain </p>
+<div class="displaymath" id="a0000000606">
+  \[  \int _2^x \frac{dt}{\log t} = \frac{x}{\log x} + O( \frac{x}{\log ^2 x} ) \]
+</div>
+<div class="displaymath" id="a0000000607">
+  \[  = (1+o(1)) \frac{x}{\log x} \]
+</div>
+<p> and the claim then follows from Theorem <a href="sect0005.html#pi_asymp">47</a>. </p>
+
+  </div>
+</div>
+<p>Let \(p_n\) denote the \(n^{th}\) prime. </p>
+<div class="proposition_thmwrapper theorem-style-definition" id="pn_asymptotic">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">3</span>
+    <span class="proposition_thmtitle">pn_asymptotic</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#pn_asymptotic">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000608"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/pn_asymptotic" class="lean_decl">pn_asymptotic</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p>One has </p>
+<div class="displaymath" id="a0000000609">
+  \[  p_n = (1+o(1)) n \log n \]
+</div>
+<p> as \(n \to \infty \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000608">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Use Corollary <a href="sect0005.html#pi_alt">9</a> to show that for any \(\epsilon {\gt}0\), and for \(n\) sufficiently large, the number of primes up to \((1-\epsilon ) n \log n\) is less than \(n\), and the number of primes up to \((1+\epsilon ) n \log n\) is greater than \(n\). </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="pn_pn_plus_one">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">10</span>
+    <span class="corollary_thmtitle">pn_pn_plus_one</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#pn_pn_plus_one">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000610"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/pn_pn_plus_one" class="lean_decl">pn_pn_plus_one</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p> We have \(p_{n+1} - p_n = o(p_n)\) as \(n \to \infty \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000610">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Easy consequence of preceding proposition. </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="prime_between">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">11</span>
+    <span class="corollary_thmtitle">prime_between</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#prime_between">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000611"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/prime_between" class="lean_decl">prime_between</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p> For every \(\epsilon {\gt}0\), there is a prime between \(x\) and \((1+\epsilon )x\) for all sufficiently large \(x\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000611">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Use Corollary <a href="sect0005.html#pi_alt">9</a> to show that \(\pi ((1+\epsilon )x) - \pi (x)\) goes to infinity as \(x \to \infty \). </p>
+
+  </div>
+</div>
+<div class="proposition_thmwrapper theorem-style-definition" id="mun">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">4</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#mun">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000612"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/sum_mobius_div_self_le" class="lean_decl">sum_mobius_div_self_le</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p>We have \(|\sum _{n \leq x} \frac{\mu (n)}{n}| \leq 1\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000612">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>From Möbius inversion \(1_{n=1} = \sum _{d|n} \mu (d)\) and summing we have </p>
+<div class="displaymath" id="a0000000613">
+  \[  1 = \sum _{d \leq x} \mu (d) \lfloor \frac{x}{d} \rfloor  \]
+</div>
+<p> for any \(x \geq 1\). Since \(\lfloor \frac{x}{d} \rfloor = \frac{x}{d} - \epsilon _d\) with \(0 \leq \epsilon _d {\lt} 1\) and \(\epsilon _x = 0\), we conclude that </p>
+<div class="displaymath" id="a0000000614">
+  \[  1 ≥ x \sum _{d \leq x} \frac{\mu (d)}{d} - (x - 1) \]
+</div>
+<p> and the claim follows. </p>
+
+  </div>
+</div>
+<div class="proposition_thmwrapper theorem-style-definition" id="mu-pnt">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">5</span>
+    <span class="proposition_thmtitle">Möbius form of prime number theorem</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#mu-pnt">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000615"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/mu_pnt" class="lean_decl">mu_pnt</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p>We have \(\sum _{n \leq x} \mu (n) = o(x)\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000615">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> From the Dirichlet convolution identity </p>
+<div class="displaymath" id="a0000000616">
+  \[  \mu (n) \log n = - \sum _{d|n} \mu (d) \Lambda (n/d) \]
+</div>
+<p> and summing we obtain </p>
+<div class="displaymath" id="a0000000617">
+  \[  \sum _{n \leq x} \mu (n) \log n = - \sum _{d \leq x} \mu (d) \sum _{m \leq x/d} \Lambda (m). \]
+</div>
+<p> For any \(\epsilon {\gt}0\), we have from the prime number theorem that </p>
+<div class="displaymath" id="a0000000618">
+  \[  \sum _{m \leq x/d} \Lambda (m) = x/d + O(\epsilon x/d) + O_\epsilon (1) \]
+</div>
+<p> (divide into cases depending on whether \(x/d\) is large or small compared to \(\epsilon \)). We conclude that </p>
+<div class="displaymath" id="a0000000619">
+  \[  \sum _{n \leq x} \mu (n) \log n = - x \sum _{d \leq x} \frac{\mu (d)}{d} + O(\epsilon x \log x) + O_\epsilon (x). \]
+</div>
+<p> Applying <a href="sect0005.html#mun" class="eqref">4</a> we conclude that </p>
+<div class="displaymath" id="a0000000620">
+  \[  \sum _{n \leq x} \mu (n) \log n = O(\epsilon x \log x) + O_\epsilon (x). \]
+</div>
+<p> and hence </p>
+<div class="displaymath" id="a0000000621">
+  \[  \sum _{n \leq x} \mu (n) \log x = O(\epsilon x \log x) + O_\epsilon (x) + O( \sum _{n \leq x} (\log x - \log n) ). \]
+</div>
+<p> From Stirling’s formula one has </p>
+<div class="displaymath" id="a0000000622">
+  \[  \sum _{n \leq x} (\log x - \log n) = O(x) \]
+</div>
+<p> thus </p>
+<div class="displaymath" id="a0000000623">
+  \[  \sum _{n \leq x} \mu (n) \log x = O(\epsilon x \log x) + O_\epsilon (x) \]
+</div>
+<p> and thus </p>
+<div class="displaymath" id="a0000000624">
+  \[  \sum _{n \leq x} \mu (n) = O(\epsilon x) + O_\epsilon (\frac{x}{\log x}). \]
+</div>
+<p> Sending \(\epsilon \to 0\) we obtain the claim. </p>
+
+  </div>
+</div>
+<div class="proposition_thmwrapper theorem-style-definition" id="lambda-pnt">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">6</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#lambda-pnt">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000625"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/lambda_pnt" class="lean_decl">lambda_pnt</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p>We have \(\sum _{n \leq x} \lambda (n) = o(x)\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000625">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> From the identity </p>
+<div class="displaymath" id="a0000000626">
+  \[  \lambda (n) = \sum _{d^2|n} \mu (n/d^2) \]
+</div>
+<p> and summing, we have </p>
+<div class="displaymath" id="a0000000627">
+  \[  \sum _{n \leq x} \lambda (n) = \sum _{d \leq \sqrt{x}} \sum _{n \leq x/d^2} \mu (n). \]
+</div>
+<p> For any \(\epsilon {\gt}0\), we have from Proposition <a href="sect0005.html#mu-pnt">5</a> that </p>
+<div class="displaymath" id="a0000000628">
+  \[  \sum _{n \leq x/d^2} \mu (n) = O(\epsilon x/d^2) + O_\epsilon (1) \]
+</div>
+<p> and hence on summing in \(d\) </p>
+<div class="displaymath" id="a0000000629">
+  \[  \sum _{n \leq x} \lambda (n) = O(\epsilon x) + O_\epsilon (x^{1/2}). \]
+</div>
+<p> Sending \(\epsilon \to 0\) we obtain the claim. </p>
+
+  </div>
+</div>
+<div class="proposition_thmwrapper theorem-style-definition" id="mu-pnt-alt">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">7</span>
+    <span class="proposition_thmtitle">Alternate Möbius form of prime number theorem</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#mu-pnt-alt">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000630"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/mu_pnt_alt" class="lean_decl">mu_pnt_alt</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p>We have \(\sum _{n \leq x} \mu (n)/n = o(1)\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000630">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> As in the proof of Theorem <a href="sect0005.html#mun">4</a>, we have </p>
+<div class="displaymath" id="a0000000631">
+  \[  1 = \sum _{d \leq x} \mu (d) \lfloor \frac{x}{d} \rfloor  \]
+</div>
+<div class="displaymath" id="a0000000632">
+  \[  = x \sum _{d \leq x} \frac{\mu (d)}{d} - \sum _{d \leq x} \mu (d) \{  \frac{x}{d} \}  \]
+</div>
+<p> so it will suffice to show that </p>
+<div class="displaymath" id="a0000000633">
+  \[  \sum _{d \leq x} \mu (d) \{  \frac{x}{d} \}  = o(x). \]
+</div>
+<p> Let \(N\) be a natural number. It suffices to show that </p>
+<div class="displaymath" id="a0000000634">
+  \[  \sum _{d \leq x} \mu (d) \{  \frac{x}{d} \}  = O(x/N). \]
+</div>
+<p> if \(x\) is large enough depending on \(N\). We can split the left-hand side as the sum of </p>
+<div class="displaymath" id="a0000000635">
+  \[  \sum _{d \leq x/N} \mu (d) \{  \frac{x}{d} \}   \]
+</div>
+<p> and </p>
+<div class="displaymath" id="a0000000636">
+  \[  \sum _{j=1}^{N-1} \sum _{x/(j+1) {\lt} d \leq x/j} \mu (d) (x/d - j). \]
+</div>
+<p> The first term is clearly \(O(x/N)\). For the second term, we can use Theorem <a href="sect0005.html#mu-pnt">5</a> and summation by parts (using the fact that \(x/d-j\) is monotone and bounded) to find that </p>
+<div class="displaymath" id="a0000000637">
+  \[  \sum _{x/(j+1) {\lt} d \leq x/j} \mu (d) (x/d - j) = o(x) \]
+</div>
+<p> for any given \(j\), so in particular </p>
+<div class="displaymath" id="a0000000638">
+  \[  \sum _{x/(j+1) {\lt} d \leq x/j} \mu (d) (x/d - j) = O(x/N^2) \]
+</div>
+<p> for all \(j=1,\dots ,N-1\) if \(x\) is large enough depending on \(N\). Summing all the bounds, we obtain the claim. </p>
+
+  </div>
+</div>
+<h1 id="a0000000026">5.1 Consequences of the PNT in arithmetic progressions</h1>
+<div class="theorem_thmwrapper theorem-style-definition" id="chebyshev_asymptotic_pnt">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">48</span>
+    <span class="theorem_thmtitle">Prime number theorem in AP</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#chebyshev_asymptotic_pnt">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000639"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/chebyshev_asymptotic_pnt" class="lean_decl">chebyshev_asymptotic_pnt</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>If \(a\  (q)\) is a primitive residue class, then one has </p>
+<div class="displaymath" id="a0000000640">
+  \[  \sum _{p \leq x: p = a\  (q)} \log p = \frac{x}{\phi (q)} + o(x). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000639">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> This is a routine modification of the proof of Theorem <a href="sect0005.html#chebyshev_asymptotic">46</a>. </p>
+
+  </div>
+</div>
+<div class="corollary_thmwrapper theorem-style-definition" id="dirichlet_thm">
+  <div class="corollary_thmheading">
+    <span class="corollary_thmcaption">
+    Corollary
+    </span>
+    <span class="corollary_thmlabel">12</span>
+    <span class="corollary_thmtitle">Dirichlet’s theorem</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#dirichlet_thm">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000641"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/dirichlet_thm" class="lean_decl">dirichlet_thm</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="corollary_thmcontent">
+  <p>Any primitive residue class contains an infinite number of primes. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000641">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> If this were not the case, then the sum \(\sum _{p \leq x: p = a\  (q)} \log p\) would be bounded in \(x\), contradicting Theorem <a href="sect0005.html#chebyshev_asymptotic_pnt">48</a>. </p>
+
+  </div>
+</div>
+<p> -/ </p>
+<p>/-</p>
+<h1 id="a0000000027">5.2 Consequences of the Chebotarev density theorem</h1>
+<div class="lemma_thmwrapper theorem-style-definition" id="Chebotarev-cyclic">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">127</span>
+    <span class="lemma_thmtitle">Cyclotomic Chebotarev</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0005.html#Chebotarev-cyclic">#</a>
+    
+    <a class="icon proof" href="sect0005.html#a0000000642"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For any \(a\) coprime to \(m\), </p>
+<div class="displaymath" id="a0000000643">
+  \[  \sum _{N \mathfrak {p} \leq x; N \mathfrak {p} = a\  (m)} \log N \mathfrak {p} = \frac{1}{|G|} \sum _{N \mathfrak {p} \leq x} \log N \mathfrak {p}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000642">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> This should follow from Lemma <a href="sect0002.html#Dedekind-PNT">17</a> by a Fourier expansion. </p>
+
+  </div>
+</div>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
+  <a href="sect0004.html" title="Third Approach"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Prime Number Theorem And ..."><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0006.html" title="Explicit estimates"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
+</body>
+</html>

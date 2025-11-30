@@ -1,0 +1,250 @@
+
+The approach here is completely standard. We follow the use of
+$\mathcal{M}(\widetilde{1_{\epsilon}})$ as in [Kontorovich 2015].
+
+
+\begin{definition}\label{ChebyshevPsi}\lean{ChebyshevPsi}\leanok
+The (second) Chebyshev Psi function is defined as
+$$
+\psi(x) := \sum_{n \le x} \Lambda(n),
+$$
+where $\Lambda(n)$ is the von Mangoldt function.
+\end{definition}
+
+
+It has already been established that zeta doesn't vanish on the 1 line, and has a pole at $s=1$
+of order 1.
+We also have the following.
+\begin{theorem}[LogDerivativeDirichlet]\label{LogDerivativeDirichlet}\lean{LogDerivativeDirichlet}\leanok
+We have that, for $\Re(s)>1$,
+$$
+-\frac{\zeta'(s)}{\zeta(s)} = \sum_{n=1}^\infty \frac{\Lambda(n)}{n^s}.
+$$
+\end{theorem}
+
+
+\begin{proof}\leanok
+Already in Mathlib.
+\end{proof}
+
+
+The main object of study is the following inverse Mellin-type transform, which will turn out to
+be a smoothed Chebyshev function.
+
+\inputleannode{SmoothedChebyshev}
+
+
+\begin{lemma}[SmoothedChebyshevIntegrand_conj]\label{SmoothedChebyshevIntegrand_conj}\lean{SmoothedChebyshevIntegrand_conj}\leanok
+The smoothed Chebyshev integrand satisfies the conjugation symmetry
+$$
+\psi_{\epsilon}(X)(\overline{s}) = \overline{\psi_{\epsilon}(X)(s)}
+$$
+for all $s \in \mathbb{C}$, $X > 0$, and $\epsilon > 0$.
+\end{lemma}
+
+
+\begin{proof}\leanok
+\ uses{deriv_riemannZeta_conj, riemannZeta_conj}
+We expand the definition of the smoothed Chebyshev integrand and compute, using the corresponding
+conjugation symmetries of the Riemann zeta function and its derivative.
+\end{proof}
+
+
+\inputleannode{SmoothedChebyshevDirichlet_aux_integrable}
+
+
+
+
+
+\inputleannode{SmoothedChebyshevDirichlet_aux_tsum_integral}
+
+
+
+
+
+Inserting the Dirichlet series expansion of the log derivative of zeta, we get the following.
+\inputleannode{SmoothedChebyshevDirichlet}
+
+
+
+
+
+The smoothed Chebyshev function is close to the actual Chebyshev function.
+\inputleannode{SmoothedChebyshevClose}
+
+
+
+
+
+Returning to the definition of $\psi_{\epsilon}$, fix a large $T$ to be chosen later, and set
+$\sigma_0 = 1 + 1 / log X$,
+$\sigma_1 = 1- A/ \log T^9$, and
+$\sigma_2<\sigma_1$ a constant.
+Pull
+contours (via rectangles!) to go
+from $\sigma_0-i\infty$ up to $\sigma_0-iT$, then over to $\sigma_1-iT$,
+up to $\sigma_1-3i$, over to $\sigma_2-3i$, up to $\sigma_2+3i$, back over to $\sigma_1+3i$, up to $\sigma_1+iT$, over to $\sigma_0+iT$, and finally up to $\sigma_0+i\infty$.
+
+\begin{verbatim}
+                    |
+                    | I₉
+              +-----+
+              |  I₈
+              |
+           I₇ |
+              |
+              |
+  +-----------+
+  |       I₆
+I₅|
+--σ₂----------σ₁--1-σ₀----
+  |
+  |       I₄
+  +-----------+
+              |
+              |
+            I₃|
+              |
+              |  I₂
+              +-----+
+                    | I₁
+                    |
+\end{verbatim}
+
+In the process, we will pick up the residue at $s=1$.
+We will do this in several stages. Here the interval integrals are defined as follows:
+
+
+\inputleannode{I1}
+
+
+\inputleannode{I2}
+
+
+\inputleannode{I37}
+
+
+\inputleannode{I8}
+
+
+\inputleannode{I9}
+
+
+\inputleannode{I3}
+
+\inputleannode{I7}
+
+
+\inputleannode{I4}
+
+
+\inputleannode{I6}
+
+
+\inputleannode{I5}
+
+
+\inputleannode{dlog_riemannZeta_bdd_on_vertical_lines}
+
+
+
+
+
+\inputleannode{SmoothedChebyshevPull1_aux_integrable}
+
+
+
+
+
+\inputleannode{BddAboveOnRect}
+
+
+
+
+
+\inputleannode{SmoothedChebyshevPull1}
+
+
+
+
+
+Next pull contours to another box.
+\inputleannode{SmoothedChebyshevPull2}
+
+
+
+
+
+We insert this information in $\psi_{\epsilon}$. We add and subtract the integral over the box
+$[1-\delta,2] \times_{ℂ} [-T,T]$, which we evaluate as follows
+\inputleannode{ZetaBoxEval}
+
+
+
+
+
+It remains to estimate all of the integrals.
+
+
+This auxiliary lemma is useful for what follows.
+\inputleannode{IBound_aux1}
+
+
+
+
+
+\inputleannode{I1Bound}
+
+
+
+
+
+\inputleannode{I2Bound}
+
+
+
+
+
+\inputleannode{I8I2}
+
+
+
+
+
+\inputleannode{I8Bound}
+
+
+
+
+
+\inputleannode{IntegralofLogx^n/x^2Bounded}
+
+
+
+
+
+\inputleannode{I3Bound}
+
+
+
+
+
+\inputleannode{I4Bound}
+
+
+
+
+
+\inputleannode{I5Bound}
+
+
+
+
+
+\section{MediumPNT}
+
+\inputleannode{MediumPNT}
+
+
+
+

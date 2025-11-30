@@ -1,0 +1,4402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Third Approach</title>
+<link rel="next" href="sect0005.html" title="Elementary Corollaries" />
+<link rel="prev" href="sect0003.html" title="Second approach" />
+<link rel="up" href="index.html" title="Prime Number Theorem And ..." />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">Prime Number Theorem And ...</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">The project</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">First approach: Wiener-Ikehara Tauberian theorem.</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0002.html#a0000000012"><span class="toc_ref">2.1</span> <span class="toc_entry">A Fourier-analytic proof of the Wiener-Ikehara theorem</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000013"><span class="toc_ref">2.2</span> <span class="toc_entry">Weak PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000014"><span class="toc_ref">2.3</span> <span class="toc_entry">Removing the Chebyshev hypothesis</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000015"><span class="toc_ref">2.4</span> <span class="toc_entry">The prime number theorem in arithmetic progressions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000016"><span class="toc_ref">2.5</span> <span class="toc_entry">The Chebotarev density theorem: the case of cyclotomic extensions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000017"><span class="toc_ref">2.6</span> <span class="toc_entry">The Chebotarev density theorem: the case of abelian extensions</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html#a0000000018"><span class="toc_ref">2.7</span> <span class="toc_entry">The Chebotarev density theorem: the general case</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0003.html"><span class="toc_ref">3</span> <span class="toc_entry">Second approach</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0003.html#a0000000019"><span class="toc_ref">3.1</span> <span class="toc_entry">Residue calculus on rectangles</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000020"><span class="toc_ref">3.2</span> <span class="toc_entry">Perron Formula</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000021"><span class="toc_ref">3.3</span> <span class="toc_entry">Mellin transforms</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000022"><span class="toc_ref">3.4</span> <span class="toc_entry">Zeta Bounds</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000023"><span class="toc_ref">3.5</span> <span class="toc_entry">Proof of Medium PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000024"><span class="toc_ref">3.6</span> <span class="toc_entry">Proof of Medium PNT</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html#a0000000025"><span class="toc_ref">3.7</span> <span class="toc_entry">MediumPNT</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class=" active current">
+  <a href="sect0004.html"><span class="toc_ref">4</span> <span class="toc_entry">Third Approach</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sect0004.html#a0000000026"><span class="toc_ref">4.1</span> <span class="toc_entry">Strong PNT</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0005.html"><span class="toc_ref">5</span> <span class="toc_entry">Elementary Corollaries</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0005.html#a0000000027"><span class="toc_ref">5.1</span> <span class="toc_entry">Consequences of the PNT in arithmetic progressions</span></a>
+ </li>
+<li class="">
+  <a href="sect0005.html#a0000000028"><span class="toc_ref">5.2</span> <span class="toc_entry">Consequences of the Chebotarev density theorem</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">6</span> <span class="toc_entry">Explicit estimates</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html"><span class="toc_ref">7</span> <span class="toc_entry">Primary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0007.html#a0000000029"><span class="toc_ref">7.1</span> <span class="toc_entry">Definitions</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html#a0000000030"><span class="toc_ref">7.2</span> <span class="toc_entry">The estimates of Fiori, Kadiri, and Swidinsky</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html#a0000000031"><span class="toc_ref">7.3</span> <span class="toc_entry">Summary of results</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0008.html"><span class="toc_ref">8</span> <span class="toc_entry">Secondary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0008.html#a0000000032"><span class="toc_ref">8.1</span> <span class="toc_entry">Definitions</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html#a0000000033"><span class="toc_ref">8.2</span> <span class="toc_entry">The arguments of Rosser and Schoenfeld</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html#a0000000034"><span class="toc_ref">8.3</span> <span class="toc_entry">Summary of results</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0009.html"><span class="toc_ref">9</span> <span class="toc_entry">Tertiary explicit estimates</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0009.html#a0000000035"><span class="toc_ref">9.1</span> <span class="toc_entry">The least common multiple sequence is not highly abundant for large \(n\)</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li ><a href="dep_graph_document.html">Dependency graph</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h1 id="a0000000005">4 Third Approach</h1>
+<h1 id="a0000000026">4.1 Strong PNT</h1>
+<div class="definition_thmwrapper theorem-style-definition" id="divRemovable_zero">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">21</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#divRemovable_zero">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/divRemovable_zero" class="lean_decl">divRemovable_zero</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>  Given a complex function \(f\), we define the function </p>
+<div class="displaymath" id="a0000000390">
+  \[ g(z):=\begin{cases}  \frac{f(z)}{z}, &  z\neq 0;\\ f’(0), &  z=0. \end{cases} \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="divRemovable_zero_of_ne_zero">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">99</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#divRemovable_zero_of_ne_zero">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000391"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#divRemovable_zero">Definition 21</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/divRemovable_zero_of_ne_zero" class="lean_decl">divRemovable_zero_of_ne_zero</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>   Let \(f\) be a complex function and let \(z\neq 0\). Then, with \(g\) defined as in Definition&#160;<a href="sect0004.html#divRemovable_zero">21</a>, </p>
+<div class="displaymath" id="a0000000392">
+  \[ g(z)=\frac{f(z)}{z}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000391">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>This follows directly from the definition of \(g\). </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="AnalyticOn_divRemovable_zero">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">100</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#AnalyticOn_divRemovable_zero">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000393"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#divRemovable_zero">Definition 21</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/AnalyticOn_divRemovable_zero" class="lean_decl">AnalyticOn_divRemovable_zero</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>   Let \(f\) be a complex function analytic on an open set \(s\) containing \(0\) such that \(f(0)=0\). Then, with \(g\) defined as in Definition&#160;<a href="sect0004.html#divRemovable_zero">21</a>, \(g\) is analytic on \(s\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000393">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We need to show that \(g\) is complex differentiable at every point in \(s\). For \(z\neq 0\), this follows directly from the definition of \(g\) and the fact that \(f\) is analytic on \(s\). For \(z=0\), we use the definition of the derivative and the fact that \(f(0)=0\): </p>
+<div class="displaymath" id="a0000000394">
+  \[  \lim _{z\to 0}\frac{g(z)-g(0)}{z-0}=\lim _{z\to 0}\frac{\frac{f(z)}{z}-f'(0)}{z}=\lim _{z\to 0}\frac{f(z)-f'(0)z}{z^2}=\lim _{z\to 0}\frac{f(z)-f(0)-f'(0)(z-0)}{(z-0)^2}=0,  \]
+</div>
+<p> where the last equality follows from the definition of the derivative of \(f\) at \(0\). Thus, \(g\) is complex differentiable at \(0\) with derivative \(0\), completing the proof. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="AnalyticOn_divRemovable_zero_closedBall">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">101</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#AnalyticOn_divRemovable_zero_closedBall">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000395"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#divRemovable_zero">Definition 21</a></li>
+          
+          <li><a href="sect0004.html#divRemovable_zero_of_ne_zero">Lemma 99</a></li>
+          
+          <li><a href="sect0004.html#AnalyticOn_divRemovable_zero">Lemma 100</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/AnalyticOn_divRemovable_zero_closedBall" class="lean_decl">AnalyticOn_divRemovable_zero_closedBall</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>   Let \(f\) be a complex function analytic on the closed ball \(|z|\leq R\) such that \(f(0)=0\). Then, with \(g\) defined as in Definition&#160;<a href="sect0004.html#divRemovable_zero">21</a>, \(g\) is analytic on \(|z|\leq R\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000395">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> The proof is similar to that of Lemma&#160;<a href="sect0004.html#AnalyticOn_divRemovable_zero">100</a>, but we need to consider two cases: when \(x\) is on the boundary of the closed ball and when it is in the interior. In the first case, we take a small open ball around \(x\) that lies entirely within the closed ball, and apply Lemma&#160;<a href="sect0004.html#AnalyticOn_divRemovable_zero">100</a> on this smaller ball. In the second case, we can take the entire open ball centered at \(0\) with radius \(R\), and again apply Lemma&#160;<a href="sect0004.html#AnalyticOn_divRemovable_zero">100</a>. In both cases, we use the fact that \(f(0)=0\) to ensure that the removable singularity at \(0\) is handled correctly. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="schwartzQuotient">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">22</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#schwartzQuotient">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#divRemovable_zero">Definition 21</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/schwartzQuotient" class="lean_decl">schwartzQuotient</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>   Given a complex function \(f\) and a real number \(M\), we define the function </p>
+<div class="displaymath" id="a0000000396">
+  \[ f_{M}(z):=\frac{g(z)}{2M - f(z)}, \]
+</div>
+<p> where \(g\) is defined as in Definition&#160;<a href="sect0004.html#divRemovable_zero">21</a>. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="AnalyticOn.schwartzQuotient">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">102</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#AnalyticOn.schwartzQuotient">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000397"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#schwartzQuotient">Definition 22</a></li>
+          
+          <li><a href="sect0004.html#divRemovable_zero">Definition 21</a></li>
+          
+          <li><a href="sect0004.html#AnalyticOn_divRemovable_zero_closedBall">Lemma 101</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/AnalyticOn.schwartzQuotient" class="lean_decl">AnalyticOn.schwartzQuotient</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>   Let \(M{\gt}0\). Let \(f\) be analytic on the closed ball \(|z|\leq R\) such that \(f(0)=0\) and suppose that \(2M - f(z)\neq 0\) for all \(|z|\leq R\). Then, with \(f_{M}\) defined as in Definition&#160;<a href="sect0004.html#schwartzQuotient">22</a>, \(f_{M}\) is analytic on \(|z|\leq R\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000397">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> This follows directly from Lemma&#160;<a href="sect0004.html#AnalyticOn_divRemovable_zero_closedBall">101</a> and the fact that the difference of two analytic functions is analytic. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="Complex.norm_le_norm_two_mul_sub_of_re_le">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">103</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#Complex.norm_le_norm_two_mul_sub_of_re_le">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000398"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/Complex.norm_le_norm_two_mul_sub_of_re_le" class="lean_decl">Complex.norm_le_norm_two_mul_sub_of_re_le</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>  Let \(M{\gt}0\) and let \(x\) be a complex number such that \(\Re x\leq M\). Then, \(|x|\leq |2M - x|\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000398">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We square both sides and simplify to obtain the equivalent inequality </p>
+<div class="displaymath" id="a0000000399">
+  \[ 0\leq 4M^2 -4M\Re x, \]
+</div>
+<p> which follows directly from the assumption \(\Re x\leq M\) and the positivity of \(M\). </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="BorelCaratheodory">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">32</span>
+    <span class="theorem_thmtitle">BorelCaratheodory</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#BorelCaratheodory">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/BorelCaratheodory" class="lean_decl">BorelCaratheodory</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> Let \(R,\, M{\gt}0\). Let \(f\) be analytic on \(|z|\leq R\) such that \(f(0)=0\) and suppose \(\Re f(z)\leq M\) for all \(|z|\leq R\). Then for any \(0 {\lt} r {\lt} R\), </p>
+<div class="displaymath" id="a0000000400">
+  \[ \sup _{|z|\leq r}|f(z)|\leq \frac{2Mr}{R-r}. \]
+</div>
+
+  </div>
+</div>
+<p>This upstreamed from https://github.com/math-inc/strongpnt/tree/main </p>
+<div class="theorem_thmwrapper theorem-style-definition" id="borelCaratheodory_closedBall">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">33</span>
+    <span class="theorem_thmtitle">borelCaratheodory_closedBall</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#borelCaratheodory_closedBall">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000401"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/borelCaratheodory_closedBall" class="lean_decl">borelCaratheodory_closedBall</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>   Let \(R,\, M{\gt}0\). Let \(f\) be analytic on \(|z|\leq R\) such that \(f(0)=0\) and suppose \(\Re f(z)\leq M\) for all \(|z|\leq R\). Then for any \(0 {\lt} r {\lt} R\), </p>
+<div class="displaymath" id="a0000000402">
+  \[ \sup _{|z|\leq r}|f(z)|\leq \frac{2Mr}{R-r}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000401">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Let </p>
+<div class="displaymath" id="a0000000403">
+  \[ f_M(z)=\frac{f(z)/z}{2M-f(z)}. \]
+</div>
+<p> Note that \(2M-f(z)\neq 0\) because \(\Re (2M-f(z))=2M-\Re f(z)\geq M{\gt}0\). Additionally, since \(f(z)\) has a zero at \(0\), we know that \(f(z)/z\) is analytic on \(|z|\leq R\). Likewise, \(f_M(z)\) is analytic on \(|z|\leq R\). </p>
+<p>Now note that \(|f(z)|\leq |2M-f(z)|\) since \(\Re f(z)\leq M\). Thus we have that </p>
+<div class="displaymath" id="a0000000404">
+  \[ |f_M(z)|=\frac{|f(z)|/|z|}{|2M-f(z)|}\leq \frac{1}{|z|}. \]
+</div>
+<p> Now by the maximum modulus principle, we know the maximum of \(|f_M|\) must occur on the boundary where \(|z|=R\). Thus, \(|f_M(z)|\leq 1/R\) for all \(|z|\leq R\). So for \(|z|=r\) we have </p>
+<div class="displaymath" id="a0000000405">
+  \[ |f_M(z)|=\frac{|f(z)|/r}{|2M-f(z)|}\leq \frac{1}{R}\implies R\, |f(z)|\leq r\, |2M-f(z)|\leq 2Mr+r\, |f(z)|. \]
+</div>
+<p> Which by algebraic manipulation gives </p>
+<div class="displaymath" id="a0000000406">
+  \[ |f(z)|\leq \frac{2Mr}{R-r}. \]
+</div>
+<p> Once more, by the maximum modulus principle, we know the maximum of \(|f|\) must occur on the boundary where \(|z|=r\). Thus, the desired result immediately follows </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="DerivativeBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">104</span>
+    <span class="lemma_thmtitle">DerivativeBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#DerivativeBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000407"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/DerivativeBound" class="lean_decl">DerivativeBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(R,\, M{\gt}0\) and \(0 {\lt} r {\lt} r' {\lt} R\). Let \(f\) be analytic on \(|z|\leq R\) such that \(f(0)=0\) and suppose \(\Re f(z)\leq M\) for all \(|z|\leq R\). Then we have that </p>
+<div class="displaymath" id="a0000000408">
+  \[ |f'(z)|\leq \frac{2M(r')^2}{(R-r')(r'-r)^2} \]
+</div>
+<p> for all \(|z|\leq r\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000407">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> By Cauchy’s integral formula we know that </p>
+<div class="displaymath" id="a0000000409">
+  \[ f'(z)=\frac{1}{2\pi i}\oint _{|w|=r'}\frac{f(w)}{(w-z)^2}\, dw=\frac{1}{2\pi }\int _0^{2\pi }\frac{r'e^{it}\, f(r'e^{it})}{(r'e^{it}-z)^2}\, dt. \]
+</div>
+<p> Thus, </p>
+<div class="equation" id="pickupPoint1">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{pickupPoint1} |f'(z)|=\left|\frac{1}{2\pi }\int _0^{2\pi }\frac{r'e^{it}\, f(r'e^{it})}{(r'e^{it}-z)^2}\, dt\right|\leq \frac{1}{2\pi }\int _0^{2\pi }\left|\frac{r'e^{it}\, f(r'e^{it})}{(r'e^{it}-z)^2}\right|\, dt. \end{equation}
+  </div>
+  <span class="equation_label">3</span>
+</p>
+</div>
+<p> Now applying Theorem <a href="sect0004.html#borelCaratheodory_closedBall">33</a>, and noting that \(r'-r\leq |r'e^{it}-z|\), we have that </p>
+<div class="displaymath" id="a0000000410">
+  \[ \left|\frac{r'e^{it}\, f(r'e^{it})}{(r'e^{it}-z)^2}\right|\leq \frac{2M(r')^2}{(R-r')(r'-r)^2}. \]
+</div>
+<p> Substituting this into Equation (<a href="sect0004.html#pickupPoint1">3</a>) and evaluating the integral completes the proof. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="BorelCaratheodoryDeriv">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">34</span>
+    <span class="theorem_thmtitle">BorelCaratheodoryDeriv</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#BorelCaratheodoryDeriv">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000411"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/BorelCaratheodoryDeriv" class="lean_decl">BorelCaratheodoryDeriv</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> Let \(R,\, M{\gt}0\). Let \(f\) be analytic on \(|z|\leq R\) such that \(f(0)=0\) and suppose \(\Re f(z)\leq M\) for all \(|z|\leq R\). Then for any \(0 {\lt} r {\lt} R\), </p>
+<div class="displaymath" id="a0000000412">
+  \[ |f'(z)|\leq \frac{16MR^2}{(R-r)^3} \]
+</div>
+<p> for all \(|z|\leq r\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000411">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Using Lemma <a href="sect0004.html#DerivativeBound">104</a> with \(r'=(R+r)/2\), and noting that \(r {\lt} R\), we have that </p>
+<div class="displaymath" id="a0000000413">
+  \[ |f'(z)|\leq \frac{4M(R+r)^2}{(R-r)^3}\leq \frac{16MR^2}{(R-r)^3}. \]
+</div>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="LogOfAnalyticFunction">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">35</span>
+    <span class="theorem_thmtitle">LogOfAnalyticFunction</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#LogOfAnalyticFunction">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000414"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/LogOfAnalyticFunction" class="lean_decl">LogOfAnalyticFunction</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> Let \(0 {\lt} r {\lt} R{\lt}1\). Let \(B:\overline{\mathbb {D}_R}\to \mathbb {C}\) be analytic on neighborhoods of points in \(\overline{\mathbb {D}_R}\) with \(B(z)\neq 0\) for all \(z\in \overline{\mathbb {D}_R}\). Then there exists \(J_B:\overline{\mathbb {D}_r}\to \mathbb {C}\) that is analytic on neighborhoods of points in \(\overline{\mathbb {D}_r}\) such that </p>
+<ul class="itemize">
+  <li><p>\(J_B(0)=0\) </p>
+</li>
+  <li><p>\(J_B'(z)=B'(z)/B(z)\) </p>
+</li>
+  <li><p>\(\log |B(z)|-\log |B(0)|=\Re J_B(z)\) </p>
+</li>
+</ul>
+<p> for all \(z\in \overline{\mathbb {D}_r}\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000414">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We let \(J_B(z)=\mathrm{Log}\, B(z)-\mathrm{Log}\, B(0)\). Then clearly, \(J_B(0)=0\) and \(J_B'(z)=B'(z)/B(z)\). Showing the third property is a little more difficult, but by no standards terrible. Exponentiating \(J_B(z)\) we have that </p>
+<div class="displaymath" id="a0000000415">
+  \[ \exp (J_B(z))=\exp (\mathrm{Log}\, B(z)-\mathrm{Log}\, B(0))=\frac{B(z)}{B(0)}\implies B(z)=B(0)\exp (J_B(z)). \]
+</div>
+<p> Now taking the modulus </p>
+<div class="displaymath" id="a0000000416">
+  \[ |B(z)|=|B(0)|\cdot |\exp (J_B(z))|=|B(0)|\cdot \exp (\Re J_B(z)). \]
+</div>
+<p> Taking the real logarithm of both sides and rearranging gives the third point. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="SetOfZeros">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">23</span>
+    <span class="definition_thmtitle">SetOfZeros</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#SetOfZeros">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/SetOfZeros" class="lean_decl">SetOfZeros</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p> Let \(R{\gt}0\) and \(f:\overline{\mathbb {D}_R}\to \mathbb {C}\). Define the set of zeros \(\mathcal{K}_f(R)=\{ \rho \in \mathbb {C}:|\rho |\leq R,\, f(\rho )=0\} \). </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="ZeroOrder">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">24</span>
+    <span class="definition_thmtitle">ZeroOrder</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZeroOrder">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZeroOrder" class="lean_decl">ZeroOrder</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p> Let \(0 {\lt} R{\lt}1\) and \(f:\mathbb {C}\to \mathbb {C}\) be analtyic on neighborhoods of points in \(\overline{\mathbb {D}_1}\). For any zero \(\rho \in \mathcal{K}_f(R)\), we define \(m_f(\rho )\) as the order of the zero \(\rho \) w.r.t \(f\). </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="ZeroFactorization">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">105</span>
+    <span class="lemma_thmtitle">ZeroFactorization</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZeroFactorization">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000417"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZeroFactorization" class="lean_decl">ZeroFactorization</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(f:\overline{\mathbb {D}_1}\to \mathbb {C}\) be analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(f(0)\neq 0\). For all \(\rho \in \mathcal{K}_f(1)\) there exists \(h_\rho (z)\) that is analytic at \(\rho \), \(h_\rho (\rho )\neq 0\), and \(f(z)=(z-\rho )^{m_f(\rho )}\, h_\rho (z)\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000417">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Since \(f\) is analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) we know that there exists a series expansion about \(\rho \): </p>
+<div class="displaymath" id="a0000000418">
+  \[ f(z)=\sum _{0\leq n}a_n\, (z-\rho )^n. \]
+</div>
+<p> Now if we let \(m\) be the smallest number such that \(a_m\neq 0\), then </p>
+<div class="displaymath" id="a0000000419">
+  \[ f(z)=\sum _{0\leq n}a_n\, (z-\rho )^n=\sum _{m\leq n}a_n\, (z-\rho )^n=(z-\rho )^m\sum _{m\leq n}a_n\, (z-\rho )^{n-m}=(z-\rho )^m\, h_\rho (z). \]
+</div>
+<p> Trivially, \(h_\rho (z)\) is analytic at \(\rho \) (we have written down the series expansion); now note that </p>
+<div class="displaymath" id="a0000000420">
+  \[ h_\rho (\rho )=\sum _{m\leq n}a_n(\rho -\rho )^{n-m}=\sum _{m\leq n}a_n0^{n-m}=a_m\neq 0. \]
+</div>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="CFunction">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">25</span>
+    <span class="definition_thmtitle">CFunction</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#CFunction">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/CFunction" class="lean_decl">CFunction</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p> Let \(0 {\lt} r {\lt} R{\lt}1\), and \(f:\overline{\mathbb {D}_1}\to \mathbb {C}\) be analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(f(0)\neq 0\). We define a function \(C_f:\overline{\mathbb {D}_R}\to \mathbb {C}\) as follows. This function is constructed by dividing \(f(z)\) by a polynomial whose roots are the zeros of \(f\) inside \(\overline{\mathbb {D}_r}\). </p>
+<div class="displaymath" id="a0000000421">
+  \[ C_f(z)=\begin{cases}  \displaystyle \frac{f(z)}{\prod _{\rho \in \mathcal{K}_f(r)}(z-\rho )^{m_f(\rho )}}\qquad \text{for }z\not\in \mathcal{K}_f(r) \\ \displaystyle \frac{h_z(z)}{\prod _{\rho \in \mathcal{K}_f(r)\setminus \{ z\} }(z-\rho )^{m_f(\rho )}}\qquad \text{for }z\in \mathcal{K}_f(r) \end{cases} \]
+</div>
+<p> where \(h_z(z)\) comes from Lemma <a href="sect0004.html#ZeroFactorization">105</a>. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="BlaschkeB">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">26</span>
+    <span class="definition_thmtitle">BlaschkeB</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#BlaschkeB">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/BlaschkeB" class="lean_decl">BlaschkeB</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p> Let \(0 {\lt} r {\lt} R{\lt}1\), and \(f:\overline{\mathbb {D}_1}\to \mathbb {C}\) be analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(f(0)\neq 0\). We define a function \(B_f:\overline{\mathbb {D}_R}\to \mathbb {C}\) as follows. </p>
+<div class="displaymath" id="a0000000422">
+  \[ B_f(z)=C_f(z)\prod _{\rho \in \mathcal{K}_f(r)}\left(R-\frac{z\overline{\rho }}{R}\right)^{m_f(\rho )} \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="BlaschkeOfZero">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">106</span>
+    <span class="lemma_thmtitle">BlaschkeOfZero</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#BlaschkeOfZero">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000423"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/BlaschkeOfZero" class="lean_decl">BlaschkeOfZero</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(0 {\lt} r {\lt} R{\lt}1\), and \(f:\overline{\mathbb {D}_1}\to \mathbb {C}\) be analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(f(0)\neq 0\). Then </p>
+<div class="displaymath" id="a0000000424">
+  \[ |B_f(0)|=|f(0)|\prod _{\rho \in \mathcal{K}_f(r)}\left(\frac{R}{|\rho |}\right)^{m_f(\rho )}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000423">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Since \(f(0)\neq 0\), we know that \(0\not\in \mathcal{K}_f(r)\). Thus, </p>
+<div class="displaymath" id="a0000000425">
+  \[ C_f(0)=\frac{f(0)}{\displaystyle \prod _{\rho \in \mathcal{K}_f(r)}(-\rho )^{m_f(\rho )}}. \]
+</div>
+<p> Thus, substituting this into Definition <a href="sect0004.html#BlaschkeB">26</a>, </p>
+<div class="displaymath" id="a0000000426">
+  \[ |B_f(0)|=|C_f(0)|\prod _{\rho \in \mathcal{K}_f(r)}R^{m_f(\rho )}=|f(0)|\prod _{\rho \in \mathcal{K}_f(r)}\left(\frac{R}{|\rho |}\right)^{m_f(\rho )}. \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="DiskBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">107</span>
+    <span class="lemma_thmtitle">DiskBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#DiskBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000427"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/DiskBound" class="lean_decl">DiskBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(B{\gt}1\) and \(0 {\lt} R{\lt}1\). If \(f:\mathbb {C}\to \mathbb {C}\) is a function analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(|f(z)|\leq B\) for \(|z|\leq R\), then \(|B_f(z)|\leq B\) for \(|z|\leq R\) also. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000427">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> For \(|z|=R\), we know that \(z\not\in \mathcal{K}_f(r)\). Thus, </p>
+<div class="displaymath" id="a0000000428">
+  \[ C_f(z)=\frac{f(z)}{\displaystyle \prod _{\rho \in \mathcal{K}_f(r)}(z-\rho )^{m_f(\rho )}}. \]
+</div>
+<p> Thus, substituting this into Definition <a href="sect0004.html#BlaschkeB">26</a>, </p>
+<div class="displaymath" id="a0000000429">
+  \[ |B_f(z)|=|f(z)|\prod _{\rho \in \mathcal{K}_f(r)}\left|\frac{R-z\overline{\rho }/R}{z-\rho }\right|^{m_f(\rho )}. \]
+</div>
+<p> But note that </p>
+<div class="displaymath" id="a0000000430">
+  \[ \left|\frac{R-z\overline{\rho }/R}{z-\rho }\right|=\frac{|R^2-z\overline{\rho }|/R}{|z-\rho |}=\frac{|z|\cdot |\overline{z-\rho }|/R}{|z-\rho |}=1. \]
+</div>
+<p> So we have that \(|B_f(z)|=|f(z)|\leq B\) when \(|z|=R\). Now by the maximum modulus principle, we know that the maximum of \(|B_f|\) must occur on the boundary where \(|z|=R\). Thus \(|B_f(z)|\leq B\) for all \(|z|\leq R\). </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="ZerosBound">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">36</span>
+    <span class="theorem_thmtitle">ZerosBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZerosBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000431"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZerosBound" class="lean_decl">ZerosBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> Let \(B{\gt}1\) and \(0{\lt} r {\lt} R{\lt}1\). If \(f:\mathbb {C}\to \mathbb {C}\) is a function analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(f(0)=1\) and \(|f(z)|\leq B\) for \(|z|\leq R\), then </p>
+<div class="displaymath" id="a0000000432">
+  \[ \sum _{\rho \in \mathcal{K}_f(r)}m_f(\rho )\leq \frac{\log B}{\log (R/r)}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000431">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Since \(f(0)=1\), we know that \(0\not\in \mathcal{K}_f(r)\). Thus, </p>
+<div class="displaymath" id="a0000000433">
+  \[ C_f(0)=\frac{f(0)}{\displaystyle \prod _{\rho \in \mathcal{K}_f(r)}(-\rho )^{m_f(\rho )}}. \]
+</div>
+<p> Thus, substituting this into Definition <a href="sect0004.html#BlaschkeB">26</a>, </p>
+<div class="displaymath" id="a0000000434">
+  \[ (R/r)^{\sum _{\rho \in \mathcal{K}_f(r)}m_f(\rho )}=\prod _{\rho \in \mathcal{K}_f(r)}\left(\frac{R}{r}\right)^{m_f(\rho )}\leq \prod _{\rho \in \mathcal{K}_f(r)}\left(\frac{R}{|\rho |}\right)^{m_f(\rho )}=|B_f(0)|\leq B \]
+</div>
+<p> whereby Lemma <a href="sect0004.html#DiskBound">107</a> we know that \(|B_f(z)|\leq B\) for all \(|z|\leq R\). Taking the logarithm of both sides and rearranging gives the desired result. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="JBlaschke">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">27</span>
+    <span class="definition_thmtitle">JBlaschke</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#JBlaschke">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/JBlaschke" class="lean_decl">JBlaschke</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p> Let \(B{\gt}1\) and \(0 {\lt} R{\lt}1\). If \(f:\mathbb {C}\to \mathbb {C}\) is a function analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(f(0)=1\), define \(L_f(z)=J_{B_f}(z)\) where \(J\) is from Theorem <a href="sect0004.html#LogOfAnalyticFunction">35</a> and \(B_f\) is from Definition <a href="sect0004.html#BlaschkeB">26</a>. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="BlaschkeNonZero">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">108</span>
+    <span class="lemma_thmtitle">BlaschkeNonZero</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#BlaschkeNonZero">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000435"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/BlaschkeNonZero" class="lean_decl">BlaschkeNonZero</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(0 {\lt} r {\lt} R{\lt}1\) and \(f:\overline{\mathbb {D}_1}\to \mathbb {C}\) be analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\). Then \(B_f(z)\neq 0\) for all \(z\in \overline{\mathbb {D}_r}\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000435">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Suppose that \(z\in \mathcal{K}_f(r)\). Then we have that </p>
+<div class="displaymath" id="a0000000436">
+  \[ C_f(z)=\frac{h_z(z)}{\displaystyle \prod _{\rho \in \mathcal{K}_f(r)\setminus \{ z\} }(z-\rho )^{m_f(\rho )}}. \]
+</div>
+<p> where \(h_z(z)\neq 0\) according to Lemma <a href="sect0004.html#ZeroFactorization">105</a>. Thus, substituting this into Definition <a href="sect0004.html#BlaschkeB">26</a>, </p>
+<div class="equation" id="pickupPoint2">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{pickupPoint2} |B_f(z)|=|h_z(z)|\cdot \left|R-\frac{|z|^2}{R}\right|^{m_f(z)}\prod _{\rho \in \mathcal{K}_f(r)\setminus \{ z\} }\left|\frac{R-z\overline{\rho }/R}{z-\rho }\right|^{m_f(\rho )}. \end{equation}
+  </div>
+  <span class="equation_label">6</span>
+</p>
+</div>
+<p> Trivially, \(|h_z(z)|\neq 0\). Now note that </p>
+<div class="displaymath" id="a0000000437">
+  \[ \left|R-\frac{|z|^2}{R}\right|=0\implies |z|=R. \]
+</div>
+<p> However, this is a contradiction because \(z\in \overline{\mathbb {D}_r}\) tells us that \(|z|\leq r {\lt} R\). Similarly, note that </p>
+<div class="displaymath" id="a0000000438">
+  \[ \left|\frac{R-z\overline{\rho }/R}{z-\rho }\right|=0\implies |z|=\frac{R^2}{|\overline{\rho }|}. \]
+</div>
+<p> However, this is also a contradiction because \(\rho \in \mathcal{K}_f(r)\) tells us that \(R {\lt} R^2/|\overline{\rho }|=|z|\), but \(z\in \overline{\mathbb {D}_r}\) tells us that \(|z|\leq r {\lt} R\). So, we know that </p>
+<div class="displaymath" id="a0000000439">
+  \[ \left|R-\frac{|z|^2}{R}\right|\neq 0\qquad \text{and}\qquad \left|\frac{R-z\overline{\rho }/R}{z-\rho }\right|\neq 0\quad \text{for all}\quad \rho \in \mathcal{K}_f(r)\setminus \{ z\} . \]
+</div>
+<p> Applying this to Equation (<a href="sect0004.html#pickupPoint2">6</a>) we have that \(|B_f(z)|\neq 0\). So, \(B_f(z)\neq 0\). </p>
+<p>Now suppose that \(z\not\in \mathcal{K}_f(r)\). Then we have that </p>
+<div class="displaymath" id="a0000000440">
+  \[ C_f(z)=\frac{f(z)}{\displaystyle \prod _{\rho \in \mathcal{K}_f(r)}(z-\rho )^{m_f(\rho )}}. \]
+</div>
+<p> Thus, substituting this into Definition <a href="sect0004.html#BlaschkeB">26</a>, </p>
+<div class="equation" id="pickupPoint3">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{pickupPoint3} |B_f(z)|=|f(z)|\prod _{\rho \in \mathcal{K}_f(r)}\left|\frac{R-z\overline{\rho }/R}{z-\rho }\right|^{m_f(\rho )}. \end{equation}
+  </div>
+  <span class="equation_label">7</span>
+</p>
+</div>
+<p> We know that \(|f(z)|\neq 0\) since \(z\not\in \mathcal{K}_f(r)\). Now note that </p>
+<div class="displaymath" id="a0000000441">
+  \[ \left|\frac{R-z\overline{\rho }/R}{z-\rho }\right|=0\implies |z|=\frac{R^2}{|\overline{\rho }|}. \]
+</div>
+<p> However, this is a contradiction because \(\rho \in \mathcal{K}_f(r)\) tells us that \(R {\lt} R^2/|\overline{\rho }|=|z|\), but \(z\in \overline{\mathbb {D}_r}\) tells us that \(|z|\leq r {\lt} R\). So, we know that </p>
+<div class="displaymath" id="a0000000442">
+  \[ \left|\frac{R-z\overline{\rho }/R}{z-\rho }\right|\neq 0\quad \text{for all}\quad \rho \in \mathcal{K}_f(r). \]
+</div>
+<p> Applying this to Equation (<a href="sect0004.html#pickupPoint3">7</a>) we have that \(|B_f(z)|\neq 0\). So, \(B_f(z)\neq 0\). </p>
+<p>We have shown that \(B_f(z)\neq 0\) for both \(z\in \mathcal{K}_f(r)\) and \(z\not\in \mathcal{K}_f(r)\), so the result follows. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="JBlaschkeDerivBound">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">37</span>
+    <span class="theorem_thmtitle">JBlaschkeDerivBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#JBlaschkeDerivBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000443"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/JBlaschkeDerivBound" class="lean_decl">JBlaschkeDerivBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> Let \(B{\gt}1\) and \(0 {\lt} r' {\lt} r {\lt} R{\lt}1\). If \(f:\mathbb {C}\to \mathbb {C}\) is a function analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(f(0)=1\) and \(|f(z)|\leq B\) for all \(|z|\leq R\), then for all \(|z|\leq r'\) </p>
+<div class="displaymath" id="a0000000444">
+  \[ |L_f'(z)|\leq \frac{16\log (B)\, r^2}{(r-r')^3} \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000443">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> By Lemma <a href="sect0004.html#DiskBound">107</a> we immediately know that \(|B_f(z)|\leq B\) for all \(|z|\leq R\). Now since \(L_f=J_{B_f}\) by Definition <a href="sect0004.html#JBlaschke">27</a>, by Theorem <a href="sect0004.html#LogOfAnalyticFunction">35</a> we know that </p>
+<div class="displaymath" id="a0000000445">
+  \[ L_f(0)=0\qquad \text{and}\qquad \Re L_f(z)=\log |B_f(z)|-\log |B_f(0)|\leq \log |B_f(z)|\leq \log B \]
+</div>
+<p> for all \(|z|\leq r\). So by Theorem <a href="sect0004.html#BorelCaratheodoryDeriv">34</a>, it follows that </p>
+<div class="displaymath" id="a0000000446">
+  \[ |L_f'(z)|\leq \frac{16\log (B)\, r^2}{(r-r')^3} \]
+</div>
+<p> for all \(|z|\leq r'\). </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="FinalBound">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">38</span>
+    <span class="theorem_thmtitle">FinalBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#FinalBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000447"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/FinalBound" class="lean_decl">FinalBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> Let \(B{\gt}1\) and \(0 {\lt} r' {\lt} r {\lt} R' {\lt} R{\lt}1\). If \(f:\mathbb {C}\to \mathbb {C}\) is a function analytic on neighborhoods of points in \(\overline{\mathbb {D}_1}\) with \(f(0)=1\) and \(|f(z)|\leq B\) for all \(|z|\leq R\), then for all \(z\in \overline{\mathbb {D}_{R'}}\setminus \mathcal{K}_f(R')\) we have </p>
+<div class="displaymath" id="a0000000448">
+  \[ \left|\frac{f'}{f}(z)-\sum _{\rho \in \mathcal{K}_f(R')}\frac{m_f(\rho )}{z-\rho }\right|\leq \left(\frac{16r^2}{(r-r')^3}+\frac{1}{(R^2/R'-R')\, \log (R/R')}\right)\log B. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000447">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Since \(z\in \overline{\mathbb {D}_{r'}}\setminus \mathcal{K}_f(R')\) we know that \(z\not\in \mathcal{K}_f(R')\); thus, by Definition <a href="sect0004.html#CFunction">25</a> we know that </p>
+<div class="displaymath" id="a0000000449">
+  \[ C_f(z)=\frac{f(z)}{\displaystyle \prod _{\rho \in \mathcal{K}_f(R')}(z-\rho )^{m_f(\rho )}}. \]
+</div>
+<p> Substituting this into Definition <a href="sect0004.html#BlaschkeB">26</a> we have that </p>
+<div class="displaymath" id="a0000000450">
+  \[ B_f(z)=f(z)\prod _{\rho \in \mathcal{K}_f(R')}\left(\frac{R-z\overline{\rho }/R}{z-\rho }\right)^{m_f(\rho )}. \]
+</div>
+<p> Taking the complex logarithm of both sides we have that </p>
+<div class="displaymath" id="a0000000451">
+  \[ \mathrm{Log}\, B_f(z)=\mathrm{Log}\, f(z)+\sum _{\rho \in \mathcal{K}_f(R')}m_f(\rho )\, \mathrm{Log}(R-z\overline{\rho }/R)-\sum _{\rho \in \mathcal{K}_f(R')}m_f(\rho )\, \mathrm{Log}(z-\rho ). \]
+</div>
+<p> Taking the derivative of both sides we have that </p>
+<div class="displaymath" id="a0000000452">
+  \[ \frac{B_f'}{B_f}(z)=\frac{f'}{f}(z)+\sum _{\rho \in \mathcal{K}_f(R')}\frac{m_f(\rho )}{z-R^2/\rho }-\sum _{\rho \in \mathcal{K}_f(R')}\frac{m_f(\rho )}{z-\rho }. \]
+</div>
+<p> By Definition <a href="sect0004.html#JBlaschke">27</a> and Theorem <a href="sect0004.html#LogOfAnalyticFunction">35</a> we recall that </p>
+<div class="displaymath" id="a0000000453">
+  \[ L_f(z)=J_{B_f}(z)=\mathrm{Log}\, B_f(z)-\mathrm{Log}\, B_f(0). \]
+</div>
+<p> Taking the derivative of both sides we have that \(L_f'(z)=(B_f'/B_f)(z)\). Thus, </p>
+<div class="displaymath" id="a0000000454">
+  \[ \frac{f'}{f}(z)-\sum _{\rho \in \mathcal{K}_f(R')}\frac{m_f(\rho )}{z-\rho }=L_f'(z)-\sum _{\rho \in \mathcal{K}_f(R')}\frac{m_f(\rho )}{z-R^2/\rho }. \]
+</div>
+<p> Now since \(z\in \overline{\mathbb {D}_{R'}}\) and \(\rho \in \mathcal{K}_f(R')\), we know that \(R^2/R'-R'\leq |z-R^2/\rho |\). Thus by the triangle inequality we have </p>
+<div class="displaymath" id="a0000000455">
+  \[ \left|\frac{f'}{f}(z)-\sum _{\rho \in \mathcal{K}_f(R')}\frac{m_f(\rho )}{z-\rho }\right|\leq |L_f'(z)|+\left(\frac{1}{R^2/R'-R'}\right)\sum _{\rho \in \mathcal{K}_f(R')}m_f(\rho ). \]
+</div>
+<p> Now by Theorem <a href="sect0004.html#ZerosBound">36</a> and <a href="sect0004.html#JBlaschkeDerivBound">37</a> we get our desired result with a little algebraic manipulation. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="ZetaFixedLowerBound">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">39</span>
+    <span class="theorem_thmtitle">ZetaFixedLowerBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZetaFixedLowerBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000456"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZetaFixedLowerBound" class="lean_decl">ZetaFixedLowerBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> For all \(t\in \mathbb {R}\) one has </p>
+<div class="displaymath" id="a0000000457">
+  \[ |\zeta (3/2+it)|\geq \frac{\zeta (3)}{\zeta (3/2)}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000456">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>From the Euler product expansion of \(\zeta \), we have that for \(\Re s{\gt}1\) </p>
+<div class="displaymath" id="a0000000458">
+  \[ \zeta (s)=\prod _p\frac{1}{1-p^{-s}}. \]
+</div>
+<p> Thus, we have that </p>
+<div class="displaymath" id="a0000000459">
+  \[ \frac{\zeta (2s)}{\zeta (s)}=\prod _p\frac{1-p^{-s}}{1-p^{-2s}}=\prod _p\frac{1}{1+p^{-s}}. \]
+</div>
+<p> Now note that \(|1-p^{-(3/2+it)}|\leq 1+|p^{-(3/2+it)}|=1+p^{-3/2}\). Thus, </p>
+<div class="displaymath" id="a0000000460">
+  \[ |\zeta (3/2+it)|=\prod _p\frac{1}{|1-p^{-(3/2+it)}|}\geq \prod _p\frac{1}{1+p^{-3/2}}=\frac{\zeta (3)}{\zeta (3/2)} \]
+</div>
+<p> for all \(t\in \mathbb {R}\) as desired. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="ZetaAltFormula">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">109</span>
+    <span class="lemma_thmtitle">ZetaAltFormula</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZetaAltFormula">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000461"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZetaAltFormula" class="lean_decl">ZetaAltFormula</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let </p>
+<div class="displaymath" id="a0000000462">
+  \[ \zeta _0(s)=1+\frac{1}{s-1}-s\int _1^\infty \{ x\} \, x^{-s}\, \frac{dx}{x}. \]
+</div>
+<p> We have that \(\zeta (s)=\zeta _0(s)\) for \(\sigma {\gt}1\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000461">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Note that for \(\sigma {\gt}1\) we have </p>
+<div class="displaymath" id="a0000000463">
+  \[ \zeta (s)=\sum _{n=1}^\infty \frac{1}{n^s}=\sum _{n=1}^\infty \frac{n}{n^s}-\sum _{n=1}^\infty \frac{n-1}{n^s}=\sum _{n=1}^\infty \frac{n}{n^s}-\sum _{n=0}^\infty \frac{n}{(n+1)^s}=\sum _{n=1}^\infty \frac{n}{n^s}-\sum _{n=1}^\infty \frac{n}{(n+1)^s}. \]
+</div>
+<p> Thus </p>
+<div class="displaymath" id="a0000000464">
+  \[ \zeta (s)=\sum _{n=1}^\infty n\, (n^{-s}-(n+1)^{-s}). \]
+</div>
+<p> Now we note that </p>
+<div class="displaymath" id="a0000000465">
+  \[ s\int _n^{n+1}x^{-s}\, \frac{dx}{x}=s\left(-\frac{1}{s}\, x^{-s}\right)_n^{n+1}=n^{-s}-(n+1)^{-s}. \]
+</div>
+<p> So, substituting this we have </p>
+<div class="displaymath" id="a0000000466">
+  \[ \zeta (s)=\sum _{n=1}^\infty n\, (n^{-s}-(n+1)^{-s})=s\sum _{n=1}^\infty n\int _n^{n+1}x^{-s}\, \frac{dx}{x}=s\int _1^\infty \lfloor x\rfloor \, x^{-s}\, \frac{dx}{x}. \]
+</div>
+<p> But noting that \(\lfloor x\rfloor =x-\{ x\} \) we have that </p>
+<div class="displaymath" id="a0000000467">
+  \[ \zeta (s)=s\int _1^\infty \lfloor x\rfloor \, x^{-s}\, \frac{dx}{x}=s\int _1^\infty x^{-s}\, dx-s\int _1^\infty \{ x\} \, x^{-s}\, \frac{dx}{x}. \]
+</div>
+<p> Evaluating the first integral completes the result. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="ZetaAltFormulaAnalytic">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">110</span>
+    <span class="lemma_thmtitle">ZetaAltFormulaAnalytic</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZetaAltFormulaAnalytic">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000468"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZetaAltFormulaAnalytic" class="lean_decl">ZetaAltFormulaAnalytic</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> We have that \(\zeta _0(s)\) is analytic for all \(s\in S\) where \(S=\{ s\in \mathbb {C}:\Re s{\gt}0,\, s\neq 1\} \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000468">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Note that we have </p>
+<div class="displaymath" id="a0000000469">
+  \[ \left|\int _1^\infty \{ x\} \, x^{-s}\, \frac{dx}{x}\right|\leq \int _1^\infty |\{ x\} \, x^{-s-1}|\, dx\leq \int _1^\infty x^{-\sigma -1}\, dx=\frac{1}{\sigma }. \]
+</div>
+<p> So this integral converges uniformly on compact subsets of \(S\), which tells us that it is analytic on \(S\). So it immediately follows that \(\zeta _0(s)\) is analytic on \(S\) as well, since \(S\) avoids the pole at \(s=1\) coming from the \((s-1)^{-1}\) term. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="ZetaExtend">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">111</span>
+    <span class="lemma_thmtitle">ZetaExtend</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZetaExtend">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000470"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZetaExtend" class="lean_decl">ZetaExtend</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> We have that </p>
+<div class="displaymath" id="a0000000471">
+  \[ \zeta (s)=1+\frac{1}{s-1}-s\int _1^\infty \{ x\} \, x^{-s}\, \frac{dx}{x} \]
+</div>
+<p> for all \(s\in S\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000470">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>This is an immediate consequence of the identity theorem. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="GlobalBound">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">40</span>
+    <span class="theorem_thmtitle">GlobalBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#GlobalBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000472"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/GlobalBound" class="lean_decl">GlobalBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> For all \(s\in \mathbb {C}\) with \(|s|\leq 1\) and \(t\in \mathbb {R}\) with \(|t|\geq 2\), we have that </p>
+<div class="displaymath" id="a0000000473">
+  \[ |\zeta (s+3/2+it)|\leq 7+2\, |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000472">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> For the sake of clearer proof writing let \(z=s+3/2+it\). Since \(|s|\leq 1\) we know that \(1/2\leq \mathfrak {R}z\); additionally, as \(|t|\geq 2\), we know \(1\leq |\mathfrak {I}z|\). So, \(z\in S\). Thus, from Lemma <a href="sect0004.html#ZetaExtend">111</a> we know that </p>
+<div class="displaymath" id="a0000000474">
+  \[ |\zeta (z)|\leq 1+\frac{1}{|z-1|}+|z|\cdot \left|\int _1^\infty \{ x\} \, x^{-z}\, \frac{dx}{x}\right| \]
+</div>
+<p> by applying the triangle inequality. Now note that \(|z-1|\geq 1\). Likewise, </p>
+<div class="displaymath" id="a0000000475">
+  \[ |z|\cdot \left|\int _1^\infty \{ x\} \, x^{-z}\, \frac{dx}{x}\right|\leq |z|\int _1^\infty |\{ x\} \, x^{-z-1}|\, dx\leq |z|\int _1^\infty x^{-\Re z-1}\, dx=\frac{|z|}{\Re z}\leq 2\, |z|. \]
+</div>
+<p> Thus we have that, </p>
+<div class="displaymath" id="a0000000476">
+  \[ |\zeta (s+3/2+it)|=|\zeta (z)|\leq 1+1+2\, |z|=2+2\, |s+3/2+it|\leq 2+2\, |s|+3+2\, |it|\leq 7+2\, |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="LogDerivZetaFinalBound">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">41</span>
+    <span class="theorem_thmtitle">LogDerivZetaFinalBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#LogDerivZetaFinalBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000477"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/LogDerivZetaFinalBound" class="lean_decl">LogDerivZetaFinalBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> Let \(t\in \mathbb {R}\) with \(|t|\geq 2\) and \(0 {\lt} r' {\lt} r {\lt} R' {\lt} R{\lt}1\). If \(f(z)=\zeta (z+3/2+it)\), then for all \(z\in \overline{\mathbb {D}_R'}\setminus \mathcal{K}_f(R')\) we have that </p>
+<div class="displaymath" id="a0000000478">
+  \[ \left|\frac{f'}{f}(z)-\sum _{\rho \in \mathcal{K}_f(R')}\frac{m_f(\rho )}{z-\rho }\right|\ll \left(\frac{16r^2}{(r-r')^3}+\frac{1}{(R^2/R'-R')\, \log (R/R')}\right)\log |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000477">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Let \(g(z)=\zeta (z+3/2+it)/\zeta (3/2+it)\). Note that \(g(0)=1\) and for \(|z|\leq R\) </p>
+<div class="displaymath" id="a0000000479">
+  \[ |g(z)|=\frac{|\zeta (z+3/2+it)|}{|\zeta (3/2+it)|}\leq \frac{\zeta (3/2)}{\zeta (3)}\cdot (7+2\, |t|)\leq \frac{13\, \zeta (3/2)}{3\, \zeta (3)}\, |t| \]
+</div>
+<p> by Theorems <a href="sect0004.html#ZetaFixedLowerBound">39</a> and <a href="sect0004.html#GlobalBound">40</a>. Thus by Theorem <a href="sect0004.html#FinalBound">38</a> we have that </p>
+<div class="displaymath" id="a0000000480">
+  \[ \left|\frac{g'}{g}(z)-\sum _{\rho \in \mathcal{K}_g(R')}\frac{m_g(\rho )}{z-\rho }\right|\leq \left(\frac{16r^2}{(r-r')^3}+\frac{1}{(R^2/R'-R')\, \log (R/R')}\right)\left(\log |t|+\log \left(\frac{13\, \zeta (3/2)}{3\, \zeta (3)}\right)\right). \]
+</div>
+<p> Now note that \(f'/f=g'/g\), \(\mathcal{K}_f(R')=\mathcal{K}_g(R')\), and \(m_g(\rho )=m_f(\rho )\) for all \(\rho \in \mathcal{K}_f(R')\). Thus we have that, </p>
+<div class="displaymath" id="a0000000481">
+  \[ \left|\frac{f'}{f}(z)-\sum _{\rho \in \mathcal{K}_f(R')}\frac{m_f(\rho )}{z-\rho }\right|\ll \left(\frac{16r^2}{(r-r')^3}+\frac{1}{(R^2/R'-R')\, \log (R/R')}\right)\log |t| \]
+</div>
+<p> where the implied constant \(C\) is taken to be </p>
+<div class="displaymath" id="a0000000482">
+  \[ C\geq 1+\frac{\log ((13\, \zeta (3/2))/(3\, \zeta (3)))}{\log 2}. \]
+</div>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="ZeroWindows">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">28</span>
+    <span class="definition_thmtitle">ZeroWindows</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZeroWindows">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZeroWindows" class="lean_decl">ZeroWindows</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p> Let \(\mathcal{Z}_t=\{ \rho \in \mathbb {C}:\zeta (\rho )=0,\, |\rho -(3/2+it)|\leq 5/6\} \). </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="SumBoundI">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">112</span>
+    <span class="lemma_thmtitle">SumBoundI</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#SumBoundI">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000483"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/SumBoundI" class="lean_decl">SumBoundI</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For all \(\delta \in (0,1)\) and \(t\in \mathbb {R}\) with \(|t|\geq 2\) we have </p>
+<div class="displaymath" id="a0000000484">
+  \[ \left|\frac{\zeta '}{\zeta }(1+\delta +it)-\sum _{\rho \in \mathcal{Z}_t}\frac{m_\zeta (\rho )}{1+\delta +it-\rho }\right|\ll \log |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000483">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> We apply Theorem <a href="sect0004.html#LogDerivZetaFinalBound">41</a> where \(r'=2/3\), \(r=3/4\), \(R'=5/6\), and \(R=8/9\). Thus, for all \(z\in \overline{\mathbb {D}_{5/6}}\setminus \mathcal{K}_f(5/6)\) we have that </p>
+<div class="displaymath" id="a0000000485">
+  \[ \left|\frac{\zeta '}{\zeta }(z+3/2+it)-\sum _{\rho \in \mathcal{K}_f(5/6)}\frac{m_f(\rho )}{z-\rho }\right|\ll \log |t| \]
+</div>
+<p> where \(f(z)=\zeta (z+3/2+it)\) for \(t\in \mathbb {R}\) with \(|t|\geq 3\). Now if we let \(z=-1/2+\delta \), then \(z\in (-1/2,1/2)\subseteq \overline{\mathbb {D}_{5/6}}\). Additionally, \(f(z)=\zeta (1+\delta +it)\), where \(1+\delta +it\) lies in the zero-free region where \(\sigma {\gt}1\). Thus, \(z\not\in \mathcal{K}_f(5/6)\). So, </p>
+<div class="displaymath" id="a0000000486">
+  \[ \left|\frac{\zeta '}{\zeta }(1+\delta +it)-\sum _{\rho \in \mathcal{K}_f(5/6)}\frac{m_f(\rho )}{-1/2+\delta -\rho }\right|\ll \log |t|. \]
+</div>
+<p> But now note that if \(\rho \in \mathcal{K}_f(5/6)\), then \(\zeta (\rho +3/2+it)=0\) and \(|\rho |\leq 5/6\). Thus, \(\rho +3/2+it\in \mathcal{Z}_t\). Additionally, note that \(m_f(\rho )=m_\zeta (\rho +3/2+it)\). So changing variables using these facts gives us that </p>
+<div class="displaymath" id="a0000000487">
+  \[ \left|\frac{\zeta '}{\zeta }(1+\delta +it)-\sum _{\rho \in \mathcal{Z}_t}\frac{m_\zeta (\rho )}{1+\delta +it-\rho }\right|\ll \log |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="ShiftTwoBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">113</span>
+    <span class="lemma_thmtitle">ShiftTwoBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ShiftTwoBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000488"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ShiftTwoBound" class="lean_decl">ShiftTwoBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For all \(\delta \in (0,1)\) and \(t\in \mathbb {R}\) with \(|t|\geq 2\) we have </p>
+<div class="displaymath" id="a0000000489">
+  \[ -\Re \left(\frac{\zeta '}{\zeta }(1+\delta +2it)\right)\ll \log |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000488">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Note that, for \(\rho \in \mathcal{Z}_{2t}\) </p>
+<div class="displaymath" id="a0000000490">
+  \begin{align*}  \Re \left(\frac{1}{1+\delta +2it-\rho }\right)& =\Re \left(\frac{1+\delta -2it-\overline{\rho }}{(1+\delta +2it-\rho )(1+\delta -2it-\overline{\rho })}\right) \\ & =\frac{\Re (1+\delta -2it-\overline{\rho })}{|1+\delta +2it-\rho |^2}=\frac{1+\delta -\Re \rho }{(1+\delta -\Re \rho )^2+(2t-\mathfrak {I}\rho )^2}. \end{align*}
+</div>
+<p> Now since \(\rho \in \mathcal{Z}_{2t}\), we have that \(|\rho -(3/2+2it)|\leq 5/6\). So, we have \(\Re \rho \in (2/3,7/3)\) and \(\mathfrak {I}\rho \in (2t-5/6,2t+5/6)\). Thus, we have that </p>
+<div class="displaymath" id="a0000000491">
+  \[ 1/3{\lt}1+\delta -\Re \rho \qquad \text{and}\qquad (1+\delta -\Re \rho )^2+(2t-\mathfrak {I}\rho )^2{\lt}16/9+25/36=89/36. \]
+</div>
+<p> Which implies that </p>
+<div class="equation" id="pickupPoint4">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{pickupPoint4} 0\leq \frac{12}{89}{\lt}\frac{1+\delta -\Re \rho }{(1+\delta -\Re \rho )^2+(2t-\mathfrak {I}\rho )^2}=\Re \left(\frac{1}{1+\delta +2it-\rho }\right). \end{equation}
+  </div>
+  <span class="equation_label">8</span>
+</p>
+</div>
+<p> Note that, from Lemma <a href="sect0004.html#SumBoundI">112</a>, we have </p>
+<div class="displaymath" id="a0000000492">
+  \[ \sum _{\rho \in \mathcal{Z}_{2t}}m_\zeta (\rho )\, \Re \left(\frac{1}{1+\delta +2it-\rho }\right)-\Re \left(\frac{\zeta '}{\zeta }(1+\delta +2it)\right)\leq \left|\frac{\zeta '}{\zeta }(1+\delta +2it)-\sum _{\rho \in \mathcal{Z}_{2t}}\frac{m_\zeta (\rho )}{1+\delta +2it-\rho }\right|\ll \log |2t|. \]
+</div>
+<p> Since \(m_\zeta (\rho )\geq 0\) for all \(\rho \in \mathcal{Z}_{2t}\), the inequality from Equation (<a href="sect0004.html#pickupPoint4">8</a>) tells us that by subtracting the sum from both sides we have </p>
+<div class="displaymath" id="a0000000493">
+  \[ -\Re \left(\frac{\zeta '}{\zeta }(1+\delta +2it)\right)\ll \log |2t|. \]
+</div>
+<p> Noting that \(\log |2t|=\log (2)+\log |t|\leq 2\log |t|\) completes the proof. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="ShiftOneBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">114</span>
+    <span class="lemma_thmtitle">ShiftOneBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ShiftOneBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000494"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ShiftOneBound" class="lean_decl">ShiftOneBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> There exists \(C{\gt}0\) such that for all \(\delta \in (0,1)\) and \(t\in \mathbb {R}\) with \(|t|\geq 3\); if \(\zeta (\rho )=0\) with \(\rho =\sigma +it\), then </p>
+<div class="displaymath" id="a0000000495">
+  \[ -\Re \left(\frac{\zeta '}{\zeta }(1+\delta +it)\right)\leq -\frac{1}{1+\delta -\sigma }+C\log |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000494">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Note that for \(\rho '\in \mathcal{Z}_t\) </p>
+<div class="displaymath" id="a0000000496">
+  \begin{align*}  \Re \left(\frac{1}{1+\delta +it-\rho '}\right)& =\Re \left(\frac{1+\delta -it-\overline{\rho '}}{(1+\delta +it-\rho ')(1+\delta -it-\overline{\rho '})}\right) \\ & =\frac{\Re (1+\delta -it-\overline{\rho '})}{|1+\delta +it-\rho '|^2}=\frac{1+\delta -\Re \rho '}{(1+\delta -\Re \rho ')^2+(t-\mathfrak {I}\rho ')^2}. \end{align*}
+</div>
+<p> Now since \(\rho '\in \mathcal{Z}_t\), we have that \(|\rho -(3/2+it)|\leq 5/6\). So, we have \(\Re \rho '\in (2/3,7/3)\) and \(\mathfrak {I}\rho '\in (t-5/6,t+5/6)\). Thus we have that </p>
+<div class="displaymath" id="a0000000497">
+  \[ 1/3{\lt}1+\delta -\Re \rho '\qquad \text{and}\qquad (1+\delta -\Re \rho ')^2+(t-\mathfrak {I}\rho ')^2{\lt}16/9+25/36=89/36. \]
+</div>
+<p> Which implies that </p>
+<div class="equation" id="pickupPoint5">
+<p>
+  <div class="equation_content">
+    \begin{equation} \label{pickupPoint5} 0\leq \frac{12}{89}{\lt}\frac{1+\delta -\Re \rho '}{(1+\delta -\Re \rho ')^2+(t-\mathfrak {I}\rho ')^2}=\Re \left(\frac{1}{1+\delta +it-\rho '}\right). \end{equation}
+  </div>
+  <span class="equation_label">9</span>
+</p>
+</div>
+<p> Note that, from Lemma <a href="sect0004.html#SumBoundI">112</a>, we have </p>
+<div class="displaymath" id="a0000000498">
+  \[ \sum _{\rho \in \mathcal{Z}_t}m_\zeta (\rho )\, \Re \left(\frac{1}{1+\delta +it-\rho }\right)-\Re \left(\frac{\zeta '}{\zeta }(1+\delta +it)\right)\leq \left|\frac{\zeta '}{\zeta }(1+\delta +it)-\sum _{\rho \in \mathcal{Z}_t}\frac{m_\zeta (\rho )}{1+\delta +it-\rho }\right|\ll \log |t|. \]
+</div>
+<p> Since \(m_\zeta (\rho )\geq 0\) for all \(\rho '\in \mathcal{Z}_t\), the inequality from Equation (<a href="sect0004.html#pickupPoint5">9</a>) tells us that by subtracting the sum over all \(\rho '\in \mathcal{Z}_t\setminus \{ \rho \} \) from both sides we have </p>
+<div class="displaymath" id="a0000000499">
+  \[ \frac{m_\zeta (\rho )}{\Re (1+\delta +it-\rho )}-\Re \left(\frac{\zeta '}{\zeta }(1+\delta +it)\right)\ll \log |t|. \]
+</div>
+<p> But of course we have that \(\Re (1+\delta +it-\rho )=1+\delta -\sigma \). So subtracting this term from both sides and recalling the implied constant we have </p>
+<div class="displaymath" id="a0000000500">
+  \[ -\Re \left(\frac{\zeta '}{\zeta }(1+\delta +it)\right)\leq -\frac{m_\zeta (\rho )}{1+\delta -\sigma }+C\log |t|. \]
+</div>
+<p> We have that \(\sigma \leq 1\) since \(\zeta \) is zero free on the right half plane \(\sigma {\gt}1\). Thus \(0{\lt}1+\delta -\sigma \). Noting this in combination with the fact that \(1\leq m_\zeta (\rho )\) completes the proof. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="ShiftZeroBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">115</span>
+    <span class="lemma_thmtitle">ShiftZeroBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ShiftZeroBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000501"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ShiftZeroBound" class="lean_decl">ShiftZeroBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For all \(\delta \in (0,1)\) we have </p>
+<div class="displaymath" id="a0000000502">
+  \[ -\Re \left(\frac{\zeta '}{\zeta }(1+\delta )\right)\leq \frac{1}{\delta }+O(1). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000501">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> From Theorem <a href="sect0003.html#riemannZetaLogDerivResidue">23</a> we know that </p>
+<div class="displaymath" id="a0000000503">
+  \[ -\frac{\zeta '}{\zeta }(s)=\frac{1}{s-1}+O(1). \]
+</div>
+<p> Changing variables \(s\mapsto 1+\delta \) and applying the triangle inequality we have that </p>
+<div class="displaymath" id="a0000000504">
+  \[ -\Re \left(\frac{\zeta '}{\zeta }(1+\delta )\right)\leq \left|-\frac{\zeta '}{\zeta }(1+\delta )\right|\leq \frac{1}{\delta }+O(1). \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="ThreeFourOneTrigIdentity">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">116</span>
+    <span class="lemma_thmtitle">ThreeFourOneTrigIdentity</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ThreeFourOneTrigIdentity">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000505"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ThreeFourOneTrigIdentity" class="lean_decl">ThreeFourOneTrigIdentity</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> We have that </p>
+<div class="displaymath" id="a0000000506">
+  \[ 0\leq 3+4\cos \theta +\cos 2\theta  \]
+</div>
+<p> for all \(\theta \in \mathbb {R}\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000505">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We know that \(\cos (2\theta )=2\cos ^2\theta -1\), thus </p>
+<div class="displaymath" id="a0000000507">
+  \[ 3+4\cos \theta +\cos 2\theta =2+4\cos \theta +2\cos ^2\theta =2\, (1+\cos \theta )^2. \]
+</div>
+<p> Noting that \(0\leq 1+\cos \theta \) completes the proof. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="ZeroInequality">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">42</span>
+    <span class="theorem_thmtitle">ZeroInequality</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#ZeroInequality">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000508"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/ZeroInequality" class="lean_decl">ZeroInequality</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>   There exists a constant \(0 {\lt} E{\lt}1\) such that for all \(\rho =\sigma +it\) with \(\zeta (\rho )=0\) and \(|t|\geq 2\), one has </p>
+<div class="displaymath" id="a0000000509">
+  \[ \sigma \leq 1-\frac{E}{\log |t|}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000508">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> From Theorem <a href="sect0003.html#LogDerivativeDirichlet">26</a> when \(\Re s{\gt}1\) we have </p>
+<div class="displaymath" id="a0000000510">
+  \[ -\frac{\zeta '}{\zeta }(s)=\sum _{1\leq n}\frac{\Lambda (n)}{n^s}. \]
+</div>
+<p> Thus, </p>
+<div class="displaymath" id="a0000000511">
+  \[ -3\, \frac{\zeta '}{\zeta }(1+\delta )-4\, \frac{\zeta '}{\zeta }(1+\delta +it)-\frac{\zeta '}{\zeta }(1+\delta +2it)=\sum _{1\leq n}\Lambda (n)\, n^{-(1+\delta )}\left(3+4n^{-it}+n^{-2it}\right). \]
+</div>
+<p> Now applying Euler’s identity </p>
+<div class="displaymath" id="a0000000512">
+  \begin{align*}  -3\, \Re \left(\frac{\zeta '}{\zeta }(1+\delta )\right)& -4\, \Re \left(\frac{\zeta '}{\zeta }(1+\delta +it)\right)-\Re \left(\frac{\zeta '}{\zeta }(1+\delta +2it)\right) \\ & \qquad \qquad \qquad =\sum _{1\leq n}\Lambda (n)\, n^{-(1+\delta )}\left(3+4\cos (-it\log n)+\cos (-2it\log n)\right) \end{align*}
+</div>
+<p> By Lemma <a href="sect0004.html#ThreeFourOneTrigIdentity">116</a> we know that the series on the right hand side is bounded below by \(0\), and by Lemmas <a href="sect0004.html#ShiftTwoBound">113</a>, <a href="sect0004.html#ShiftOneBound">114</a>, and <a href="sect0004.html#ShiftZeroBound">115</a> we have an upper bound on the left hand side. So, </p>
+<div class="displaymath" id="a0000000513">
+  \[ 0\leq \frac{3}{\delta }+3A-\frac{4}{1+\delta -\sigma }+4B\log |t|+C\log |t| \]
+</div>
+<p> where \(A\), \(B\), and \(C\) are the implied constants coming from Lemmas <a href="sect0004.html#ShiftZeroBound">115</a>, <a href="sect0004.html#ShiftOneBound">114</a>, and <a href="sect0004.html#ShiftTwoBound">113</a> respectively. By choosing \(D\geq 3A/\log 2+4B+C\) we have </p>
+<div class="displaymath" id="a0000000514">
+  \[ \frac{4}{1+\delta -\sigma }\leq \frac{3}{\delta }+D\log |t| \]
+</div>
+<p> by some manipulation. Now if we choose \(\delta =(2D\log |t|)^{-1}\) then we have </p>
+<div class="displaymath" id="a0000000515">
+  \[ \frac{4}{1-\sigma +1/(2D\log |t|)}\leq 7D\log |t|. \]
+</div>
+<p> So with some manipulation we have that </p>
+<div class="displaymath" id="a0000000516">
+  \[ \sigma \leq 1-\frac{1}{14D\log |t|}. \]
+</div>
+<p> This is exactly the desired result with the constant \(E=(14D)^{-1}\) </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="DeltaT">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">29</span>
+    <span class="definition_thmtitle">DeltaT</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#DeltaT">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/DeltaT" class="lean_decl">DeltaT</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>    Let \(\delta _t=E/\log |t|\) where \(E\) is the constant coming from Theorem <a href="sect0004.html#ZeroInequality">42</a>. </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="DeltaRange">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">117</span>
+    <span class="lemma_thmtitle">DeltaRange</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#DeltaRange">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000517"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#DeltaT">Definition 29</a></li>
+          
+          <li><a href="sect0004.html#ShiftZeroBound">Lemma 115</a></li>
+          
+          <li><a href="sect0004.html#ShiftTwoBound">Lemma 113</a></li>
+          
+          <li><a href="sect0004.html#SumBoundI">Lemma 112</a></li>
+          
+          <li><a href="sect0004.html#LogDerivZetaFinalBound">Theorem 41</a></li>
+          
+          <li><a href="sect0004.html#ShiftOneBound">Lemma 114</a></li>
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/DeltaRange" class="lean_decl">DeltaRange</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>    For all \(t\in \mathbb {R}\) with \(|t|\geq 2\) we have that </p>
+<div class="displaymath" id="a0000000518">
+  \[ \delta _t{\lt}1/14. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000517">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Note that \(\delta _t=E/\log |t|\) where \(E\) is the implied constant from Lemma <a href="sect0004.html#ZeroInequality">42</a>. But we know that \(E=(14D)^{-1}\) where \(D\geq 3A/\log 2+4B+C\) where \(A\), \(B\), and \(C\) are the constants coming from Lemmas <a href="sect0004.html#ShiftZeroBound">115</a>, <a href="sect0004.html#ShiftOneBound">114</a>, and <a href="sect0004.html#ShiftTwoBound">113</a> respectively. Thus, </p>
+<div class="displaymath" id="a0000000519">
+  \[ E\leq \frac{1}{14\, (3A/\log 2+4B+C)}. \]
+</div>
+<p> But note that \(A\geq 0\) and \(B\geq 0\) by Lemmas <a href="sect0004.html#ShiftZeroBound">115</a> and <a href="sect0004.html#ShiftOneBound">114</a> respectively. However, we have that </p>
+<div class="displaymath" id="a0000000520">
+  \[ C\geq 2+\frac{2\log ((13\, \zeta (3/2))/(3\, \zeta (3)))}{\log 2} \]
+</div>
+<p> by Theorem <a href="sect0004.html#LogDerivZetaFinalBound">41</a> with Lemmas <a href="sect0004.html#SumBoundI">112</a> and <a href="sect0004.html#ShiftTwoBound">113</a>. So, by a very lazy estimate we have \(C\geq 2\) and \(E\leq 1/28\). Thus, </p>
+<div class="displaymath" id="a0000000521">
+  \[ \delta _t=\frac{E}{\log |t|}\leq \frac{1}{28\, \log 2}{\lt}\frac{1}{14}. \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="SumBoundII">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">118</span>
+    <span class="lemma_thmtitle">SumBoundII</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#SumBoundII">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000522"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/SumBoundII" class="lean_decl">SumBoundII</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For all \(t\in \mathbb {R}\) with \(|t|\geq 2\) and \(z=\sigma +it\) where \(1-\delta _t/3\leq \sigma \leq 3/2\), we have that </p>
+<div class="displaymath" id="a0000000523">
+  \[ \left|\frac{\zeta '}{\zeta }(z)-\sum _{\rho \in \mathcal{Z}_t}\frac{m_\zeta (\rho )}{z-\rho }\right|\ll \log |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000522">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> By Lemma <a href="sect0004.html#DeltaRange">117</a> we have that </p>
+<div class="displaymath" id="a0000000524">
+  \[ -11/21{\lt}-1/2-\delta _t/3\leq \sigma -3/2\leq 0. \]
+</div>
+<p> We apply Theorem <a href="sect0004.html#LogDerivZetaFinalBound">41</a> where \(r'=2/3\), \(r=3/4\), \(R'=5/6\), and \(R=8/9\). Thus for all \(z\in \overline{\mathbb {D}_{5/6}}\setminus \mathcal{K}_f(5/6)\) we have that </p>
+<div class="displaymath" id="a0000000525">
+  \[ \left|\frac{\zeta '}{\zeta }(z+3/2+it)-\sum _{\rho \in \mathcal{K}_f(5/6)}\frac{m_f(\rho )}{z-\rho }\right|\ll \log |t| \]
+</div>
+<p> where \(f(z)=\zeta (z+3/2+it)\) for \(t\in \mathbb {R}\) with \(|t|\geq 3\). Now if we let \(z=\sigma -3/2\), then \(z\in (-11/21,0)\subseteq \overline{\mathbb {D}_{5/6}}\). Additionally, \(f(z)=\zeta (\sigma +it)\), where \(\sigma +it\) lies in the zero free region given by Lemma <a href="sect0004.html#ZeroInequality">42</a> since \(\sigma \geq 1-\delta _t/3\geq 1-\delta _t\). Thus, \(z\not\in \mathcal{K}_f(5/6)\). So, </p>
+<div class="displaymath" id="a0000000526">
+  \[ \left|\frac{\zeta '}{\zeta }(\sigma +it)-\sum _{\rho \in \mathcal{K}_f(5/6)}\frac{m_f(\rho )}{\sigma -3/2-\rho }\right|\ll \log |t|. \]
+</div>
+<p> But now note that if \(\rho \in \mathcal{K}_f(5/6)\), then \(\zeta (\rho +3/2+it)=0\) and \(|\rho |\leq 5/6\). Additionally, note that \(m_f(\rho )=m_\zeta (\rho +3/2+it)\). So changing variables using these facts gives us that </p>
+<div class="displaymath" id="a0000000527">
+  \[ \left|\frac{\zeta '}{\zeta }(\sigma +it)-\sum _{\rho \in \mathcal{Z}_t}\frac{m_\zeta (\rho )}{\sigma +it-\rho }\right|\ll \log |t|. \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="GapSize">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">119</span>
+    <span class="lemma_thmtitle">GapSize</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#GapSize">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000528"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/GapSize" class="lean_decl">GapSize</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(t\in \mathbb {R}\) with \(|t|\geq 3\) and \(z=\sigma +it\) where \(1-\delta _t/3\leq \sigma \leq 3/2\). Additionally, let \(\rho \in \mathcal{Z}_t\). Then we have that </p>
+<div class="displaymath" id="a0000000529">
+  \[ |z-\rho |\geq \delta _t/6. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000528">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Let \(\rho =\sigma '+it'\) and note that since \(\rho \in \mathcal{Z}_t\), we have \(t'\in (t-5/6,t+5/6)\). Thus, if \(t{\gt}1\) we have </p>
+<div class="displaymath" id="a0000000530">
+  \[ \log |t'|\leq \log |t+5/6|\leq \log |2t|=\log 2+\log |t|\leq 2\log |t|. \]
+</div>
+<p> And otherwise if \(t{\lt}-1\) we have </p>
+<div class="displaymath" id="a0000000531">
+  \[ \log |t'|\leq \log |t-5/6|\leq \log |2t|=\log 2+\log |t|\leq 2\log |t|. \]
+</div>
+<p> So by taking reciprocals and multiplying through by a constant we have that \(\delta _t\leq 2\delta _{t'}\). Now note that since \(\rho \in \mathcal{Z}_t\) we know that \(\sigma '\leq 1-\delta _{t'}\) by Theorem <a href="sect0004.html#ZeroInequality">42</a> (here we use the fact that \(|t|\geq 3\) to give us that \(|t'|\geq 2\)). Thus, </p>
+<div class="displaymath" id="a0000000532">
+  \[ \delta _t/6\leq \delta _{t'}-\delta _t/3=1-\delta _t/3-(1-\delta _{t'})\leq \sigma -\sigma '\leq |z-\rho |. \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="LogDerivZetaUniformLogSquaredBoundStrip">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">120</span>
+    <span class="lemma_thmtitle">LogDerivZetaUniformLogSquaredBoundStrip</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#LogDerivZetaUniformLogSquaredBoundStrip">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000533"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+          <li><a href="sect0004.html#GapSize">Lemma 119</a></li>
+          
+          <li><a href="sect0004.html#GlobalBound">Theorem 40</a></li>
+          
+          <li><a href="sect0004.html#ZetaFixedLowerBound">Theorem 39</a></li>
+          
+          <li><a href="sect0004.html#SumBoundII">Lemma 118</a></li>
+          
+          <li><a href="sect0004.html#ZerosBound">Theorem 36</a></li>
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/LogDerivZetaUniformLogSquaredBoundStrip" class="lean_decl">LogDerivZetaUniformLogSquaredBoundStrip</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>    There exists a constant \(F\in (0,1/2)\) such that for all \(t\in \mathbb {R}\) with \(|t|\geq 3\) one has </p>
+<div class="displaymath" id="a0000000534">
+  \[ 1-\frac{F}{\log |t|}\leq \sigma \leq 3/2\implies \left|\frac{\zeta '}{\zeta }(\sigma +it)\right|\ll \log ^2|t| \]
+</div>
+<p> where the implied constant is uniform in \(\sigma \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000533">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Take \(F=E/3\) where \(E\) comes from Theorem <a href="sect0004.html#ZeroInequality">42</a>. Then we have that \(\sigma \geq 1-\delta _t/3\). So, we apply Lemma <a href="sect0004.html#SumBoundII">118</a>, which gives us that </p>
+<div class="displaymath" id="a0000000535">
+  \[ \left|\frac{\zeta '}{\zeta }(z)-\sum _{\rho \in \mathcal{Z}_t}\frac{m_\zeta (\rho )}{z-\rho }\right|\ll \log |t|. \]
+</div>
+<p> Using the reverse triangle inequality and rearranging, we have that </p>
+<div class="displaymath" id="a0000000536">
+  \[ \left|\frac{\zeta '}{\zeta }(z)\right|\leq \sum _{\rho \in \mathcal{Z}_t}\frac{m_\zeta (\rho )}{|z-\rho |}+C\, \log |t| \]
+</div>
+<p> where \(C\) is the implied constant in Lemma <a href="sect0004.html#SumBoundII">118</a>. Now applying Lemma <a href="sect0004.html#GapSize">119</a> we have that </p>
+<div class="displaymath" id="a0000000537">
+  \[ \left|\frac{\zeta '}{\zeta }(z)\right|\leq \frac{6}{\delta _t}\sum _{\rho \in \mathcal{Z}_t}m_\zeta (\rho )+C\, \log |t|. \]
+</div>
+<p> Now let \(f(z)=\zeta (z+3/2+it)/\zeta (3/2+it)\) with \(\rho =\rho '+3/2+it\). Then if \(\rho \in \mathcal{Z}_t\) we have that </p>
+<div class="displaymath" id="a0000000538">
+  \[ 0=\zeta (\rho )=\zeta (\rho '+3/2+it)=f(\rho ') \]
+</div>
+<p> with the same multiplicity of zero, that is \(m_\zeta (\rho )=m_f(\rho ')\). And also if \(\rho \in \mathcal{Z}_t\) then </p>
+<div class="displaymath" id="a0000000539">
+  \[ 5/6\geq |\rho -(3/2+it)|=|\rho '|. \]
+</div>
+<p> Thus we change variables to have that </p>
+<div class="displaymath" id="a0000000540">
+  \[ \left|\frac{\zeta '}{\zeta }(z)\right|\leq \frac{6}{\delta _t}\sum _{\rho '\in \mathcal{K}_f(5/6)}m_f(\rho ')+C\, \log |t|. \]
+</div>
+<p> Now note that \(f(0)=1\) and for \(|z|\leq 8/9\) we have </p>
+<div class="displaymath" id="a0000000541">
+  \[ |f(z)|=\frac{|\zeta (z+3/2+it)|}{|\zeta (3/2+it)|}\leq \frac{\zeta (3/2)}{\zeta (3)}\cdot (7+2\, |t|)\leq \frac{13\, \zeta (3/2)}{3\, \zeta (3)}\, |t| \]
+</div>
+<p> by Theorems <a href="sect0004.html#ZetaFixedLowerBound">39</a> and <a href="sect0004.html#GlobalBound">40</a>. Thus by Theorem <a href="sect0004.html#ZerosBound">36</a> we have that </p>
+<div class="displaymath" id="a0000000542">
+  \[ \sum _{\rho '\in \mathcal{K}_f(5/6)}m_f(\rho ')\leq \frac{\log |t|+\log (13\, \zeta (3/2)/(3\, \zeta (3)))}{\log ((8/9)/(5/6))}\leq D\log |t| \]
+</div>
+<p> where \(D\) is taken to be sufficiently large. Recall, by definition that, \(\delta _t=E/\log |t|\) with \(E\) coming from Theorem <a href="sect0004.html#ZeroInequality">42</a>. By using this fact and the above, we have that </p>
+<div class="displaymath" id="a0000000543">
+  \[ \left|\frac{\zeta '}{\zeta }(z)\right|\ll \log ^2|t|+\log |t| \]
+</div>
+<p> where the implied constant is taken to be bigger than \(\max (6D/E,C)\). We know that the RHS is bounded above by \(\ll \log ^2|t|\); so the result follows. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="LogDerivZetaUniformLogSquaredBound">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">43</span>
+    <span class="theorem_thmtitle">LogDerivZetaUniformLogSquaredBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#LogDerivZetaUniformLogSquaredBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000544"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#LogDerivZetaUniformLogSquaredBoundStrip">Lemma 120</a></li>
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/LogDerivZetaUniformLogSquaredBound" class="lean_decl">LogDerivZetaUniformLogSquaredBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>    There exists a constant \(F\in (0,1/2)\) such that for all \(t\in \mathbb {R}\) with \(|t|\geq 3\) one has </p>
+<div class="displaymath" id="a0000000545">
+  \[ 1-\frac{F}{\log |t|}\leq \sigma \implies \left|\frac{\zeta '}{\zeta }(\sigma +it)\right|\ll \log ^2|t| \]
+</div>
+<p> where the implied constant is uniform in \(\sigma \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000544">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> usesriemannZetaLogDerivResidue, LogDerivZetaUniformLogSquaredBoundStrip Note that </p>
+<div class="displaymath" id="a0000000546">
+  \[ \left|\frac{\zeta '}{\zeta }(\sigma +it)\right|=\sum _{1\leq n}\frac{\Lambda (n)}{|n^{\sigma +it}|}=\sum _{1\leq n}\frac{\Lambda (n)}{n^\sigma }=-\frac{\zeta '}{\zeta }(\sigma )\leq \left|\frac{\zeta '}{\zeta }(\sigma )\right|. \]
+</div>
+<p> From Theorem <a href="sect0003.html#riemannZetaLogDerivResidue">23</a>, and applying the triangle inequality we know that </p>
+<div class="displaymath" id="a0000000547">
+  \[ \left|\frac{\zeta '}{\zeta }(s)\right|\leq \frac{1}{|s-1|}+C. \]
+</div>
+<p> where \(C{\gt}0\) is some constant. Thus, for \(\sigma \geq 3/2\) we have that </p>
+<div class="displaymath" id="a0000000548">
+  \[ \left|\frac{\zeta '}{\zeta }(\sigma +it)\right|\leq \left|\frac{\zeta '}{\zeta }(\sigma )\right|\leq \frac{1}{\sigma -1}+C\leq 2+C\ll 1\ll \log ^2|t|. \]
+</div>
+<p> Putting this together with Lemma <a href="sect0004.html#LogDerivZetaUniformLogSquaredBoundStrip">120</a> completes the proof. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="LogDerivZetaLogSquaredBoundSmallt">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">44</span>
+    <span class="theorem_thmtitle">LogDerivZetaLogSquaredBoundSmallt</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#LogDerivZetaLogSquaredBoundSmallt">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000549"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#LogDerivZetaUniformLogSquaredBoundStrip">Lemma 120</a></li>
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+          <li><a href="sect0003.html#riemannZetaLogDerivResidue">Theorem 23</a></li>
+          
+          <li><a href="sect0004.html#LogDerivZetaUniformLogSquaredBound">Theorem 43</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/LogDerivZetaLogSquaredBoundSmallt" class="lean_decl">LogDerivZetaLogSquaredBoundSmallt</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>    For \(T{\gt}0\) and \(\sigma '=1-\delta _T/3=1-F/\log T\), if \(|t|\leq T\) then we have that </p>
+<div class="displaymath" id="a0000000550">
+  \[ \left|\frac{\zeta '}{\zeta }(\sigma '+it)\right|\ll \log ^2(2+T). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000549">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Note that if \(|t|\geq 3\) then from Theorem <a href="sect0004.html#LogDerivZetaUniformLogSquaredBound">43</a> we have that </p>
+<div class="displaymath" id="a0000000551">
+  \[ \left|\frac{\zeta '}{\zeta }(\sigma '+it)\right|\ll \log ^2|t|\leq \log ^2T\leq \log ^2(2+T). \]
+</div>
+<p> Otherwise, if \(|t|\leq 3\), then from Theorem <a href="sect0003.html#riemannZetaLogDerivResidue">23</a> and applying the triangle inequality we know </p>
+<div class="displaymath" id="a0000000552">
+  \[ \left|\frac{\zeta '}{\zeta }(\sigma '+it)\right|\leq \frac{1}{|(\sigma '-1)+it|}+C\leq \frac{\log T}{F}+C \]
+</div>
+<p> where \(C\geq 0\). Thus, we have that </p>
+<div class="displaymath" id="a0000000553">
+  \[ \left|\frac{\zeta '}{\zeta }(\sigma '+it)\right|\leq \left(\frac{\log T}{F\, \log 2}+\frac{C}{\log 2}\right)\, \log (2+|t|)\leq \left(\frac{\log (2+T)}{F\, \log 2}+\frac{C}{\log 2}\right)\log (2+T)\ll \log ^2(2+T). \]
+</div>
+
+  </div>
+</div>
+<p>From here out we closely follow our previous proof of the Medium PNT and we modify it using our new estimate in Theorem <a href="sect0004.html#LogDerivZetaUniformLogSquaredBound">43</a>. Recall Definition <a href="sect0003.html#SmoothedChebyshev">10</a>; for fixed \(\varepsilon {\gt}0\) and a bump function \(\nu \) supported on \([1/2,2]\) we have </p>
+<div class="displaymath" id="a0000000554">
+  \[ \psi _\varepsilon (X)=\frac{1}{2\pi i}\int _{(\sigma )}\left(-\frac{\zeta '}{\zeta }(s)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(s)\, X^s\, ds \]
+</div>
+<p> where \(\sigma =1+1/\log X\). Let \(T{\gt}3\) be a large constant to be chosen later, and we take \(\sigma '=1-\delta _T/3=1-F/\log T\) with \(F\) coming from Theorem <a href="sect0004.html#LogDerivZetaUniformLogSquaredBound">43</a>. We integrate along the \(\sigma \) vertical line, and we pull contours accumulating the pole at \(s=1\) when we integrate along the curves </p>
+<ul class="itemize">
+  <li><p>\(I_1\): \(\sigma -i\infty \) to \(\sigma -iT\) </p>
+</li>
+  <li><p>\(I_2\): \(\sigma '-iT\) to \(\sigma -iT\) </p>
+</li>
+  <li><p>\(I_3\): \(\sigma '-iT\) to \(\sigma '+iT\) </p>
+</li>
+  <li><p>\(I_4\): \(\sigma '+iT\) to \(\sigma +iT\) </p>
+</li>
+  <li><p>\(I_5\): \(\sigma +iT\) to \(\sigma +i\infty \). </p>
+</li>
+</ul>
+<div class="definition_thmwrapper theorem-style-definition" id="I1New">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">30</span>
+    <span class="definition_thmtitle">I1New</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I1New">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0003.html#Smooth1">Definition 6</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I1New" class="lean_decl">I1New</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>    Let </p>
+<div class="displaymath" id="a0000000555">
+  \[ I_1(\nu ,\varepsilon ,X,T)=\frac{1}{2\pi i}\int _{-\infty }^{-T}\left(-\frac{\zeta '}{\zeta }(\sigma +it)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(\sigma +it)\, X^{\sigma +it}\, dt. \]
+</div>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="I5New">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">31</span>
+    <span class="definition_thmtitle">I5New</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I5New">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0003.html#Smooth1">Definition 6</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I5New" class="lean_decl">I5New</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>    Let </p>
+<div class="displaymath" id="a0000000556">
+  \[ I_5(\nu ,\varepsilon ,X,T)=\frac{1}{2\pi i}\int _T^\infty \left(-\frac{\zeta '}{\zeta }(\sigma +it)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(\sigma +it)\, X^{\sigma +it}\, dt. \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="I1NewBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">121</span>
+    <span class="lemma_thmtitle">I1NewBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I1NewBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000557"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#I1New">Definition 30</a></li>
+          
+          <li><a href="sect0003.html#MellinOfSmooth1b">Lemma 51</a></li>
+          
+          <li><a href="sect0004.html#LogDerivZetaUniformLogSquaredBound">Theorem 43</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I1NewBound" class="lean_decl">I1NewBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>    We have that </p>
+<div class="displaymath" id="a0000000558">
+  \[ |I_1(\nu ,\varepsilon ,X,T)|\ll \frac{X}{\varepsilon \sqrt{T}}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000557">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Note that \(|I_1(\nu ,\varepsilon ,X,T)|=\) </p>
+<div class="displaymath" id="a0000000559">
+  \[ \left|\frac{1}{2\pi i}\int _{-\infty }^{-T}\left(-\frac{\zeta '}{\zeta }(\sigma +it)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(\sigma +it)\, X^{\sigma +it}\, dt\right|\ll \int _{-\infty }^{-T}\left|\frac{\zeta '}{\zeta }(\sigma +it)\right|\cdot |\mathcal{M}(\tilde{1}_\varepsilon )(\sigma +it)|\cdot X^\sigma \, dt. \]
+</div>
+<p> Applying Theorem <a href="sect0004.html#LogDerivZetaUniformLogSquaredBound">43</a> and Lemma <a href="sect0003.html#MellinOfSmooth1b">51</a>, we have that </p>
+<div class="displaymath" id="a0000000560">
+  \[ |I_1(\nu ,\varepsilon ,X,T)|\ll \int _{-\infty }^{-T}\log ^2|t|\cdot \frac{X^\sigma }{\varepsilon \, |\sigma +it|^2}\, dt\ll \frac{X}{\varepsilon }\int _T^\infty \frac{\sqrt{t}\, dt}{t^2}\ll \frac{X}{\varepsilon \sqrt{T}}. \]
+</div>
+<p> Here we are using the fact that \(\log ^2 t\) grows slower than \(\sqrt{t}\), \(|\sigma +it|^2\geq t^2\), and \(X^\sigma =X\cdot X^{1/\log X}=eX\). </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="I5NewBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">122</span>
+    <span class="lemma_thmtitle">I5NewBound</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I5NewBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000561"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#I5New">Definition 31</a></li>
+          
+          <li><a href="sect0003.html#riemannZeta_conj">Theorem 14</a></li>
+          
+          <li><a href="sect0003.html#Smooth1">Definition 6</a></li>
+          
+          <li><a href="sect0003.html#deriv_riemannZeta_conj">Theorem 15</a></li>
+          
+          <li><a href="sect0004.html#I1NewBound">Lemma 121</a></li>
+          
+          <li><a href="sect0004.html#I1New">Definition 30</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I5NewBound" class="lean_decl">I5NewBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>    We have that </p>
+<div class="displaymath" id="a0000000562">
+  \[ |I_5(\nu ,\varepsilon ,X,T)|\ll \frac{X}{\varepsilon \sqrt{T}}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000561">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> By symmetry, note that </p>
+<div class="displaymath" id="a0000000563">
+  \[ |I_1(\nu ,\varepsilon ,X,T)|=|\overline{I_5(\nu ,\varepsilon ,X,T)}|=|I_5(\nu ,\varepsilon ,X,T)|. \]
+</div>
+<p> Applying Lemma <a href="sect0004.html#I1NewBound">121</a> completes the proof. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="I2New">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">32</span>
+    <span class="definition_thmtitle">I2New</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I2New">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0003.html#Smooth1">Definition 6</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I2New" class="lean_decl">I2New</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>    Let </p>
+<div class="displaymath" id="a0000000564">
+  \[ I_2(\nu ,\varepsilon ,X,T)=\frac{1}{2\pi i}\int _{\sigma '}^\sigma \left(-\frac{\zeta '}{\zeta }(\sigma _0-iT)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(\sigma _0-iT)\, X^{\sigma _0-iT}\, d\sigma _0. \]
+</div>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="I4New">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">33</span>
+    <span class="definition_thmtitle">I4New</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I4New">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0003.html#Smooth1">Definition 6</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I4New" class="lean_decl">I4New</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>    Let </p>
+<div class="displaymath" id="a0000000565">
+  \[ I_4(\nu ,\varepsilon ,X,T)=\frac{1}{2\pi i}\int _{\sigma '}^\sigma \left(-\frac{\zeta '}{\zeta }(\sigma _0+iT)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(\sigma _0+iT)\, X^{\sigma _0+iT}\, d\sigma _0. \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="I2NewBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">123</span>
+    <span class="lemma_thmtitle">I2NewBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I2NewBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000566"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#LogDerivZetaUniformLogSquaredBoundStrip">Lemma 120</a></li>
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+          <li><a href="sect0004.html#I2New">Definition 32</a></li>
+          
+          <li><a href="sect0003.html#MellinOfSmooth1b">Lemma 51</a></li>
+          
+          <li><a href="sect0004.html#LogDerivZetaUniformLogSquaredBound">Theorem 43</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I2NewBound" class="lean_decl">I2NewBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>    We have that </p>
+<div class="displaymath" id="a0000000567">
+  \[ |I_2(\nu ,\varepsilon ,X,T)|\ll \frac{X}{\varepsilon \sqrt{T}}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000566">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Note that \(|I_2(\nu ,\varepsilon ,X,T)|=\) </p>
+<div class="displaymath" id="a0000000568">
+  \[ \left|\frac{1}{2\pi i}\int _{\sigma '}^\sigma \left(-\frac{\zeta '}{\zeta }(\sigma _0-iT)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(\sigma _0-iT)\, X^{\sigma _0-iT}\, d\sigma _0\right|\ll \int _{\sigma '}^\sigma \left|\frac{\zeta '}{\zeta }(\sigma _0-iT)\right|\cdot |\mathcal{M}(\tilde{1}_\varepsilon )(\sigma _0-iT)|\cdot X^{\sigma _0}\, d\sigma _0. \]
+</div>
+<p> Applying Theorem <a href="sect0004.html#LogDerivZetaUniformLogSquaredBound">43</a> and Lemma <a href="sect0003.html#MellinOfSmooth1b">51</a>, we have that </p>
+<div class="displaymath" id="a0000000569">
+  \[ |I_2(\nu ,\varepsilon ,X,T)|\ll \int _{\sigma '}^\sigma \log ^2 T\cdot \frac{X^{\sigma _0}}{\varepsilon \, |\sigma _0-iT|^2}\, d\sigma _0\ll \frac{X\, \log ^2T}{\varepsilon \, T^2}\int _{\sigma '}^\sigma d\, \sigma _0=\frac{X\, \log ^2T}{\varepsilon \, T^2}\, (\sigma -\sigma '). \]
+</div>
+<p> Here we are using the fact that \(X^{\sigma _0}\leq X^\sigma =X\cdot X^{1/\log X}=eX\) and \(|\sigma _0-iT|^2\geq T^2\). Now note that </p>
+<div class="displaymath" id="a0000000570">
+  \[ |I_2(\nu ,\varepsilon ,X,T)|\ll \frac{X\, \log ^2T}{\varepsilon \, T^2}\, (\sigma -\sigma ')=\frac{X\, \log ^2T}{\varepsilon \, T^2\, \log X}+\frac{FX\, \log T}{\varepsilon \, T^2}\ll \frac{X}{\varepsilon \sqrt{T}}. \]
+</div>
+<p> Here we are using the fact that \(\log T\ll T^{3/2}\), \(\log ^2T\ll T^{3/2}\), and \(X/\log X\ll X\). </p>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="I4NewBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">124</span>
+    <span class="lemma_thmtitle">I4NewBound</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I4NewBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000571"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#LogDerivZetaUniformLogSquaredBoundStrip">Lemma 120</a></li>
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+          <li><a href="sect0004.html#I4New">Definition 33</a></li>
+          
+          <li><a href="sect0004.html#I2NewBound">Lemma 123</a></li>
+          
+          <li><a href="sect0003.html#riemannZeta_conj">Theorem 14</a></li>
+          
+          <li><a href="sect0004.html#I2New">Definition 32</a></li>
+          
+          <li><a href="sect0003.html#Smooth1">Definition 6</a></li>
+          
+          <li><a href="sect0003.html#intervalIntegral_conj">Theorem 16</a></li>
+          
+          <li><a href="sect0003.html#deriv_riemannZeta_conj">Theorem 15</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I4NewBound" class="lean_decl">I4NewBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>    We have that </p>
+<div class="displaymath" id="a0000000572">
+  \[ |I_4(\nu ,\varepsilon ,X,T)|\ll \frac{X}{\varepsilon \sqrt{T}}. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000571">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> By symmetry, note that </p>
+<div class="displaymath" id="a0000000573">
+  \[ |I_2(\nu ,\varepsilon ,X,T)|=|\overline{I_4(\nu ,\varepsilon ,X,T)}|=|I_4(\nu ,\varepsilon ,X,T)|. \]
+</div>
+<p> Applying Lemma <a href="sect0004.html#I2NewBound">123</a> completes the proof. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="I3New">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">34</span>
+    <span class="definition_thmtitle">I3New</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I3New">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0003.html#Smooth1">Definition 6</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I3New" class="lean_decl">I3New</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>    Let </p>
+<div class="displaymath" id="a0000000574">
+  \[ I_3(\nu ,\varepsilon ,X,T)=\frac{1}{2\pi i}\int _{-T}^T\left(-\frac{\zeta '}{\zeta }(\sigma '+it)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(\sigma '+it)\, X^{\sigma '+it}\, dt. \]
+</div>
+
+  </div>
+</div>
+<div class="lemma_thmwrapper theorem-style-definition" id="I3NewBound">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">125</span>
+    <span class="lemma_thmtitle">I3NewBound</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#I3NewBound">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000575"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#LogDerivZetaUniformLogSquaredBoundStrip">Lemma 120</a></li>
+          
+          <li><a href="sect0004.html#ZeroInequality">Theorem 42</a></li>
+          
+          <li><a href="sect0004.html#I3New">Definition 34</a></li>
+          
+          <li><a href="sect0003.html#MellinOfSmooth1b">Lemma 51</a></li>
+          
+          <li><a href="sect0004.html#LogDerivZetaLogSquaredBoundSmallt">Theorem 44</a></li>
+          
+          <li><a href="sect0004.html#DeltaRange">Lemma 117</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/I3NewBound" class="lean_decl">I3NewBound</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>    We have that </p>
+<div class="displaymath" id="a0000000576">
+  \[ |I_3(\nu ,\varepsilon ,X,T)|\ll \frac{X^{1-F/\log T}\sqrt{T}}{\varepsilon }. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000575">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Note that \(|I_3(\nu ,\varepsilon ,X,T)|=\) </p>
+<div class="displaymath" id="a0000000577">
+  \[ \left|\frac{1}{2\pi i}\int _{-T}^T\left(-\frac{\zeta '}{\zeta }(\sigma '+it)\right)\, \mathcal{M}(\tilde{1}_\varepsilon )(\sigma '+it)\, X^{\sigma '+it}\, dt\right|\ll \int _{-T}^T\left|\frac{\zeta '}{\zeta }(\sigma '+it)\right|\cdot |\mathcal{M}(\tilde{1}_\varepsilon )(\sigma '+it)|\cdot X^{\sigma '}\, dt. \]
+</div>
+<p> Applying Theorem <a href="sect0004.html#LogDerivZetaLogSquaredBoundSmallt">44</a> and Lemma <a href="sect0003.html#MellinOfSmooth1b">51</a>, we have that </p>
+<div class="displaymath" id="a0000000578">
+  \[ |I_3(\nu ,\varepsilon ,X,T)|\ll \int _{-T}^T\log ^2(2+T)\cdot \frac{X^{\sigma '}}{\varepsilon \, |\sigma '+it|^2}\, dt\ll \frac{X^{1-F/\log T}\, \sqrt{T}}{\varepsilon }\int _0^T\frac{dt}{|\sigma '+it|^2}. \]
+</div>
+<p> Here we are using the fact that this integrand is symmetric in \(t\) about \(0\) and that \(\log ^2(2+T)\ll \sqrt{T}\) for sufficiently large \(T\). Now note that, by Lemma <a href="sect0004.html#DeltaRange">117</a>, we have </p>
+<div class="displaymath" id="a0000000579">
+  \[ \frac{1}{|\sigma '+it|^2}=\frac{1}{(1-\delta _T/3)^2+t^2}{\lt}\frac{1}{(41/42)^2+t^2}. \]
+</div>
+<p> Thus, </p>
+<div class="displaymath" id="a0000000580">
+  \[ |I_3(\nu ,\varepsilon ,X,T)|\ll \frac{X^{1-F/\log T}\sqrt{T}}{\varepsilon }\int _0^T\frac{dt}{|\sigma '+it|^2}\leq \frac{X^{1-F/\log T}\sqrt{T}}{\varepsilon }\int _0^\infty \frac{dt}{(41/42)^2+t^2}. \]
+</div>
+<p> The integral on the right hand side evaluates to \(21\pi /41\), which is just a constant, so the desired result follows. </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="SmoothedChebyshevPull3">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">45</span>
+    <span class="theorem_thmtitle">SmoothedChebyshevPull3</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#SmoothedChebyshevPull3">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000581"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0004.html#I3New">Definition 34</a></li>
+          
+          <li><a href="sect0004.html#I4New">Definition 33</a></li>
+          
+          <li><a href="sect0003.html#SmoothedChebyshev">Definition 10</a></li>
+          
+          <li><a href="sect0004.html#I2New">Definition 32</a></li>
+          
+          <li><a href="sect0003.html#Smooth1">Definition 6</a></li>
+          
+          <li><a href="sect0004.html#I5New">Definition 31</a></li>
+          
+          <li><a href="sect0004.html#I1New">Definition 30</a></li>
+          
+          <li><a href="sect0003.html#Smooth1Nonneg">Lemma 48</a></li>
+          
+          <li><a href="sect0003.html#ResidueMult">Theorem 22</a></li>
+          
+          <li><a href="sect0003.html#BddAbove_to_IsBigO">Theorem 21</a></li>
+          
+          <li><a href="sect0003.html#ResidueTheoremOnRectangleWithSimplePole">Lemma 20</a></li>
+          
+          <li><a href="sect0003.html#SmoothedChebyshevPull1_aux_integrable">Lemma 87</a></li>
+          
+          <li><a href="sect0003.html#riemannZetaLogDerivResidue">Theorem 23</a></li>
+          
+          <li><a href="sect0003.html#Smooth1Properties_above">Lemma 47</a></li>
+          
+          <li><a href="sect0003.html#Smooth1ContinuousAt">Lemma 53</a></li>
+          
+          <li><a href="sect0003.html#existsDifferentiableOn_of_bddAbove">Theorem 3</a></li>
+          
+          <li><a href="sect0003.html#Smooth1LeOne">Lemma 49</a></li>
+          
+          <li><a href="sect0003.html#VerticalIntegral">Definition 3</a></li>
+          
+          <li><a href="sect0003.html#RectangleIntegral">Definition 2</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/SmoothedChebyshevPull3" class="lean_decl">SmoothedChebyshevPull3</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p>    We have that </p>
+<div class="displaymath" id="a0000000582">
+  \[ \psi _\varepsilon (X)=\mathcal{M}(\tilde{1}_\varepsilon )(1)\, X^1+I_1-I_2+I_3+I_4+I_5. \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000581">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> Pull contours and accumulate the pole of \(\zeta '/\zeta \) at \(s=1\). </p>
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-definition" id="StrongPNT">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">46</span>
+    <span class="theorem_thmtitle">StrongPNT</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0004.html#StrongPNT">#</a>
+    
+    <a class="icon proof" href="sect0004.html#a0000000583"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://AlexKontorovich.github.io/PrimeNumberTheoremAnd/docs/find/#doc/StrongPNT" class="lean_decl">StrongPNT</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> We have </p>
+<div class="displaymath" id="a0000000584">
+  \[ \sum _{n\leq x}\Lambda (n)=x+O\left(x\exp (-c\sqrt{\log x})\right). \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000583">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p> By Theorem <a href="sect0003.html#SmoothedChebyshevClose">28</a> and <a href="sect0004.html#SmoothedChebyshevPull3">45</a> we have that </p>
+<div class="displaymath" id="a0000000585">
+  \[ \mathcal{M}(\tilde{1}_\varepsilon )(1)\, x^1+I_1-I_2+I_3+I_4+I_5=\psi (x)+O(\varepsilon x\log x). \]
+</div>
+<p> Applying Theorem <a href="sect0003.html#MellinOfSmooth1c">52</a> and Lemmas <a href="sect0004.html#I1NewBound">121</a>, <a href="sect0004.html#I2NewBound">123</a>, <a href="sect0004.html#I3NewBound">125</a>, <a href="sect0004.html#I4NewBound">124</a>, and <a href="sect0004.html#I5NewBound">122</a> we have that </p>
+<div class="displaymath" id="a0000000586">
+  \[ \psi (x)=x+O(\varepsilon x)+O(\varepsilon x\log x)+O\left(\frac{x}{\varepsilon \sqrt{T}}\right)+O\left(\frac{x^{1-F/\log T}\sqrt{T}}{\varepsilon }\right). \]
+</div>
+<p> We absorb the \(O(\varepsilon x)\) term into the \(O(\varepsilon x\log x)\) term and balance the last two terms in \(T\). </p>
+<div class="displaymath" id="a0000000587">
+  \[ \frac{x}{\varepsilon \sqrt{T}}=\frac{x^{1-F/\log T}\sqrt{T}}{\varepsilon }\implies T=\exp (\sqrt{F\log x}). \]
+</div>
+<p> Thus, </p>
+<div class="displaymath" id="a0000000588">
+  \[ \psi (x)=x+O(\varepsilon x\log x)+O\left(\frac{x}{\displaystyle \varepsilon \exp ((1/2)\cdot \sqrt{F\log x})}\right). \]
+</div>
+<p> Now we balance the last two terms in \(\varepsilon \). </p>
+<div class="displaymath" id="a0000000589">
+  \[ \varepsilon x\log x=\frac{x}{\displaystyle \varepsilon \exp ((1/2)\cdot \sqrt{F\log x})}\implies \varepsilon \log x=\frac{\displaystyle \sqrt{\log x}}{\displaystyle \exp ((1/4)\cdot \sqrt{F\log x})}. \]
+</div>
+<p> Thus, </p>
+<div class="displaymath" id="a0000000590">
+  \[ \psi (x)=x+O\left(x\exp (-(\sqrt{F}/4)\cdot \sqrt{\log x})\sqrt{\log x}\right). \]
+</div>
+<p> Absorbing the \(\displaystyle \sqrt{\log x}\) into the \(\displaystyle \exp (-(\sqrt{F}/4)\cdot \sqrt{\log x})\) completes the proof. </p>
+
+  </div>
+</div>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
+  <a href="sect0003.html" title="Second approach"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Prime Number Theorem And ..."><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0005.html" title="Elementary Corollaries"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
+</body>
+</html>

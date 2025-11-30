@@ -1,0 +1,113 @@
+
+\inputleannode{finsum_range_eq_sum_range}
+
+
+
+
+
+\inputleannode{chebyshev_asymptotic}
+
+
+
+
+
+\inputleannode{primorial_bounds}
+
+
+
+
+
+\inputleannode{pi_asymp}
+
+
+
+
+
+\inputleannode{pi_alt}
+
+
+
+
+
+Let $p_n$ denote the $n^{th}$ prime.
+
+\inputleannode{pn_asymptotic}
+
+
+
+
+
+\inputleannode{pn_pn_plus_one}
+
+
+
+
+
+\inputleannode{prime_between}
+
+
+
+
+
+\inputleannode{mun}
+
+
+
+
+
+\inputleannode{mu-pnt}
+
+
+
+
+
+\inputleannode{lambda-pnt}
+
+
+
+
+
+
+\inputleannode{mu-pnt-alt}
+
+
+
+
+
+\section{Consequences of the PNT in arithmetic progressions}
+
+\begin{theorem}[Prime number theorem in AP]\label{chebyshev_asymptotic_pnt}\lean{chebyshev_asymptotic_pnt}\leanok  If $a\ (q)$ is a primitive residue class, then one has
+  $$ \sum_{p \leq x: p = a\ (q)} \log p = \frac{x}{\phi(q)} + o(x).$$
+\end{theorem}
+
+
+\begin{proof}
+\uses{chebyshev_asymptotic}
+This is a routine modification of the proof of Theorem \ref{chebyshev_asymptotic}.
+\end{proof}
+
+
+\begin{corollary}[Dirichlet's theorem]\label{dirichlet_thm}\lean{dirichlet_thm}\leanok  Any primitive residue class contains an infinite number of primes.
+\end{corollary}
+
+
+\begin{proof}
+\uses{chebyshev_asymptotic_pnt}
+If this were not the case, then the sum $\sum_{p \leq x: p = a\ (q)} \log p$ would be bounded in $x$, contradicting Theorem \ref{chebyshev_asymptotic_pnt}.
+\end{proof}
+-/
+
+/-%%
+\section{Consequences of the Chebotarev density theorem}
+
+
+
+\begin{lemma}[Cyclotomic Chebotarev]\label{Chebotarev-cyclic}  For any $a$ coprime to $m$,
+$$ \sum_{N \mathfrak{p} \leq x; N \mathfrak{p} = a\ (m)} \log N \mathfrak{p}  =
+\frac{1}{|G|} \sum_{N \mathfrak{p} \leq x} \log N \mathfrak{p}.$$
+\end{lemma}
+
+
+\begin{proof}\uses{Dedekind-PNT, WeakPNT_AP} This should follow from Lemma \ref{Dedekind-PNT} by a Fourier expansion.
+\end{proof}
+
